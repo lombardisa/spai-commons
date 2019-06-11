@@ -28,8 +28,8 @@
 		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
 		<maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
 
-		<!-- Holon -->
-		<holon.platform.version>5.2.11</holon.platform.version>
+		<!-- Jackson -->
+		<jackson.version>2.9.9</jackson.version>
 	</properties>
 
 	<build>
@@ -84,24 +84,17 @@
 		</plugins>
 	</build>
 
-	<dependencyManagement>
-		<dependencies>
-			<!-- Holon Platform -->
-			<dependency>
-				<groupId>com.holon-platform</groupId>
-				<artifactId>bom</artifactId>
-				<version>${holon.platform.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<dependencies>
-		<!-- Holon core -->
+		<!-- Jackson -->
 		<dependency>
-			<groupId>com.holon-platform.core</groupId>
-			<artifactId>holon-core</artifactId>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
 		</dependency>
 	</dependencies>
 
