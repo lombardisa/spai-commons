@@ -9,17 +9,26 @@ public class LockImpl implements Lock {
 
 	private static final long serialVersionUID = -9015960979692928667L;
 
-	private final String owner;
-	private final String entityName;
-	private final Integer entityId;
-	private final LocalDateTime timeStamp;
+	private String owner;
+	private String entityName;
+	private Integer entityId;
+	private LocalDateTime timeStamp;
+
+	/**
+	 * Default empty constructor (necessary for Jackson serialization)
+	 */
+
+	public LockImpl() {
+		super();
+	}
 
 	/**
 	 * Constructor.
-	 * @param owner The lock owner id (not null)
+	 * 
+	 * @param owner      The lock owner id (not null)
 	 * @param entityName The locked entity name (not null)
-	 * @param entityId The locked entity id (not null)
-	 * @param timeStamp The lock acquisition date and time (not null)
+	 * @param entityId   The locked entity id (not null)
+	 * @param timeStamp  The lock acquisition date and time (not null)
 	 */
 	public LockImpl(String owner, String entityName, Integer entityId, LocalDateTime timeStamp) {
 		super();
@@ -47,6 +56,22 @@ public class LockImpl implements Lock {
 	@Override
 	public LocalDateTime getTimeStamp() {
 		return timeStamp;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
+	public void setEntityName(String entityName) {
+		this.entityName = entityName;
+	}
+
+	public void setEntityId(Integer entityId) {
+		this.entityId = entityId;
+	}
+
+	public void setTimeStamp(LocalDateTime timeStamp) {
+		this.timeStamp = timeStamp;
 	}
 
 	@Override

@@ -3,9 +3,13 @@ package ch.lombardi.spai.commons.locks;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
 /**
  * Acquired lock representation.
  */
+
+@JsonDeserialize(as = LockImpl.class)
 public interface Lock extends Serializable {
 
 	/**
