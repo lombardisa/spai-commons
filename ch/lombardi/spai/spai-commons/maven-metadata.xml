@@ -3,10 +3,10 @@
   <groupId>ch.lombardi.spai</groupId>
   <artifactId>spai-commons</artifactId>
   <versioning>
-    <release>0.0.4</release>
+    <release>0.0.5</release>
     <versions>
-      <version>0.0.4</version>
+      <version>0.0.5</version>
     </versions>
-    <lastUpdated>20191017110321</lastUpdated>
+    <lastUpdated>20220318203207</lastUpdated>
   </versioning>
 </metadata>
