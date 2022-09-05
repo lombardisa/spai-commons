@@ -69,7 +69,7 @@ public interface Annuncio extends Serializable {
 	 * 
 	 * @return: la possibilità di home office dell'annuncio.
 	 */
-	Boolean getHomeOffice();
+	String getHomeOffice();
 
 	/**
 	 * Metodo per ricevere la percentuale d'occupazione minima (%) dell'annuncio.

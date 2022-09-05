@@ -1,6 +1,7 @@
 package ch.lombardi.spai.commons.rec;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public class AnnuncioImpl implements Annuncio {
 
@@ -15,8 +16,8 @@ public class AnnuncioImpl implements Annuncio {
 	private Integer refSecondId;
 	private String titolo;
 	private String descrizione;
-	private Boolean attivo;
-	private Boolean homeOffice;
+	private String attivo;
+	private String homeOffice;
 	private Double occupMin;
 	private Double occupMax;
 	private LocalDateTime inizio;
@@ -33,7 +34,7 @@ public class AnnuncioImpl implements Annuncio {
 	}
 
 	public AnnuncioImpl(Integer annuncioId, Integer refPrincId, Integer sedeId, Integer sezioneId, Integer areaId,
-			Integer refSecondId, String titolo, String descrizione, Boolean attivo, Boolean homeOffice, Double occupMin,
+			Integer refSecondId, String titolo, String descrizione, String attivo, String homeOffice, Double occupMin,
 			Double occupMax, LocalDateTime inizio, LocalDateTime fine, LocalDateTime dataInizioContratto,
 			Integer durataContratto, Integer unitaDurataContratto) {
 		super();
@@ -88,11 +89,11 @@ public class AnnuncioImpl implements Annuncio {
 		return descrizione;
 	}
 
-	public Boolean getAttivo() {
+	public String getAttivo() {
 		return attivo;
 	}
 
-	public Boolean getHomeOffice() {
+	public String getHomeOffice() {
 		return homeOffice;
 	}
 
@@ -156,11 +157,11 @@ public class AnnuncioImpl implements Annuncio {
 		this.descrizione = descrizione;
 	}
 
-	public void setAttivo(Boolean attivo) {
+	public void setAttivo(String attivo) {
 		this.attivo = attivo;
 	}
 
-	public void setHomeOffice(Boolean homeOffice) {
+	public void setHomeOffice(String homeOffice) {
 		this.homeOffice = homeOffice;
 	}
 
@@ -192,4 +193,32 @@ public class AnnuncioImpl implements Annuncio {
 		this.unitaDurataContratto = unitaDurataContratto;
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(annuncioId, areaId, attivo, dataInizioContratto, descrizione, durataContratto, fine,
+				homeOffice, inizio, occupMax, occupMin, refPrincId, refSecondId, sedeId, sezioneId, titolo,
+				unitaDurataContratto);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AnnuncioImpl other = (AnnuncioImpl) obj;
+		return Objects.equals(annuncioId, other.annuncioId) && Objects.equals(areaId, other.areaId)
+				&& Objects.equals(attivo, other.attivo)
+				&& Objects.equals(dataInizioContratto, other.dataInizioContratto)
+				&& Objects.equals(descrizione, other.descrizione)
+				&& Objects.equals(durataContratto, other.durataContratto) && Objects.equals(fine, other.fine)
+				&& Objects.equals(homeOffice, other.homeOffice) && Objects.equals(inizio, other.inizio)
+				&& Objects.equals(occupMax, other.occupMax) && Objects.equals(occupMin, other.occupMin)
+				&& Objects.equals(refPrincId, other.refPrincId) && Objects.equals(refSecondId, other.refSecondId)
+				&& Objects.equals(sedeId, other.sedeId) && Objects.equals(sezioneId, other.sezioneId)
+				&& Objects.equals(titolo, other.titolo)
+				&& Objects.equals(unitaDurataContratto, other.unitaDurataContratto);
+	}
 }
