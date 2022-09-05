@@ -58,6 +58,7 @@
 					<configuration>
 						<charset>UTF-8</charset>
 						<docencoding>UTF-8</docencoding>
+						<doclint>none</doclint>
 					</configuration>
 				</plugin>
 				<!-- Release -->
