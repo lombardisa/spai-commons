@@ -1,5 +1,5 @@
 package ch.lombardi.spai.commons.rec;
 
-public class SedeImple {
+public class SedeImpl {
 
 }

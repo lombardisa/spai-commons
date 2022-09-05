@@ -15,9 +15,12 @@ public class AnnuncioImpl implements Annuncio {
 	private Integer refSecondId;
 	private String titolo;
 	private String descrizione;
+	private Boolean attivo;
 	private Boolean homeOffice;
 	private Double occupMin;
 	private Double occupMax;
+	private LocalDateTime inizio;
+	private LocalDateTime fine;
 	private LocalDateTime dataInizioContratto;
 	private Integer durataContratto;
 	private Integer unitaDurataContratto;
@@ -29,27 +32,10 @@ public class AnnuncioImpl implements Annuncio {
 		super();
 	}
 
-	/**
-	 * Contructor.
-	 * 
-	 * @param annuncioId
-	 * @param refPrincId
-	 * @param sedeId
-	 * @param sezioneId
-	 * @param areaId
-	 * @param refSecondId
-	 * @param titolo
-	 * @param descrizione
-	 * @param homeOffice
-	 * @param occupMin
-	 * @param occupMax
-	 * @param dataInizioContratto
-	 * @param durataContratto
-	 * @param unitaDurataContratto
-	 */
 	public AnnuncioImpl(Integer annuncioId, Integer refPrincId, Integer sedeId, Integer sezioneId, Integer areaId,
-			Integer refSecondId, String titolo, String descrizione, Boolean homeOffice, Double occupMin,
-			Double occupMax, LocalDateTime dataInizioContratto, Integer durataContratto, Integer unitaDurataContratto) {
+			Integer refSecondId, String titolo, String descrizione, Boolean attivo, Boolean homeOffice, Double occupMin,
+			Double occupMax, LocalDateTime inizio, LocalDateTime fine, LocalDateTime dataInizioContratto,
+			Integer durataContratto, Integer unitaDurataContratto) {
 		super();
 		this.annuncioId = annuncioId;
 		this.refPrincId = refPrincId;
@@ -59,86 +45,91 @@ public class AnnuncioImpl implements Annuncio {
 		this.refSecondId = refSecondId;
 		this.titolo = titolo;
 		this.descrizione = descrizione;
+		this.attivo = attivo;
 		this.homeOffice = homeOffice;
 		this.occupMin = occupMin;
 		this.occupMax = occupMax;
+		this.inizio = inizio;
+		this.fine = fine;
 		this.dataInizioContratto = dataInizioContratto;
 		this.durataContratto = durataContratto;
 		this.unitaDurataContratto = unitaDurataContratto;
 	}
 
-	@Override
 	public Integer getAnnuncioId() {
 		return annuncioId;
 	}
 
-	@Override
 	public Integer getRefPrincId() {
 		return refPrincId;
 	}
 
-	@Override
 	public Integer getSedeId() {
 		return sedeId;
 	}
 
-	@Override
 	public Integer getSezioneId() {
 		return sezioneId;
 	}
 
-	@Override
 	public Integer getAreaId() {
 		return areaId;
 	}
 
-	@Override
 	public Integer getRefSecondId() {
 		return refSecondId;
 	}
 
-	@Override
 	public String getTitolo() {
 		return titolo;
 	}
 
-	@Override
 	public String getDescrizione() {
 		return descrizione;
 	}
 
-	@Override
+	public Boolean getAttivo() {
+		return attivo;
+	}
+
 	public Boolean getHomeOffice() {
 		return homeOffice;
 	}
 
-	@Override
 	public Double getOccupMin() {
 		return occupMin;
 	}
 
-	@Override
 	public Double getOccupMax() {
 		return occupMax;
 	}
 
-	@Override
+	public LocalDateTime getInizio() {
+		return inizio;
+	}
+
+	public LocalDateTime getFine() {
+		return fine;
+	}
+
 	public LocalDateTime getDataInizioContratto() {
 		return dataInizioContratto;
 	}
 
-	@Override
 	public Integer getDurataContratto() {
 		return durataContratto;
 	}
 
-	@Override
 	public Integer getUnitaDurataContratto() {
 		return unitaDurataContratto;
 	}
 
 	public void setAnnuncioId(Integer annuncioId) {
 		this.annuncioId = annuncioId;
+	}
+
+	public void setRefPrincId(Integer refPrincId) {
+		this.refPrincId = refPrincId;
 	}
 
 	public void setSedeId(Integer sedeId) {
@@ -153,12 +144,20 @@ public class AnnuncioImpl implements Annuncio {
 		this.areaId = areaId;
 	}
 
+	public void setRefSecondId(Integer refSecondId) {
+		this.refSecondId = refSecondId;
+	}
+
 	public void setTitolo(String titolo) {
 		this.titolo = titolo;
 	}
 
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
+	}
+
+	public void setAttivo(Boolean attivo) {
+		this.attivo = attivo;
 	}
 
 	public void setHomeOffice(Boolean homeOffice) {
@@ -171,6 +170,14 @@ public class AnnuncioImpl implements Annuncio {
 
 	public void setOccupMax(Double occupMax) {
 		this.occupMax = occupMax;
+	}
+
+	public void setInizio(LocalDateTime inizio) {
+		this.inizio = inizio;
+	}
+
+	public void setFine(LocalDateTime fine) {
+		this.fine = fine;
 	}
 
 	public void setDataInizioContratto(LocalDateTime dataInizioContratto) {
