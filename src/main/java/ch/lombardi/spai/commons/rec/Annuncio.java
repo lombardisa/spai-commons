@@ -1,7 +1,8 @@
 package ch.lombardi.spai.commons.rec;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
@@ -14,7 +15,7 @@ public interface Annuncio extends Serializable {
 	 * @return: l'ID dell'annuncio.
 	 */
 	Integer getAnnuncioId();
-	
+
 	/**
 	 * Metodo per ricevere l'ID del referente principale.
 	 * 
@@ -42,7 +43,7 @@ public interface Annuncio extends Serializable {
 	 * @return: l'ID dell'area (settore lavorativo).
 	 */
 	Integer getAreaId();
-	
+
 	/**
 	 * Metodo per ricevere l'ID del referente secondario.
 	 * 
@@ -76,31 +77,49 @@ public interface Annuncio extends Serializable {
 	 * 
 	 * @return: la percentuale d'occupazione minima (%) dell'annuncio.
 	 */
-	Double getOccupMin();
+	BigDecimal getOccupMin();
 
 	/**
 	 * Metodo per ricevere la percentuale d'occupazione massima (%) dell'annuncio.
 	 * 
 	 * @return: la percentuale d'occupazione massima (%) dell'annuncio.
 	 */
-	Double getOccupMax();
+	BigDecimal getOccupMax();
 
-	/* Metodo per ricevere la data d'inizio contratto dell'annuncio.
+	/**
+	 * Metodo per ricevere la data di pubblicazione dell'annuncio.
+	 * 
+	 * @return la data di pubblicazione dell'annuncio.
+	 */
+	LocalDate getInizio();
+
+	/**
+	 * Metodo per ricevere la data di rimozione dell'annuncio.
+	 * 
+	 * @return la data di rimozione dell'annuncio.
+	 */
+	LocalDate getFine();
+
+	/*
+	 * Metodo per ricevere la data d'inizio contratto dell'annuncio.
 	 * 
 	 * @return: la data d'inizio contratto dell'annuncio.
 	 */
-	LocalDateTime getDataInizioContratto();
+	LocalDate getDataInizioContratto();
 
-	/* Metodo per ricevere la durata contrattuale dell'annuncio.
+	/*
+	 * Metodo per ricevere la durata contrattuale dell'annuncio.
 	 * 
 	 * @return: la durata contrattuale dell'annuncio.
 	 */
 	Integer getDurataContratto();
 
-	/* Metodo per ricevere l'unità di misura della durata contrattuale dell'annuncio.
+	/*
+	 * Metodo per ricevere l'unità di misura della durata contrattuale
+	 * dell'annuncio.
 	 * 
 	 * @return: l'unità di misura della durata contrattuale dell'annuncio.
 	 */
-	Integer getUnitaDurataContratto();
+	String getUnitaDurataContratto();
 
 }
