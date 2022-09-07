@@ -15,14 +15,14 @@ public class AnnuncioImpl implements Annuncio {
 	private String nomeRefPrinc;
 	private String conomeRefPrinc;
 	private byte[] fotoRefPrinc;
-	
+
 	private Integer sedeId;
 	private String descSede;
 	private String nomeIndirizzo;
 	private String descIndirizzo;
 	private String indirizzo;
-	private Integer casellaPostale;
-	private Integer nap;
+	private String casellaPostale;
+	private String nap;
 	private String localita;
 	private Integer nazioneId;
 	private String descNazione;
@@ -30,35 +30,35 @@ public class AnnuncioImpl implements Annuncio {
 	private String emailHr;
 	private String paginaInternet;
 	private String paginaLinkedin;
-	
+
 	private Integer sezioneId;
-		
+
 	private Integer areaId;
 	private String descArea;
-	
+
 	private Integer refSecondId;
 	private String nomeRefSecond;
 	private String conomeRefSecond;
 	private byte[] fotoRefSecond;
-	
+
 	private String titolo;
-	
+
 	private String descrizione;
-	
+
 	private String homeOffice;
-	
+
 	private BigDecimal occupMin;
-	
+
 	private BigDecimal occupMax;
-	
+
 	private LocalDate inizio;
-	
+
 	private LocalDate fine;
-	
+
 	private LocalDate dataInizioContratto;
-	
+
 	private Integer durataContratto;
-	
+
 	private String unitaDurataContratto;
 
 	/**
@@ -70,11 +70,11 @@ public class AnnuncioImpl implements Annuncio {
 
 	public AnnuncioImpl(Integer annuncioId, Integer refPrincId, String nomeRefPrinc, String conomeRefPrinc,
 			byte[] fotoRefPrinc, Integer sedeId, String descSede, String nomeIndirizzo, String descIndirizzo,
-			String indirizzo, Integer casellaPostale, Integer nap, String localita, Integer nazioneId,
-			String descNazione, String noTelefono, String emailHr, String paginaInternet, String paginaLinkedin,
-			Integer sezioneId, Integer areaId, String descArea, Integer refSecondId, String nomeRefSecond,
-			String conomeRefSecond, byte[] fotoRefSecond, String titolo, String descrizione, String homeOffice,
-			BigDecimal occupMin, BigDecimal occupMax, LocalDate inizio, LocalDate fine, LocalDate dataInizioContratto,
+			String indirizzo, String casellaPostale, String nap, String localita, Integer nazioneId, String descNazione,
+			String noTelefono, String emailHr, String paginaInternet, String paginaLinkedin, Integer sezioneId,
+			Integer areaId, String descArea, Integer refSecondId, String nomeRefSecond, String conomeRefSecond,
+			byte[] fotoRefSecond, String titolo, String descrizione, String homeOffice, BigDecimal occupMin,
+			BigDecimal occupMax, LocalDate inizio, LocalDate fine, LocalDate dataInizioContratto,
 			Integer durataContratto, String unitaDurataContratto) {
 		super();
 		this.annuncioId = annuncioId;
@@ -155,11 +155,11 @@ public class AnnuncioImpl implements Annuncio {
 		return indirizzo;
 	}
 
-	public Integer getCasellaPostale() {
+	public String getCasellaPostale() {
 		return casellaPostale;
 	}
 
-	public Integer getNap() {
+	public String getNap() {
 		return nap;
 	}
 
@@ -299,11 +299,11 @@ public class AnnuncioImpl implements Annuncio {
 		this.indirizzo = indirizzo;
 	}
 
-	public void setCasellaPostale(Integer casellaPostale) {
+	public void setCasellaPostale(String casellaPostale) {
 		this.casellaPostale = casellaPostale;
 	}
 
-	public void setNap(Integer nap) {
+	public void setNap(String nap) {
 		this.nap = nap;
 	}
 
