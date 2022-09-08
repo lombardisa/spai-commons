@@ -59,7 +59,7 @@ public class AnnuncioImpl implements Annuncio {
 
 	private Integer durataContratto;
 
-	private String unitaDurataContratto;
+	private Integer unitaDurataContratto;
 
 	/**
 	 * Default empty constructor (necessary for Jackson serialization)
@@ -75,7 +75,7 @@ public class AnnuncioImpl implements Annuncio {
 			Integer areaId, String descArea, Integer refSecondId, String nomeRefSecond, String conomeRefSecond,
 			byte[] fotoRefSecond, String titolo, String descrizione, String homeOffice, BigDecimal occupMin,
 			BigDecimal occupMax, LocalDate inizio, LocalDate fine, LocalDate dataInizioContratto,
-			Integer durataContratto, String unitaDurataContratto) {
+			Integer durataContratto, Integer unitaDurataContratto) {
 		super();
 		this.annuncioId = annuncioId;
 		this.refPrincId = refPrincId;
@@ -255,7 +255,7 @@ public class AnnuncioImpl implements Annuncio {
 		return durataContratto;
 	}
 
-	public String getUnitaDurataContratto() {
+	public Integer getUnitaDurataContratto() {
 		return unitaDurataContratto;
 	}
 
@@ -399,7 +399,7 @@ public class AnnuncioImpl implements Annuncio {
 		this.durataContratto = durataContratto;
 	}
 
-	public void setUnitaDurataContratto(String unitaDurataContratto) {
+	public void setUnitaDurataContratto(Integer unitaDurataContratto) {
 		this.unitaDurataContratto = unitaDurataContratto;
 	}
 

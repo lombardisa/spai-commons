@@ -264,7 +264,7 @@ public interface Annuncio extends Serializable {
 	 * 
 	 * @return: l'unità di misura della durata contrattuale dell'annuncio.
 	 */
-	String getUnitaDurataContratto();
+	Integer getUnitaDurataContratto();
 
 	// -------------------------------------------------------------------------------------------------
 
