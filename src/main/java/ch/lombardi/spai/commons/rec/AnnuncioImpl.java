@@ -1,6 +1,5 @@
 package ch.lombardi.spai.commons.rec;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Objects;
@@ -47,10 +46,6 @@ public class AnnuncioImpl implements Annuncio {
 
 	private String homeOffice;
 
-	private BigDecimal occupMin;
-
-	private BigDecimal occupMax;
-
 	private LocalDate inizio;
 
 	private LocalDate fine;
@@ -73,8 +68,7 @@ public class AnnuncioImpl implements Annuncio {
 			String indirizzo, String casellaPostale, String nap, String localita, Integer nazioneId, String descNazione,
 			String noTelefono, String emailHr, String paginaInternet, String paginaLinkedin, Integer sezioneId,
 			Integer areaId, String descArea, Integer refSecondId, String nomeRefSecond, String conomeRefSecond,
-			byte[] fotoRefSecond, String titolo, String descrizione, String homeOffice, BigDecimal occupMin,
-			BigDecimal occupMax, LocalDate inizio, LocalDate fine, LocalDate dataInizioContratto,
+			byte[] fotoRefSecond, String titolo, String descrizione, String homeOffice, LocalDate inizio, LocalDate fine, LocalDate dataInizioContratto,
 			Integer durataContratto, String unitaDurataContratto) {
 		super();
 		this.annuncioId = annuncioId;
@@ -106,8 +100,6 @@ public class AnnuncioImpl implements Annuncio {
 		this.titolo = titolo;
 		this.descrizione = descrizione;
 		this.homeOffice = homeOffice;
-		this.occupMin = occupMin;
-		this.occupMax = occupMax;
 		this.inizio = inizio;
 		this.fine = fine;
 		this.dataInizioContratto = dataInizioContratto;
@@ -238,16 +230,6 @@ public class AnnuncioImpl implements Annuncio {
 	@Override
 	public String getHomeOffice() {
 		return homeOffice;
-	}
-
-	@Override
-	public BigDecimal getOccupMin() {
-		return occupMin;
-	}
-
-	@Override
-	public BigDecimal getOccupMax() {
-		return occupMax;
 	}
 
 	@Override
@@ -391,13 +373,6 @@ public class AnnuncioImpl implements Annuncio {
 		this.homeOffice = homeOffice;
 	}
 
-	public void setOccupMin(BigDecimal occupMin) {
-		this.occupMin = occupMin;
-	}
-
-	public void setOccupMax(BigDecimal occupMax) {
-		this.occupMax = occupMax;
-	}
 
 	public void setInizio(LocalDate inizio) {
 		this.inizio = inizio;
@@ -428,7 +403,7 @@ public class AnnuncioImpl implements Annuncio {
 		result = prime * result + Objects.hash(annuncioId, areaId, casellaPostale, conomeRefPrinc, conomeRefSecond,
 				dataInizioContratto, descArea, descIndirizzo, descNazione, descSede, descrizione, durataContratto,
 				emailHr, fine, homeOffice, indirizzo, inizio, localita, nap, nazioneId, noTelefono, nomeIndirizzo,
-				nomeRefPrinc, nomeRefSecond, occupMax, occupMin, paginaInternet, paginaLinkedin, refPrincId,
+				nomeRefPrinc, nomeRefSecond, paginaInternet, paginaLinkedin, refPrincId,
 				refSecondId, sedeId, sezioneId, titolo, unitaDurataContratto);
 		return result;
 	}
@@ -458,8 +433,7 @@ public class AnnuncioImpl implements Annuncio {
 				&& Objects.equals(nazioneId, other.nazioneId) && Objects.equals(noTelefono, other.noTelefono)
 				&& Objects.equals(nomeIndirizzo, other.nomeIndirizzo)
 				&& Objects.equals(nomeRefPrinc, other.nomeRefPrinc)
-				&& Objects.equals(nomeRefSecond, other.nomeRefSecond) && Objects.equals(occupMax, other.occupMax)
-				&& Objects.equals(occupMin, other.occupMin) && Objects.equals(paginaInternet, other.paginaInternet)
+				&& Objects.equals(nomeRefSecond, other.nomeRefSecond) && Objects.equals(paginaInternet, other.paginaInternet)
 				&& Objects.equals(paginaLinkedin, other.paginaLinkedin) && Objects.equals(refPrincId, other.refPrincId)
 				&& Objects.equals(refSecondId, other.refSecondId) && Objects.equals(sedeId, other.sedeId)
 				&& Objects.equals(sezioneId, other.sezioneId) && Objects.equals(titolo, other.titolo)
