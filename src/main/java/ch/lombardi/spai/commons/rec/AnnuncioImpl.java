@@ -115,10 +115,12 @@ public class AnnuncioImpl implements Annuncio {
 		this.unitaDurataContratto = unitaDurataContratto;
 	}
 
+	@Override
 	public Integer getAnnuncioId() {
 		return annuncioId;
 	}
 
+	@Override
 	public Integer getRefPrincId() {
 		return refPrincId;
 	}
@@ -135,6 +137,7 @@ public class AnnuncioImpl implements Annuncio {
 		return fotoRefPrinc;
 	}
 
+	@Override
 	public Integer getSedeId() {
 		return sedeId;
 	}
@@ -191,10 +194,12 @@ public class AnnuncioImpl implements Annuncio {
 		return paginaLinkedin;
 	}
 
+	@Override
 	public Integer getSezioneId() {
 		return sezioneId;
 	}
 
+	@Override
 	public Integer getAreaId() {
 		return areaId;
 	}
@@ -203,6 +208,7 @@ public class AnnuncioImpl implements Annuncio {
 		return descArea;
 	}
 
+	@Override
 	public Integer getRefSecondId() {
 		return refSecondId;
 	}
@@ -219,42 +225,52 @@ public class AnnuncioImpl implements Annuncio {
 		return fotoRefSecond;
 	}
 
+	@Override
 	public String getTitolo() {
 		return titolo;
 	}
-
+	
+	@Override
 	public String getDescrizione() {
 		return descrizione;
 	}
 
+	@Override
 	public String getHomeOffice() {
 		return homeOffice;
 	}
 
+	@Override
 	public BigDecimal getOccupMin() {
 		return occupMin;
 	}
 
+	@Override
 	public BigDecimal getOccupMax() {
 		return occupMax;
 	}
 
+	@Override
 	public LocalDate getInizio() {
 		return inizio;
 	}
 
+	@Override
 	public LocalDate getFine() {
 		return fine;
 	}
 
+	@Override
 	public LocalDate getDataInizioContratto() {
 		return dataInizioContratto;
 	}
 
+	@Override
 	public Integer getDurataContratto() {
 		return durataContratto;
 	}
 
+	@Override
 	public String getUnitaDurataContratto() {
 		return unitaDurataContratto;
 	}
