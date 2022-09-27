@@ -9,9 +9,8 @@ public class AreaImpl implements Area {
 	// VARIABILI
 	private Integer areaId;
 	private Integer societaId;
-	private String descrizione;
+	private String desc_area;
 	private String codice;
-	private String attivo;
 
 	/**
 	 * Default empty constructor (necessary for Jackson serialization)
@@ -24,17 +23,15 @@ public class AreaImpl implements Area {
 	 * 
 	 * @param areaId
 	 * @param societaId
-	 * @param descrizione
+	 * @param desc_area
 	 * @param codice
-	 * @param attivo
 	 */
-	public AreaImpl(Integer areaId, Integer societaId, String descrizione, String codice, String attivo) {
+	public AreaImpl(Integer areaId, Integer societaId, String desc_area, String codice) {
 		super();
 		this.areaId = areaId;
 		this.societaId = societaId;
-		this.descrizione = descrizione;
+		this.desc_area = desc_area;
 		this.codice = codice;
-		this.attivo = attivo;
 	}
 
 	public Integer getAreaId() {
@@ -45,16 +42,12 @@ public class AreaImpl implements Area {
 		return societaId;
 	}
 
-	public String getDescrizione() {
-		return descrizione;
+	public String getDescArea() {
+		return desc_area;
 	}
 
 	public String getCodice() {
 		return codice;
-	}
-
-	public String getAttivo() {
-		return attivo;
 	}
 
 	public void setAreaId(Integer areaId) {
@@ -65,21 +58,17 @@ public class AreaImpl implements Area {
 		this.societaId = societaId;
 	}
 
-	public void setDescrizione(String descrizione) {
-		this.descrizione = descrizione;
+	public void setDescArea(String descrizione) {
+		this.desc_area = descrizione;
 	}
 
 	public void setCodice(String codice) {
 		this.codice = codice;
 	}
 
-	public void setAttivo(String attivo) {
-		this.attivo = attivo;
-	}
-
 	@Override
 	public int hashCode() {
-		return Objects.hash(areaId, attivo, codice, descrizione, societaId);
+		return Objects.hash(areaId, codice, desc_area, societaId);
 	}
 
 	@Override
@@ -91,9 +80,8 @@ public class AreaImpl implements Area {
 		if (getClass() != obj.getClass())
 			return false;
 		AreaImpl other = (AreaImpl) obj;
-		return Objects.equals(areaId, other.areaId) && Objects.equals(attivo, other.attivo)
-				&& Objects.equals(codice, other.codice) && Objects.equals(descrizione, other.descrizione)
-				&& Objects.equals(societaId, other.societaId);
+		return Objects.equals(areaId, other.areaId) && Objects.equals(codice, other.codice)
+				&& Objects.equals(desc_area, other.desc_area) && Objects.equals(societaId, other.societaId);
 	}
 
 }
