@@ -13,7 +13,7 @@ public class AnnuncioImpl implements Annuncio {
 	private Integer annuncioId;
 	private Integer refPrincId;
 	private String nomeRefPrinc;
-	private String conomeRefPrinc;
+	private String cognomeRefPrinc;
 	private byte[] fotoRefPrinc;
 
 	private Integer sedeId;
@@ -38,7 +38,7 @@ public class AnnuncioImpl implements Annuncio {
 
 	private Integer refSecondId;
 	private String nomeRefSecond;
-	private String conomeRefSecond;
+	private String cognomeRefSecond;
 	private byte[] fotoRefSecond;
 
 	private String titolo;
@@ -68,11 +68,11 @@ public class AnnuncioImpl implements Annuncio {
 		super();
 	}
 
-	public AnnuncioImpl(Integer annuncioId, Integer refPrincId, String nomeRefPrinc, String conomeRefPrinc,
+	public AnnuncioImpl(Integer annuncioId, Integer refPrincId, String nomeRefPrinc, String cognomeRefPrinc,
 			byte[] fotoRefPrinc, Integer sedeId, String descSede, String nomeIndirizzo, String descIndirizzo,
 			String indirizzo, String casellaPostale, String nap, String localita, Integer nazioneId, String descNazione,
 			String noTelefono, String emailHr, String paginaInternet, String paginaLinkedin, Integer sezioneId,
-			Integer areaId, String descArea, Integer refSecondId, String nomeRefSecond, String conomeRefSecond,
+			Integer areaId, String descArea, Integer refSecondId, String nomeRefSecond, String cognomeRefSecond,
 			byte[] fotoRefSecond, String titolo, String descrizione, String homeOffice, BigDecimal occupMin,
 			BigDecimal occupMax, LocalDate inizio, LocalDate fine, LocalDate dataInizioContratto,
 			Integer durataContratto, Integer unitaDurataContratto) {
@@ -80,7 +80,7 @@ public class AnnuncioImpl implements Annuncio {
 		this.annuncioId = annuncioId;
 		this.refPrincId = refPrincId;
 		this.nomeRefPrinc = nomeRefPrinc;
-		this.conomeRefPrinc = conomeRefPrinc;
+		this.cognomeRefPrinc = cognomeRefPrinc;
 		this.fotoRefPrinc = fotoRefPrinc;
 		this.sedeId = sedeId;
 		this.descSede = descSede;
@@ -101,7 +101,7 @@ public class AnnuncioImpl implements Annuncio {
 		this.descArea = descArea;
 		this.refSecondId = refSecondId;
 		this.nomeRefSecond = nomeRefSecond;
-		this.conomeRefSecond = conomeRefSecond;
+		this.cognomeRefSecond = cognomeRefSecond;
 		this.fotoRefSecond = fotoRefSecond;
 		this.titolo = titolo;
 		this.descrizione = descrizione;
@@ -127,8 +127,8 @@ public class AnnuncioImpl implements Annuncio {
 		return nomeRefPrinc;
 	}
 
-	public String getConomeRefPrinc() {
-		return conomeRefPrinc;
+	public String getCognomeRefPrinc() {
+		return cognomeRefPrinc;
 	}
 
 	public byte[] getFotoRefPrinc() {
@@ -211,8 +211,8 @@ public class AnnuncioImpl implements Annuncio {
 		return nomeRefSecond;
 	}
 
-	public String getConomeRefSecond() {
-		return conomeRefSecond;
+	public String getCognomeRefSecond() {
+		return cognomeRefSecond;
 	}
 
 	public byte[] getFotoRefSecond() {
@@ -271,8 +271,8 @@ public class AnnuncioImpl implements Annuncio {
 		this.nomeRefPrinc = nomeRefPrinc;
 	}
 
-	public void setConomeRefPrinc(String conomeRefPrinc) {
-		this.conomeRefPrinc = conomeRefPrinc;
+	public void setCognomeRefPrinc(String cognomeRefPrinc) {
+		this.cognomeRefPrinc = cognomeRefPrinc;
 	}
 
 	public void setFotoRefPrinc(byte[] fotoRefPrinc) {
@@ -355,8 +355,8 @@ public class AnnuncioImpl implements Annuncio {
 		this.nomeRefSecond = nomeRefSecond;
 	}
 
-	public void setConomeRefSecond(String conomeRefSecond) {
-		this.conomeRefSecond = conomeRefSecond;
+	public void setCognomeRefSecond(String cognomeRefSecond) {
+		this.cognomeRefSecond = cognomeRefSecond;
 	}
 
 	public void setFotoRefSecond(byte[] fotoRefSecond) {
@@ -409,7 +409,7 @@ public class AnnuncioImpl implements Annuncio {
 		int result = 1;
 		result = prime * result + Arrays.hashCode(fotoRefPrinc);
 		result = prime * result + Arrays.hashCode(fotoRefSecond);
-		result = prime * result + Objects.hash(annuncioId, areaId, casellaPostale, conomeRefPrinc, conomeRefSecond,
+		result = prime * result + Objects.hash(annuncioId, areaId, casellaPostale, cognomeRefPrinc, cognomeRefSecond,
 				dataInizioContratto, descArea, descIndirizzo, descNazione, descSede, descrizione, durataContratto,
 				emailHr, fine, homeOffice, indirizzo, inizio, localita, nap, nazioneId, noTelefono, nomeIndirizzo,
 				nomeRefPrinc, nomeRefSecond, paginaInternet, paginaLinkedin, refPrincId, refSecondId, sedeId, sezioneId,
@@ -428,8 +428,8 @@ public class AnnuncioImpl implements Annuncio {
 		AnnuncioImpl other = (AnnuncioImpl) obj;
 		return Objects.equals(annuncioId, other.annuncioId) && Objects.equals(areaId, other.areaId)
 				&& Objects.equals(casellaPostale, other.casellaPostale)
-				&& Objects.equals(conomeRefPrinc, other.conomeRefPrinc)
-				&& Objects.equals(conomeRefSecond, other.conomeRefSecond)
+				&& Objects.equals(cognomeRefPrinc, other.cognomeRefPrinc)
+				&& Objects.equals(cognomeRefSecond, other.cognomeRefSecond)
 				&& Objects.equals(dataInizioContratto, other.dataInizioContratto)
 				&& Objects.equals(descArea, other.descArea) && Objects.equals(descIndirizzo, other.descIndirizzo)
 				&& Objects.equals(descNazione, other.descNazione) && Objects.equals(descSede, other.descSede)

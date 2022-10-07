@@ -33,7 +33,7 @@ public interface Annuncio extends Serializable {
 	 * 
 	 * @return
 	 */
-	String getConomeRefPrinc();
+	String getCognomeRefPrinc();
 
 	/**
 	 * 
@@ -169,7 +169,7 @@ public interface Annuncio extends Serializable {
 	 * 
 	 * @return
 	 */
-	String getConomeRefSecond();
+	String getCognomeRefSecond();
 
 	/**
 	 * 
