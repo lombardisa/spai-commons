@@ -8,16 +8,40 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 @JsonDeserialize(as = SedeImpl.class)
 public interface Sede extends Serializable {
 
+	// METHODS-------------------------------------------
+	/**
+	 * 
+	 * @return
+	 */
 	Integer getSedeId();
 
+	/**
+	 * 
+	 * @return
+	 */
 	Integer getSocietaId();
 
+	/**
+	 * 
+	 * @return
+	 */
 	String getDescSede();
 
+	/**
+	 * 
+	 * @return
+	 */
 	String getNomeIndirizzo();
 
+	/**
+	 * 
+	 * @return
+	 */
 	String getLocalita();
 
+	/**
+	 * 
+	 * @return
+	 */
 	LocalDate getDataChiusura();
-
 }

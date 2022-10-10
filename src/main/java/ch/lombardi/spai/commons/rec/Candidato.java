@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 @JsonDeserialize(as = CandidatoImpl.class)
 public interface Candidato extends Serializable {
 
+	// METHODS-------------------------------------------
 	/**
 	 * Metodo per ricevere l'ID del candidato.
 	 * 
