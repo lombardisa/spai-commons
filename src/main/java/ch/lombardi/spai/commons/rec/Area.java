@@ -30,6 +30,13 @@ public interface Area extends Serializable {
 	String getDescArea();
 
 	/**
+	 * Returns the DESCRIZIONE_BREVE of the ID_AREA.
+	 * 
+	 * @return: the DESCRIZIONE_BREVE of the ID_AREA.
+	 */
+	String getDescAreaBreve();
+
+	/**
 	 * Returns the CODICE of the ID_AREA.
 	 * 
 	 * @return: the CODICE of the ID_AREA.

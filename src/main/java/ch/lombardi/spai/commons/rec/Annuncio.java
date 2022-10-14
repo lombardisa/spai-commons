@@ -165,6 +165,13 @@ public interface Annuncio extends Serializable {
 	String getDescArea();
 
 	/**
+	 * Returns the DESCRIZIONE_BREVE of the ID_AREA of the job offer.
+	 * 
+	 * @return the DESCRIZIONE_BREVE of the ID_AREA of the job offer.
+	 */
+	String getDescAreaBreve();
+
+	/**
 	 * Returns the ID_REF_SECOND of the job offer.
 	 * 
 	 * @return: the ID_REF_SECOND of the job offer.

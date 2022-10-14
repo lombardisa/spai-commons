@@ -37,6 +37,12 @@ public interface Sede extends Serializable {
 	 * 
 	 * @return
 	 */
+	String getIndirizzo();
+
+	/**
+	 * 
+	 * @return
+	 */
 	String getLocalita();
 
 	/**
@@ -44,4 +50,52 @@ public interface Sede extends Serializable {
 	 * @return
 	 */
 	LocalDate getDataChiusura();
+
+	/**
+	 * 
+	 * @return
+	 */
+	String getNap();
+
+	/**
+	 * 
+	 * @return
+	 */
+	String getNoTelefono();
+
+	/**
+	 * 
+	 * @return
+	 */
+	String geteMail();
+
+	/**
+	 * 
+	 * @return
+	 */
+	String getTimeZone();
+
+	/**
+	 * 
+	 * @return
+	 */
+	String getDescEstesa();
+
+	/**
+	 * 
+	 * @return
+	 */
+	String geteMailHr();
+
+	/**
+	 * 
+	 * @return
+	 */
+	Integer getNazioneId();
+
+	/**
+	 * 
+	 * @return
+	 */
+	String getNazione();
 }
