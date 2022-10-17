@@ -1,7 +1,7 @@
 package ch.lombardi.spai.commons.rec;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
@@ -63,7 +63,7 @@ public interface Candidato extends Serializable {
 	 * 
 	 * @return la data di formazione del candidato.
 	 */
-	LocalDateTime getDataFormazione();
+	LocalDate getDataFormazione();
 
 	/**
 	 * Metodo per ricevere il nome del candidato.
@@ -84,7 +84,7 @@ public interface Candidato extends Serializable {
 	 * 
 	 * @return la data di nascita del candidato.
 	 */
-	LocalDateTime getNascita();
+	LocalDate getNascita();
 
 	/**
 	 * Metodo per ricevere l'indirizzo email del candidato.
@@ -101,16 +101,19 @@ public interface Candidato extends Serializable {
 	Byte getCv();
 
 	/**
-	 * Metodo per ricevere la conferma (S/N) di accettazione termini da parte del candidato.
+	 * Metodo per ricevere la conferma (S/N) di accettazione termini da parte del
+	 * candidato.
 	 * 
 	 * @return la conferma (S/N) di accettazione termini da parte del candidato.
 	 */
 	String getCheckTermini();
 
 	/**
-	 * Metodo per ricevere la conferma (S/N) di accettazione autorizzazione da parte del candidato.
+	 * Metodo per ricevere la conferma (S/N) di accettazione autorizzazione da parte
+	 * del candidato.
 	 * 
-	 * @return la conferma (S/N) di accettazione autorizzazione da parte del candidato.
+	 * @return la conferma (S/N) di accettazione autorizzazione da parte del
+	 *         candidato.
 	 */
 	String getCheckAutorizzazione();
 
@@ -126,7 +129,7 @@ public interface Candidato extends Serializable {
 	 * 
 	 * @return il messaggio del candidato.
 	 */
-	Byte getMessaggio();
+	String getMessaggio();
 
 	/**
 	 * Metodo per ricevere il messaggio vocale del candidato.
@@ -162,4 +165,18 @@ public interface Candidato extends Serializable {
 	 * @return la seconda valutazione del candidato.
 	 */
 	String getValutazioneSeconda();
+
+	/**
+	 * Metodo per ricevere la seconda valutazione del candidato.
+	 * 
+	 * @return la seconda valutazione del candidato.
+	 */
+	String getFeedbackInterno();
+
+	/**
+	 * Metodo per ricevere la seconda valutazione del candidato.
+	 * 
+	 * @return la seconda valutazione del candidato.
+	 */
+	String getInformato();
 }

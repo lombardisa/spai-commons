@@ -1,6 +1,6 @@
 package ch.lombardi.spai.commons.rec;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class CandidatoImpl implements Candidato {
@@ -15,21 +15,23 @@ public class CandidatoImpl implements Candidato {
 	private Integer formazioneId;
 	private Integer statoId;
 	private Integer annuncioId;
-	private LocalDateTime dataFormazione;
+	private LocalDate dataFormazione;
 	private String nome;
 	private String cognome;
-	private LocalDateTime nascita;
+	private LocalDate nascita;
 	private String email;
 	private Byte cv;
 	private String checkTermini;
 	private String checkAutorizzazione;
 	private String telefono;
-	private Byte messaggio;
+	private String messaggio;
 	private Byte vocale;
 	private String cvEstensione;
 	private String vocaleEstensione;
 	private String valutazionePrima;
 	private String valutazioneSeconda;
+	private String feedbackInterno;
+	private String informato;
 
 	/**
 	 * Default empty constructor (necessary for Jackson serialization)
@@ -62,12 +64,14 @@ public class CandidatoImpl implements Candidato {
 	 * @param vocaleEstensione
 	 * @param valutazionePrima
 	 * @param valutazioneSeconda
+	 * @param feedbackInterno
+	 * @param informato
 	 */
 	public CandidatoImpl(Integer candidatoId, Integer sessoId, Integer sondaggioId, Integer situazioneLavorativaId,
-			Integer formazioneId, Integer statoId, Integer annuncioId, LocalDateTime dataFormazione, String nome,
-			String cognome, LocalDateTime nascita, String email, Byte cv, String checkTermini,
-			String checkAutorizzazione, String telefono, Byte messaggio, Byte vocale, String cvEstensione,
-			String vocaleEstensione, String valutazionePrima, String valutazioneSeconda) {
+			Integer formazioneId, Integer statoId, Integer annuncioId, LocalDate dataFormazione, String nome,
+			String cognome, LocalDate nascita, String email, Byte cv, String checkTermini, String checkAutorizzazione,
+			String telefono, String messaggio, Byte vocale, String cvEstensione, String vocaleEstensione,
+			String valutazionePrima, String valutazioneSeconda, String feedbackInterno, String informato) {
 		super();
 		this.candidatoId = candidatoId;
 		this.sessoId = sessoId;
@@ -91,6 +95,8 @@ public class CandidatoImpl implements Candidato {
 		this.vocaleEstensione = vocaleEstensione;
 		this.valutazionePrima = valutazionePrima;
 		this.valutazioneSeconda = valutazioneSeconda;
+		this.feedbackInterno = feedbackInterno;
+		this.informato = informato;
 	}
 
 	public Integer getCandidatoId() {
@@ -121,7 +127,7 @@ public class CandidatoImpl implements Candidato {
 		return annuncioId;
 	}
 
-	public LocalDateTime getDataFormazione() {
+	public LocalDate getDataFormazione() {
 		return dataFormazione;
 	}
 
@@ -133,7 +139,7 @@ public class CandidatoImpl implements Candidato {
 		return cognome;
 	}
 
-	public LocalDateTime getNascita() {
+	public LocalDate getNascita() {
 		return nascita;
 	}
 
@@ -157,7 +163,7 @@ public class CandidatoImpl implements Candidato {
 		return telefono;
 	}
 
-	public Byte getMessaggio() {
+	public String getMessaggio() {
 		return messaggio;
 	}
 
@@ -179,6 +185,14 @@ public class CandidatoImpl implements Candidato {
 
 	public String getValutazioneSeconda() {
 		return valutazioneSeconda;
+	}
+
+	public String getFeedbackInterno() {
+		return feedbackInterno;
+	}
+
+	public String getInformato() {
+		return informato;
 	}
 
 	public void setCandidatoId(Integer candidatoId) {
@@ -209,7 +223,7 @@ public class CandidatoImpl implements Candidato {
 		this.annuncioId = annuncioId;
 	}
 
-	public void setDataFormazione(LocalDateTime dataFormazione) {
+	public void setDataFormazione(LocalDate dataFormazione) {
 		this.dataFormazione = dataFormazione;
 	}
 
@@ -221,7 +235,7 @@ public class CandidatoImpl implements Candidato {
 		this.cognome = cognome;
 	}
 
-	public void setNascita(LocalDateTime nascita) {
+	public void setNascita(LocalDate nascita) {
 		this.nascita = nascita;
 	}
 
@@ -245,7 +259,7 @@ public class CandidatoImpl implements Candidato {
 		this.telefono = telefono;
 	}
 
-	public void setMessaggio(Byte messaggio) {
+	public void setMessaggio(String messaggio) {
 		this.messaggio = messaggio;
 	}
 
@@ -269,11 +283,20 @@ public class CandidatoImpl implements Candidato {
 		this.valutazioneSeconda = valutazioneSeconda;
 	}
 
+	public void setFeedbackInterno(String feedbackInterno) {
+		this.feedbackInterno = feedbackInterno;
+	}
+
+	public void setInformato(String informato) {
+		this.informato = informato;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(annuncioId, candidatoId, checkAutorizzazione, checkTermini, cognome, cv, cvEstensione,
-				dataFormazione, email, formazioneId, messaggio, nascita, nome, sessoId, situazioneLavorativaId,
-				sondaggioId, statoId, telefono, valutazionePrima, valutazioneSeconda, vocale, vocaleEstensione);
+				dataFormazione, email, feedbackInterno, formazioneId, informato, messaggio, nascita, nome, sessoId,
+				situazioneLavorativaId, sondaggioId, statoId, telefono, valutazionePrima, valutazioneSeconda, vocale,
+				vocaleEstensione);
 	}
 
 	@Override
@@ -290,9 +313,10 @@ public class CandidatoImpl implements Candidato {
 				&& Objects.equals(checkTermini, other.checkTermini) && Objects.equals(cognome, other.cognome)
 				&& Objects.equals(cv, other.cv) && Objects.equals(cvEstensione, other.cvEstensione)
 				&& Objects.equals(dataFormazione, other.dataFormazione) && Objects.equals(email, other.email)
-				&& Objects.equals(formazioneId, other.formazioneId) && Objects.equals(messaggio, other.messaggio)
-				&& Objects.equals(nascita, other.nascita) && Objects.equals(nome, other.nome)
-				&& Objects.equals(sessoId, other.sessoId)
+				&& Objects.equals(feedbackInterno, other.feedbackInterno)
+				&& Objects.equals(formazioneId, other.formazioneId) && Objects.equals(informato, other.informato)
+				&& Objects.equals(messaggio, other.messaggio) && Objects.equals(nascita, other.nascita)
+				&& Objects.equals(nome, other.nome) && Objects.equals(sessoId, other.sessoId)
 				&& Objects.equals(situazioneLavorativaId, other.situazioneLavorativaId)
 				&& Objects.equals(sondaggioId, other.sondaggioId) && Objects.equals(statoId, other.statoId)
 				&& Objects.equals(telefono, other.telefono) && Objects.equals(valutazionePrima, other.valutazionePrima)
