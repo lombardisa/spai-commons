@@ -59,6 +59,13 @@ public interface Candidato extends Serializable {
 	Integer getAnnuncioId();
 
 	/**
+	 * Metodo per ricevere l'ID della motivazione scarto del candidato.
+	 * 
+	 * @return l'ID della motivazione scarto del candidato.
+	 */
+	Integer getMotivazioneScartoId();
+
+	/**
 	 * Metodo per ricevere la data di formazione del candidato.
 	 * 
 	 * @return la data di formazione del candidato.
@@ -98,7 +105,7 @@ public interface Candidato extends Serializable {
 	 * 
 	 * @return il CV del candidato.
 	 */
-	Byte getCv();
+	byte[] getCv();
 
 	/**
 	 * Metodo per ricevere la conferma (S/N) di accettazione termini da parte del
@@ -136,7 +143,7 @@ public interface Candidato extends Serializable {
 	 * 
 	 * @return il messaggio vocale del candidato.
 	 */
-	Byte getVocale();
+	byte[] getVocale();
 
 	/**
 	 * Metodo per ricevere l'estenzione del CV del candidato.

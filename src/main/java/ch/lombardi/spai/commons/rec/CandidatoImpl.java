@@ -1,6 +1,7 @@
 package ch.lombardi.spai.commons.rec;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Objects;
 
 public class CandidatoImpl implements Candidato {
@@ -20,18 +21,30 @@ public class CandidatoImpl implements Candidato {
 	private String cognome;
 	private LocalDate nascita;
 	private String email;
-	private Byte cv;
+	private byte[] cv;
 	private String checkTermini;
 	private String checkAutorizzazione;
 	private String telefono;
 	private String messaggio;
-	private Byte vocale;
+	private byte[] vocale;
 	private String cvEstensione;
 	private String vocaleEstensione;
 	private String valutazionePrima;
 	private String valutazioneSeconda;
+	private Integer motivazioneScartoId;
 	private String feedbackInterno;
 	private String informato;
+
+	@Override
+	public String toString() {
+		return getCandidatoId() + ", " + getSessoId() + ", " + getSondaggioId() + ", " + getSituazioneLavorativaId()
+				+ ", " + getFormazioneId() + ", " + getStatoId() + ", " + getAnnuncioId() + ", " + getDataFormazione()
+				+ ", " + getNome() + ", " + getCognome() + ", " + getNascita() + ", " + getEmail() + ", " + getCv()
+				+ ", " + getCheckTermini() + ", " + getCheckAutorizzazione() + ", " + getTelefono() + ", "
+				+ getMessaggio() + ", " + getVocale() + ", " + getCvEstensione() + ", " + getVocaleEstensione() + ", "
+				+ getValutazionePrima() + ", " + getValutazioneSeconda() + ", " + getMotivazioneScartoId() + ", "
+				+ getFeedbackInterno() + ", " + getInformato();
+	}
 
 	/**
 	 * Default empty constructor (necessary for Jackson serialization)
@@ -40,38 +53,12 @@ public class CandidatoImpl implements Candidato {
 		super();
 	}
 
-	/**
-	 * 
-	 * @param candidatoId
-	 * @param sessoId
-	 * @param sondaggioId
-	 * @param situazioneLavorativaId
-	 * @param formazioneId
-	 * @param statoId
-	 * @param annuncioId
-	 * @param dataFormazione
-	 * @param nome
-	 * @param cognome
-	 * @param nascita
-	 * @param email
-	 * @param cv
-	 * @param checkTermini
-	 * @param checkAutorizzazione
-	 * @param telefono
-	 * @param messaggio
-	 * @param vocale
-	 * @param cvEstensione
-	 * @param vocaleEstensione
-	 * @param valutazionePrima
-	 * @param valutazioneSeconda
-	 * @param feedbackInterno
-	 * @param informato
-	 */
 	public CandidatoImpl(Integer candidatoId, Integer sessoId, Integer sondaggioId, Integer situazioneLavorativaId,
 			Integer formazioneId, Integer statoId, Integer annuncioId, LocalDate dataFormazione, String nome,
-			String cognome, LocalDate nascita, String email, Byte cv, String checkTermini, String checkAutorizzazione,
-			String telefono, String messaggio, Byte vocale, String cvEstensione, String vocaleEstensione,
-			String valutazionePrima, String valutazioneSeconda, String feedbackInterno, String informato) {
+			String cognome, LocalDate nascita, String email, byte[] cv, String checkTermini, String checkAutorizzazione,
+			String telefono, String messaggio, byte[] vocale, String cvEstensione, String vocaleEstensione,
+			String valutazionePrima, String valutazioneSeconda, Integer motivazioneScartoId, String feedbackInterno,
+			String informato) {
 		super();
 		this.candidatoId = candidatoId;
 		this.sessoId = sessoId;
@@ -95,6 +82,7 @@ public class CandidatoImpl implements Candidato {
 		this.vocaleEstensione = vocaleEstensione;
 		this.valutazionePrima = valutazionePrima;
 		this.valutazioneSeconda = valutazioneSeconda;
+		this.motivazioneScartoId = motivazioneScartoId;
 		this.feedbackInterno = feedbackInterno;
 		this.informato = informato;
 	}
@@ -147,7 +135,7 @@ public class CandidatoImpl implements Candidato {
 		return email;
 	}
 
-	public Byte getCv() {
+	public byte[] getCv() {
 		return cv;
 	}
 
@@ -167,7 +155,7 @@ public class CandidatoImpl implements Candidato {
 		return messaggio;
 	}
 
-	public Byte getVocale() {
+	public byte[] getVocale() {
 		return vocale;
 	}
 
@@ -185,6 +173,10 @@ public class CandidatoImpl implements Candidato {
 
 	public String getValutazioneSeconda() {
 		return valutazioneSeconda;
+	}
+
+	public Integer getMotivazioneScartoId() {
+		return motivazioneScartoId;
 	}
 
 	public String getFeedbackInterno() {
@@ -243,7 +235,7 @@ public class CandidatoImpl implements Candidato {
 		this.email = email;
 	}
 
-	public void setCv(Byte cv) {
+	public void setCv(byte[] cv) {
 		this.cv = cv;
 	}
 
@@ -263,7 +255,7 @@ public class CandidatoImpl implements Candidato {
 		this.messaggio = messaggio;
 	}
 
-	public void setVocale(Byte vocale) {
+	public void setVocale(byte[] vocale) {
 		this.vocale = vocale;
 	}
 
@@ -283,6 +275,10 @@ public class CandidatoImpl implements Candidato {
 		this.valutazioneSeconda = valutazioneSeconda;
 	}
 
+	public void setMotivazioneScartoId(Integer motivazioneScartoId) {
+		this.motivazioneScartoId = motivazioneScartoId;
+	}
+
 	public void setFeedbackInterno(String feedbackInterno) {
 		this.feedbackInterno = feedbackInterno;
 	}
@@ -293,10 +289,15 @@ public class CandidatoImpl implements Candidato {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(annuncioId, candidatoId, checkAutorizzazione, checkTermini, cognome, cv, cvEstensione,
-				dataFormazione, email, feedbackInterno, formazioneId, informato, messaggio, nascita, nome, sessoId,
-				situazioneLavorativaId, sondaggioId, statoId, telefono, valutazionePrima, valutazioneSeconda, vocale,
-				vocaleEstensione);
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(cv);
+		result = prime * result + Arrays.hashCode(vocale);
+		result = prime * result + Objects.hash(annuncioId, candidatoId, checkAutorizzazione, checkTermini, cognome,
+				cvEstensione, dataFormazione, email, feedbackInterno, formazioneId, informato, messaggio,
+				motivazioneScartoId, nascita, nome, sessoId, situazioneLavorativaId, sondaggioId, statoId, telefono,
+				valutazionePrima, valutazioneSeconda, vocaleEstensione);
+		return result;
 	}
 
 	@Override
@@ -311,16 +312,18 @@ public class CandidatoImpl implements Candidato {
 		return Objects.equals(annuncioId, other.annuncioId) && Objects.equals(candidatoId, other.candidatoId)
 				&& Objects.equals(checkAutorizzazione, other.checkAutorizzazione)
 				&& Objects.equals(checkTermini, other.checkTermini) && Objects.equals(cognome, other.cognome)
-				&& Objects.equals(cv, other.cv) && Objects.equals(cvEstensione, other.cvEstensione)
+				&& Arrays.equals(cv, other.cv) && Objects.equals(cvEstensione, other.cvEstensione)
 				&& Objects.equals(dataFormazione, other.dataFormazione) && Objects.equals(email, other.email)
 				&& Objects.equals(feedbackInterno, other.feedbackInterno)
 				&& Objects.equals(formazioneId, other.formazioneId) && Objects.equals(informato, other.informato)
-				&& Objects.equals(messaggio, other.messaggio) && Objects.equals(nascita, other.nascita)
-				&& Objects.equals(nome, other.nome) && Objects.equals(sessoId, other.sessoId)
+				&& Objects.equals(messaggio, other.messaggio)
+				&& Objects.equals(motivazioneScartoId, other.motivazioneScartoId)
+				&& Objects.equals(nascita, other.nascita) && Objects.equals(nome, other.nome)
+				&& Objects.equals(sessoId, other.sessoId)
 				&& Objects.equals(situazioneLavorativaId, other.situazioneLavorativaId)
 				&& Objects.equals(sondaggioId, other.sondaggioId) && Objects.equals(statoId, other.statoId)
 				&& Objects.equals(telefono, other.telefono) && Objects.equals(valutazionePrima, other.valutazionePrima)
-				&& Objects.equals(valutazioneSeconda, other.valutazioneSeconda) && Objects.equals(vocale, other.vocale)
+				&& Objects.equals(valutazioneSeconda, other.valutazioneSeconda) && Arrays.equals(vocale, other.vocale)
 				&& Objects.equals(vocaleEstensione, other.vocaleEstensione);
 	}
 }
