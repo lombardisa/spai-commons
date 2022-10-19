@@ -42,4 +42,11 @@ public interface Area extends Serializable {
 	 * @return: the CODICE of the ID_AREA.
 	 */
 	String getCodice();
+
+	/**
+	 * Returns the IMMAGINE of the ID_AREA.
+	 * 
+	 * @return: the IMMAGINE of the ID_AREA.
+	 */
+	byte[] getImmagine();
 }

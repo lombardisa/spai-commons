@@ -1,5 +1,6 @@
 package ch.lombardi.spai.commons.rec;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class AreaImpl implements Area {
@@ -9,9 +10,10 @@ public class AreaImpl implements Area {
 	// VARIABILI
 	private Integer areaId;
 	private Integer societaId;
-	private String desc_area;
-	private String desc_area_breve;
+	private String descArea;
+	private String descAreaBreve;
 	private String codice;
+	private byte[] immagine;
 
 	/**
 	 * Default empty constructor (necessary for Jackson serialization)
@@ -24,17 +26,20 @@ public class AreaImpl implements Area {
 	 * 
 	 * @param areaId
 	 * @param societaId
-	 * @param desc_area
-	 * @param desc_area
+	 * @param descArea
+	 * @param descAreaBreve
 	 * @param codice
+	 * @param immagine
 	 */
-	public AreaImpl(Integer areaId, Integer societaId, String desc_area, String desc_area_breve, String codice) {
+	public AreaImpl(Integer areaId, Integer societaId, String descArea, String descAreaBreve, String codice,
+			byte[] immagine) {
 		super();
 		this.areaId = areaId;
 		this.societaId = societaId;
-		this.desc_area = desc_area;
-		this.desc_area_breve = desc_area_breve;
+		this.descArea = descArea;
+		this.descAreaBreve = descAreaBreve;
 		this.codice = codice;
+		this.immagine = immagine;
 	}
 
 	public Integer getAreaId() {
@@ -46,15 +51,19 @@ public class AreaImpl implements Area {
 	}
 
 	public String getDescArea() {
-		return desc_area;
+		return descArea;
 	}
 
 	public String getDescAreaBreve() {
-		return desc_area_breve;
+		return descAreaBreve;
 	}
 
 	public String getCodice() {
 		return codice;
+	}
+
+	public byte[] getImmagine() {
+		return immagine;
 	}
 
 	public void setAreaId(Integer areaId) {
@@ -65,21 +74,29 @@ public class AreaImpl implements Area {
 		this.societaId = societaId;
 	}
 
-	public void setDescArea(String descrizione) {
-		this.desc_area = descrizione;
+	public void setDescArea(String descArea) {
+		this.descArea = descArea;
 	}
 
-	public void setDescAreaBreve(String descrizione) {
-		this.desc_area_breve = descrizione;
+	public void setDescAreaBreve(String descAreaBreve) {
+		this.descAreaBreve = descAreaBreve;
 	}
 
 	public void setCodice(String codice) {
 		this.codice = codice;
 	}
 
+	public void setImmagine(byte[] immagine) {
+		this.immagine = immagine;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(areaId, codice, desc_area, desc_area_breve, societaId);
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(immagine);
+		result = prime * result + Objects.hash(areaId, codice, descArea, descAreaBreve, societaId);
+		return result;
 	}
 
 	@Override
@@ -92,7 +109,7 @@ public class AreaImpl implements Area {
 			return false;
 		AreaImpl other = (AreaImpl) obj;
 		return Objects.equals(areaId, other.areaId) && Objects.equals(codice, other.codice)
-				&& Objects.equals(desc_area, other.desc_area) && Objects.equals(desc_area_breve, other.desc_area_breve)
-				&& Objects.equals(societaId, other.societaId);
+				&& Objects.equals(descArea, other.descArea) && Objects.equals(descAreaBreve, other.descAreaBreve)
+				&& Arrays.equals(immagine, other.immagine) && Objects.equals(societaId, other.societaId);
 	}
 }

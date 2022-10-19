@@ -20,4 +20,18 @@ public interface Benefit extends Serializable {
 	 * @return: the DESCRIZIONE of the ID_BENEFIT.
 	 */
 	String getDesc();
+
+	/**
+	 * Returns the ICONA of the ID_BENEFIT.
+	 * 
+	 * @return the ICONA of the ID_BENEFIT.
+	 */
+	byte[] getIcona();
+
+	/**
+	 * Returns the ICONA_CODICE of the ID_BENEFIT.
+	 * 
+	 * @return: the ICONA_CODICE of the ID_BENEFIT.
+	 */
+	String getIconaCodice();
 }

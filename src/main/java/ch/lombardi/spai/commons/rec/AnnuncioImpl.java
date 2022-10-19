@@ -15,7 +15,6 @@ public class AnnuncioImpl implements Annuncio {
 	private String nomeRefPrinc;
 	private String cognomeRefPrinc;
 	private byte[] fotoRefPrinc;
-
 	private Integer sedeId;
 	private String descSede;
 	private String nomeIndirizzo;
@@ -30,37 +29,25 @@ public class AnnuncioImpl implements Annuncio {
 	private String emailHr;
 	private String paginaInternet;
 	private String paginaLinkedin;
-
 	private Integer sezioneId;
-
 	private Integer areaId;
 	private String descArea;
 	private String descAreaBreve;
-
 	private Integer refSecondId;
 	private String nomeRefSecond;
 	private String cognomeRefSecond;
 	private byte[] fotoRefSecond;
-
 	private String titolo;
-
 	private String descrizione;
-
 	private String homeOffice;
-
 	private BigDecimal occupMin;
-
 	private BigDecimal occupMax;
-
 	private LocalDate inizio;
-
 	private LocalDate fine;
-
 	private LocalDate dataInizioContratto;
-
 	private Integer durataContratto;
-
 	private Integer unitaDurataContratto;
+	private byte[] foto;
 
 	/**
 	 * Default empty constructor (necessary for Jackson serialization)
@@ -69,6 +56,47 @@ public class AnnuncioImpl implements Annuncio {
 		super();
 	}
 
+	/**
+	 * 
+	 * @param annuncioId
+	 * @param refPrincId
+	 * @param nomeRefPrinc
+	 * @param cognomeRefPrinc
+	 * @param fotoRefPrinc
+	 * @param sedeId
+	 * @param descSede
+	 * @param nomeIndirizzo
+	 * @param descIndirizzo
+	 * @param indirizzo
+	 * @param casellaPostale
+	 * @param nap
+	 * @param localita
+	 * @param nazioneId
+	 * @param descNazione
+	 * @param noTelefono
+	 * @param emailHr
+	 * @param paginaInternet
+	 * @param paginaLinkedin
+	 * @param sezioneId
+	 * @param areaId
+	 * @param descArea
+	 * @param descAreaBreve
+	 * @param refSecondId
+	 * @param nomeRefSecond
+	 * @param cognomeRefSecond
+	 * @param fotoRefSecond
+	 * @param titolo
+	 * @param descrizione
+	 * @param homeOffice
+	 * @param occupMin
+	 * @param occupMax
+	 * @param inizio
+	 * @param fine
+	 * @param dataInizioContratto
+	 * @param durataContratto
+	 * @param unitaDurataContratto
+	 * @param foto
+	 */
 	public AnnuncioImpl(Integer annuncioId, Integer refPrincId, String nomeRefPrinc, String cognomeRefPrinc,
 			byte[] fotoRefPrinc, Integer sedeId, String descSede, String nomeIndirizzo, String descIndirizzo,
 			String indirizzo, String casellaPostale, String nap, String localita, Integer nazioneId, String descNazione,
@@ -76,7 +104,7 @@ public class AnnuncioImpl implements Annuncio {
 			Integer areaId, String descArea, String descAreaBreve, Integer refSecondId, String nomeRefSecond,
 			String cognomeRefSecond, byte[] fotoRefSecond, String titolo, String descrizione, String homeOffice,
 			BigDecimal occupMin, BigDecimal occupMax, LocalDate inizio, LocalDate fine, LocalDate dataInizioContratto,
-			Integer durataContratto, Integer unitaDurataContratto) {
+			Integer durataContratto, Integer unitaDurataContratto, byte[] foto) {
 		super();
 		this.annuncioId = annuncioId;
 		this.refPrincId = refPrincId;
@@ -115,6 +143,7 @@ public class AnnuncioImpl implements Annuncio {
 		this.dataInizioContratto = dataInizioContratto;
 		this.durataContratto = durataContratto;
 		this.unitaDurataContratto = unitaDurataContratto;
+		this.foto = foto;
 	}
 
 	public Integer getAnnuncioId() {
@@ -265,6 +294,10 @@ public class AnnuncioImpl implements Annuncio {
 		return unitaDurataContratto;
 	}
 
+	public byte[] getFoto() {
+		return foto;
+	}
+
 	public void setAnnuncioId(Integer annuncioId) {
 		this.annuncioId = annuncioId;
 	}
@@ -413,10 +446,15 @@ public class AnnuncioImpl implements Annuncio {
 		this.unitaDurataContratto = unitaDurataContratto;
 	}
 
+	public void setFoto(byte[] foto) {
+		this.foto = foto;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + Arrays.hashCode(foto);
 		result = prime * result + Arrays.hashCode(fotoRefPrinc);
 		result = prime * result + Arrays.hashCode(fotoRefSecond);
 		result = prime * result + Objects.hash(annuncioId, areaId, casellaPostale, cognomeRefPrinc, cognomeRefSecond,
@@ -445,12 +483,12 @@ public class AnnuncioImpl implements Annuncio {
 				&& Objects.equals(descIndirizzo, other.descIndirizzo) && Objects.equals(descNazione, other.descNazione)
 				&& Objects.equals(descSede, other.descSede) && Objects.equals(descrizione, other.descrizione)
 				&& Objects.equals(durataContratto, other.durataContratto) && Objects.equals(emailHr, other.emailHr)
-				&& Objects.equals(fine, other.fine) && Arrays.equals(fotoRefPrinc, other.fotoRefPrinc)
-				&& Arrays.equals(fotoRefSecond, other.fotoRefSecond) && Objects.equals(homeOffice, other.homeOffice)
-				&& Objects.equals(indirizzo, other.indirizzo) && Objects.equals(inizio, other.inizio)
-				&& Objects.equals(localita, other.localita) && Objects.equals(nap, other.nap)
-				&& Objects.equals(nazioneId, other.nazioneId) && Objects.equals(noTelefono, other.noTelefono)
-				&& Objects.equals(nomeIndirizzo, other.nomeIndirizzo)
+				&& Objects.equals(fine, other.fine) && Arrays.equals(foto, other.foto)
+				&& Arrays.equals(fotoRefPrinc, other.fotoRefPrinc) && Arrays.equals(fotoRefSecond, other.fotoRefSecond)
+				&& Objects.equals(homeOffice, other.homeOffice) && Objects.equals(indirizzo, other.indirizzo)
+				&& Objects.equals(inizio, other.inizio) && Objects.equals(localita, other.localita)
+				&& Objects.equals(nap, other.nap) && Objects.equals(nazioneId, other.nazioneId)
+				&& Objects.equals(noTelefono, other.noTelefono) && Objects.equals(nomeIndirizzo, other.nomeIndirizzo)
 				&& Objects.equals(nomeRefPrinc, other.nomeRefPrinc)
 				&& Objects.equals(nomeRefSecond, other.nomeRefSecond) && Objects.equals(occupMax, other.occupMax)
 				&& Objects.equals(occupMin, other.occupMin) && Objects.equals(paginaInternet, other.paginaInternet)

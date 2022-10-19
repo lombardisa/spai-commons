@@ -268,4 +268,11 @@ public interface Annuncio extends Serializable {
 	 * @return: the unit of measurement of the job offer's contract duration.
 	 */
 	Integer getUnitaDurataContratto();
+
+	/**
+	 * Returns the picture of the FOTO of the job offer.
+	 * 
+	 * @return the picture of the FOTO of the job offer.
+	 */
+	byte[] getFoto();
 }
