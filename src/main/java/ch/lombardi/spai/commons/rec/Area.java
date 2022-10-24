@@ -6,47 +6,17 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 @JsonDeserialize(as = AreaImpl.class)
 public interface Area extends Serializable {
-
-	// METHODS-------------------------------------------
 	/**
-	 * Returns the ID_AREA.
+	 * Returns the ID_CHIAVE.
 	 * 
-	 * @return: the ID_AREA.
+	 * @return: the ID_CHIAVE.
 	 */
-	Integer getAreaId();
+	String getChiaveId();
 
 	/**
-	 * Returns the ID_SOCIETA.
+	 * Returns the TESTO of the ID_CHIAVE.
 	 * 
-	 * @return: the ID_SOCIETA.
+	 * @return: the TESTO of the ID_CHIAVE.
 	 */
-	Integer getSocietaId();
-
-	/**
-	 * Returns the DESCRIZIONE of the ID_AREA.
-	 * 
-	 * @return: the DESCRIZIONE of the ID_AREA.
-	 */
-	String getDescArea();
-
-	/**
-	 * Returns the DESCRIZIONE_BREVE of the ID_AREA.
-	 * 
-	 * @return: the DESCRIZIONE_BREVE of the ID_AREA.
-	 */
-	String getDescAreaBreve();
-
-	/**
-	 * Returns the CODICE of the ID_AREA.
-	 * 
-	 * @return: the CODICE of the ID_AREA.
-	 */
-	String getCodice();
-
-	/**
-	 * Returns the IMMAGINE of the ID_AREA.
-	 * 
-	 * @return: the IMMAGINE of the ID_AREA.
-	 */
-	byte[] getImmagine();
+	String getTesto();
 }

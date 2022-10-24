@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 @JsonDeserialize(as = FormazioneImpl.class)
 public interface Formazione extends Serializable {
-	// METHODS-------------------------------------------
 	/**
 	 * Returns the ID_CHIAVE.
 	 * 

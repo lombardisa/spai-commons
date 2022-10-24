@@ -23,6 +23,13 @@ public interface Annuncio extends Serializable {
 	 * @return the ID_REF_PRINC of the job offer.
 	 */
 	Integer getRefPrincId();
+	
+	/**
+	 * Returns the DATI_COMPLETI of the job offer.
+	 * 
+	 * @return the DATI_COMPLETI of the job offer.
+	 */
+	String getDatiCompleti();
 
 	/**
 	 * Returns the first name of the ID_REF_PRINC of the job offer.
