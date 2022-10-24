@@ -8,7 +8,6 @@ public class CandidatoImpl implements Candidato {
 
 	private static final long serialVersionUID = -2903163788258047228L;
 
-	// VARIABILI
 	private Integer candidatoId;
 	private Integer sessoId;
 	private Integer sondaggioId;
@@ -34,6 +33,16 @@ public class CandidatoImpl implements Candidato {
 	private Integer motivazioneScartoId;
 	private String feedbackInterno;
 	private String informato;
+	private Integer documentoId;
+	private byte[] documento;
+	private String estensione;
+	private String descrizioneDocumento;
+	private Integer linkId;
+	private String link;
+	private Integer candidatoLinguaId;
+	private Integer linguaId;
+	private Integer linguaLivelloId;
+	private String linguaMadre;
 
 	@Override
 	public String toString() {
@@ -43,7 +52,10 @@ public class CandidatoImpl implements Candidato {
 				+ ", " + getCheckTermini() + ", " + getCheckAutorizzazione() + ", " + getTelefono() + ", "
 				+ getMessaggio() + ", " + getVocale() + ", " + getCvEstensione() + ", " + getVocaleEstensione() + ", "
 				+ getValutazionePrima() + ", " + getValutazioneSeconda() + ", " + getMotivazioneScartoId() + ", "
-				+ getFeedbackInterno() + ", " + getInformato();
+				+ getFeedbackInterno() + ", " + getInformato() + ", " + getDocumentoId() + ", " + getDocumento() + ", "
+				+ getEstensione() + ", " + getDescrizioneDocumento() + ", " + getLinkId() + ", " + getLink() + ", "
+				+ getCandidatoLinguaId() + ", " + getLinguaId() + ", " + getLinguaLivelloId() + ", " + getLinguaMadre()
+				+ ", ";
 	}
 
 	/**
@@ -53,12 +65,52 @@ public class CandidatoImpl implements Candidato {
 		super();
 	}
 
+	/**
+	 * 
+	 * @param candidatoId
+	 * @param sessoId
+	 * @param sondaggioId
+	 * @param situazioneLavorativaId
+	 * @param formazioneId
+	 * @param statoId
+	 * @param annuncioId
+	 * @param dataFormazione
+	 * @param nome
+	 * @param cognome
+	 * @param nascita
+	 * @param email
+	 * @param cv
+	 * @param checkTermini
+	 * @param checkAutorizzazione
+	 * @param telefono
+	 * @param messaggio
+	 * @param vocale
+	 * @param cvEstensione
+	 * @param vocaleEstensione
+	 * @param valutazionePrima
+	 * @param valutazioneSeconda
+	 * @param motivazioneScartoId
+	 * @param feedbackInterno
+	 * @param informato
+	 * @param documentoId
+	 * @param documento
+	 * @param estensione
+	 * @param descrizioneDocumento
+	 * @param linkId
+	 * @param link
+	 * @param candidatoLinguaId
+	 * @param linguaId
+	 * @param linguaLivelloId
+	 * @param linguaMadre
+	 */
 	public CandidatoImpl(Integer candidatoId, Integer sessoId, Integer sondaggioId, Integer situazioneLavorativaId,
 			Integer formazioneId, Integer statoId, Integer annuncioId, LocalDate dataFormazione, String nome,
 			String cognome, LocalDate nascita, String email, byte[] cv, String checkTermini, String checkAutorizzazione,
 			String telefono, String messaggio, byte[] vocale, String cvEstensione, String vocaleEstensione,
 			String valutazionePrima, String valutazioneSeconda, Integer motivazioneScartoId, String feedbackInterno,
-			String informato) {
+			String informato, Integer documentoId, byte[] documento, String estensione, String descrizioneDocumento,
+			Integer linkId, String link, Integer candidatoLinguaId, Integer linguaId, Integer linguaLivelloId,
+			String linguaMadre) {
 		super();
 		this.candidatoId = candidatoId;
 		this.sessoId = sessoId;
@@ -85,6 +137,16 @@ public class CandidatoImpl implements Candidato {
 		this.motivazioneScartoId = motivazioneScartoId;
 		this.feedbackInterno = feedbackInterno;
 		this.informato = informato;
+		this.documentoId = documentoId;
+		this.documento = documento;
+		this.estensione = estensione;
+		this.descrizioneDocumento = descrizioneDocumento;
+		this.linkId = linkId;
+		this.link = link;
+		this.candidatoLinguaId = candidatoLinguaId;
+		this.linguaId = linguaId;
+		this.linguaLivelloId = linguaLivelloId;
+		this.linguaMadre = linguaMadre;
 	}
 
 	public Integer getCandidatoId() {
@@ -187,6 +249,46 @@ public class CandidatoImpl implements Candidato {
 		return informato;
 	}
 
+	public Integer getDocumentoId() {
+		return documentoId;
+	}
+
+	public byte[] getDocumento() {
+		return documento;
+	}
+
+	public String getEstensione() {
+		return estensione;
+	}
+
+	public String getDescrizioneDocumento() {
+		return descrizioneDocumento;
+	}
+
+	public Integer getLinkId() {
+		return linkId;
+	}
+
+	public String getLink() {
+		return link;
+	}
+
+	public Integer getCandidatoLinguaId() {
+		return candidatoLinguaId;
+	}
+
+	public Integer getLinguaId() {
+		return linguaId;
+	}
+
+	public Integer getLinguaLivelloId() {
+		return linguaLivelloId;
+	}
+
+	public String getLinguaMadre() {
+		return linguaMadre;
+	}
+
 	public void setCandidatoId(Integer candidatoId) {
 		this.candidatoId = candidatoId;
 	}
@@ -287,16 +389,58 @@ public class CandidatoImpl implements Candidato {
 		this.informato = informato;
 	}
 
+	public void setDocumentoId(Integer documentoId) {
+		this.documentoId = documentoId;
+	}
+
+	public void setDocumento(byte[] documento) {
+		this.documento = documento;
+	}
+
+	public void setEstensione(String estensione) {
+		this.estensione = estensione;
+	}
+
+	public void setDescrizioneDocumento(String descrizioneDocumento) {
+		this.descrizioneDocumento = descrizioneDocumento;
+	}
+
+	public void setLinkId(Integer linkId) {
+		this.linkId = linkId;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
+	}
+
+	public void setCandidatoLinguaId(Integer candidatoLinguaId) {
+		this.candidatoLinguaId = candidatoLinguaId;
+	}
+
+	public void setLinguaId(Integer linguaId) {
+		this.linguaId = linguaId;
+	}
+
+	public void setLinguaLivelloId(Integer linguaLivelloId) {
+		this.linguaLivelloId = linguaLivelloId;
+	}
+
+	public void setLinguaMadre(String linguaMadre) {
+		this.linguaMadre = linguaMadre;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + Arrays.hashCode(cv);
+		result = prime * result + Arrays.hashCode(documento);
 		result = prime * result + Arrays.hashCode(vocale);
-		result = prime * result + Objects.hash(annuncioId, candidatoId, checkAutorizzazione, checkTermini, cognome,
-				cvEstensione, dataFormazione, email, feedbackInterno, formazioneId, informato, messaggio,
-				motivazioneScartoId, nascita, nome, sessoId, situazioneLavorativaId, sondaggioId, statoId, telefono,
-				valutazionePrima, valutazioneSeconda, vocaleEstensione);
+		result = prime * result + Objects.hash(annuncioId, candidatoId, candidatoLinguaId, checkAutorizzazione,
+				checkTermini, cognome, cvEstensione, dataFormazione, descrizioneDocumento, documentoId, email,
+				estensione, feedbackInterno, formazioneId, informato, linguaId, linguaLivelloId, linguaMadre, link,
+				linkId, messaggio, motivazioneScartoId, nascita, nome, sessoId, situazioneLavorativaId, sondaggioId,
+				statoId, telefono, valutazionePrima, valutazioneSeconda, vocaleEstensione);
 		return result;
 	}
 
@@ -310,13 +454,19 @@ public class CandidatoImpl implements Candidato {
 			return false;
 		CandidatoImpl other = (CandidatoImpl) obj;
 		return Objects.equals(annuncioId, other.annuncioId) && Objects.equals(candidatoId, other.candidatoId)
+				&& Objects.equals(candidatoLinguaId, other.candidatoLinguaId)
 				&& Objects.equals(checkAutorizzazione, other.checkAutorizzazione)
 				&& Objects.equals(checkTermini, other.checkTermini) && Objects.equals(cognome, other.cognome)
 				&& Arrays.equals(cv, other.cv) && Objects.equals(cvEstensione, other.cvEstensione)
-				&& Objects.equals(dataFormazione, other.dataFormazione) && Objects.equals(email, other.email)
+				&& Objects.equals(dataFormazione, other.dataFormazione)
+				&& Objects.equals(descrizioneDocumento, other.descrizioneDocumento)
+				&& Arrays.equals(documento, other.documento) && Objects.equals(documentoId, other.documentoId)
+				&& Objects.equals(email, other.email) && Objects.equals(estensione, other.estensione)
 				&& Objects.equals(feedbackInterno, other.feedbackInterno)
 				&& Objects.equals(formazioneId, other.formazioneId) && Objects.equals(informato, other.informato)
-				&& Objects.equals(messaggio, other.messaggio)
+				&& Objects.equals(linguaId, other.linguaId) && Objects.equals(linguaLivelloId, other.linguaLivelloId)
+				&& Objects.equals(linguaMadre, other.linguaMadre) && Objects.equals(link, other.link)
+				&& Objects.equals(linkId, other.linkId) && Objects.equals(messaggio, other.messaggio)
 				&& Objects.equals(motivazioneScartoId, other.motivazioneScartoId)
 				&& Objects.equals(nascita, other.nascita) && Objects.equals(nome, other.nome)
 				&& Objects.equals(sessoId, other.sessoId)

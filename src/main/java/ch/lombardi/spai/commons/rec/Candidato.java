@@ -31,6 +31,48 @@ public interface Candidato extends Serializable {
 	Integer getSondaggioId();
 
 	/**
+	 * Metodo per ricevere l'ID del link.
+	 * 
+	 * @return l'ID del link.
+	 */
+	Integer getLinkId();
+
+	/**
+	 * Metodo per ricevere il link.
+	 * 
+	 * @return il link.
+	 */
+	String getLink();
+	
+	/**
+	 * Metodo per ricevere l'ID della lingua.
+	 * 
+	 * @return l'ID della lingua.
+	 */
+	Integer getCandidatoLinguaId();
+
+	/**
+	 * Metodo per ricevere l'ID della lingua.
+	 * 
+	 * @return l'ID della lingua.
+	 */
+	Integer getLinguaId();
+
+	/**
+	 * Metodo per ricevere l'ID della lingua livello.
+	 * 
+	 * @return l'ID della lingua livello.
+	 */
+	Integer getLinguaLivelloId();
+
+	/**
+	 * Metodo per ricevere la lingua madre (S/N).
+	 * 
+	 * @return la lingua madre (S/N).
+	 */
+	String getLinguaMadre();
+
+	/**
 	 * Metodo per ricevere la situazione lavorativa del candidato.
 	 * 
 	 * @return la situazione lavorativa del candidato.
@@ -186,4 +228,32 @@ public interface Candidato extends Serializable {
 	 * @return la seconda valutazione del candidato.
 	 */
 	String getInformato();
+
+	/**
+	 * Metodo per ricevere l'ID del candidato.
+	 * 
+	 * @return l'ID del candidato.
+	 */
+	Integer getDocumentoId();
+
+	/**
+	 * Metodo per ricevere l'ID del sesso del candidato.
+	 * 
+	 * @return l'ID del sesso del candidato.
+	 */
+	byte[] getDocumento();
+
+	/**
+	 * Metodo per ricevere l'ID del sesso del candidato.
+	 * 
+	 * @return l'ID del sesso del candidato.
+	 */
+	String getEstensione();
+
+	/**
+	 * Metodo per ricevere l'ID del sesso del candidato.
+	 * 
+	 * @return l'ID del sesso del candidato.
+	 */
+	String getDescrizioneDocumento();
 }

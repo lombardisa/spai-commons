@@ -8,37 +8,16 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 public interface Sesso extends Serializable {
 	// METHODS-------------------------------------------
 	/**
-	 * Returns the ID_SESSO.
+	 * Returns the ID_CHIAVE.
 	 * 
-	 * @return: the ID_SESSO.
+	 * @return: the ID_CHIAVE.
 	 */
-	Integer getSessoId();
-
-	/**
-	 * Returns the ID_SOCIETA of ID_SESSO.
-	 * 
-	 * @return: the ID_SOCIETA of ID_SESSO.
-	 */
-	Integer getSocietaId();
-
-	/**
-	 * Returns the DESCRIZIONE of ID_SESSO.
-	 * 
-	 * @return: the DESCRIZIONE of ID_SESSO.
-	 */
-	String getDesc();
-
-	/**
-	 * Returns the ATTIVO of the ID_SESSO.
-	 * 
-	 * @return: the ATTIVO of the ID_SESSO.
-	 */
-	String getAttivo();
+	String getChiaveId();
 	
 	/**
-	 * Returns the CODICE of the ID_SESSO.
+	 * Returns the TESTO of the ID_CHIAVE.
 	 * 
-	 * @return: the CODICE of the ID_SESSO.
+	 * @return: the TESTO of the ID_CHIAVE.
 	 */
-	String getCodice();
+	String getTesto();
 }
