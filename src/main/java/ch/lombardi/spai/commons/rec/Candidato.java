@@ -42,7 +42,7 @@ public interface Candidato extends Serializable {
 	 * 
 	 * @return il link.
 	 */
-	String getLink();
+	String[] getLink();
 	
 	/**
 	 * Metodo per ricevere l'ID della lingua.
@@ -56,21 +56,14 @@ public interface Candidato extends Serializable {
 	 * 
 	 * @return l'ID della lingua.
 	 */
-	Integer getLinguaId();
+	String[] getLinguaId();
 
 	/**
 	 * Metodo per ricevere l'ID della lingua livello.
 	 * 
 	 * @return l'ID della lingua livello.
 	 */
-	Integer getLinguaLivelloId();
-
-	/**
-	 * Metodo per ricevere la lingua madre (S/N).
-	 * 
-	 * @return la lingua madre (S/N).
-	 */
-	String getLinguaMadre();
+	String[] getLinguaLivelloId();
 
 	/**
 	 * Metodo per ricevere la situazione lavorativa del candidato.
@@ -248,7 +241,7 @@ public interface Candidato extends Serializable {
 	 * 
 	 * @return l'ID del sesso del candidato.
 	 */
-	String getEstensione();
+	String getDocumentoEstensione();
 
 	/**
 	 * Metodo per ricevere l'ID del sesso del candidato.

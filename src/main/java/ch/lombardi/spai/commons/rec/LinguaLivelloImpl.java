@@ -7,8 +7,8 @@ public class LinguaLivelloImpl implements LinguaLivello {
 	private static final long serialVersionUID = 7093622546335418840L;
 
 	// VARIABILI
-	private Integer linguaLivelloId;
-	private String desc;
+	private String chiaveId;
+	private String testo;
 
 	/**
 	 * 
@@ -17,36 +17,31 @@ public class LinguaLivelloImpl implements LinguaLivello {
 		super();
 	}
 
-	/**
-	 * 
-	 * @param linguaLivelloId
-	 * @param desc
-	 */
-	public LinguaLivelloImpl(Integer linguaLivelloId, String desc) {
+	public LinguaLivelloImpl(String chiaveId, String testo) {
 		super();
-		this.linguaLivelloId = linguaLivelloId;
-		this.desc = desc;
+		this.chiaveId = chiaveId;
+		this.testo = testo;
 	}
 
-	public Integer getLinguaLivelloId() {
-		return linguaLivelloId;
+	public String getChiaveId() {
+		return chiaveId;
 	}
 
-	public String getDesc() {
-		return desc;
+	public String getTesto() {
+		return testo;
 	}
 
-	public void setLinguaLivelloId(Integer linguaLivelloId) {
-		this.linguaLivelloId = linguaLivelloId;
+	public void setChiaveId(String chiaveId) {
+		this.chiaveId = chiaveId;
 	}
 
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setTesto(String testo) {
+		this.testo = testo;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(desc, linguaLivelloId);
+		return Objects.hash(chiaveId, testo);
 	}
 
 	@Override
@@ -58,6 +53,6 @@ public class LinguaLivelloImpl implements LinguaLivello {
 		if (getClass() != obj.getClass())
 			return false;
 		LinguaLivelloImpl other = (LinguaLivelloImpl) obj;
-		return Objects.equals(desc, other.desc) && Objects.equals(linguaLivelloId, other.linguaLivelloId);
+		return Objects.equals(chiaveId, other.chiaveId) && Objects.equals(testo, other.testo);
 	}
 }

@@ -7,11 +7,8 @@ public class SondaggioImpl implements Sondaggio {
 	private static final long serialVersionUID = -2393711910011217184L;
 
 	// VARIABILI
-	private Integer sondaggioId;
-	private Integer societaId;
-	private String desc;
-	private String attivo;
-	private String codice;
+	private String chiaveId;
+	private String testo;
 
 	/**
 	 * 
@@ -20,66 +17,31 @@ public class SondaggioImpl implements Sondaggio {
 		super();
 	}
 
-	/**
-	 * 
-	 * @param sondaggioId
-	 * @param societaId
-	 * @param desc
-	 * @param attivo
-	 * @param codice
-	 */
-	public SondaggioImpl(Integer sondaggioId, Integer societaId, String desc, String attivo, String codice) {
+	public SondaggioImpl(String chiaveId, String testo) {
 		super();
-		this.sondaggioId = sondaggioId;
-		this.societaId = societaId;
-		this.desc = desc;
-		this.attivo = attivo;
-		this.codice = codice;
+		this.chiaveId = chiaveId;
+		this.testo = testo;
 	}
 
-	public Integer getSondaggioId() {
-		return sondaggioId;
+	public String getChiaveId() {
+		return chiaveId;
 	}
 
-	public Integer getSocietaId() {
-		return societaId;
+	public String getTesto() {
+		return testo;
 	}
 
-	public String getDesc() {
-		return desc;
+	public void setChiaveId(String chiaveId) {
+		this.chiaveId = chiaveId;
 	}
 
-	public String getAttivo() {
-		return attivo;
-	}
-
-	public String getCodice() {
-		return codice;
-	}
-
-	public void setSondaggioId(Integer sondaggioId) {
-		this.sondaggioId = sondaggioId;
-	}
-
-	public void setSocietaId(Integer societaId) {
-		this.societaId = societaId;
-	}
-
-	public void setDesc(String desc) {
-		this.desc = desc;
-	}
-
-	public void setAttivo(String attivo) {
-		this.attivo = attivo;
-	}
-
-	public void setCodice(String codice) {
-		this.codice = codice;
+	public void setTesto(String testo) {
+		this.testo = testo;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(attivo, codice, desc, societaId, sondaggioId);
+		return Objects.hash(chiaveId, testo);
 	}
 
 	@Override
@@ -91,8 +53,6 @@ public class SondaggioImpl implements Sondaggio {
 		if (getClass() != obj.getClass())
 			return false;
 		SondaggioImpl other = (SondaggioImpl) obj;
-		return Objects.equals(attivo, other.attivo) && Objects.equals(codice, other.codice)
-				&& Objects.equals(desc, other.desc) && Objects.equals(societaId, other.societaId)
-				&& Objects.equals(sondaggioId, other.sondaggioId);
+		return Objects.equals(chiaveId, other.chiaveId) && Objects.equals(testo, other.testo);
 	}
 }

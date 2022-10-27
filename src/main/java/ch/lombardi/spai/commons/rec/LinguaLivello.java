@@ -6,18 +6,17 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 @JsonDeserialize(as = LinguaLivelloImpl.class)
 public interface LinguaLivello extends Serializable {
-	// METHODS-------------------------------------------
 	/**
-	 * Returns the ID_LINGUA_LIVELLO.
+	 * Returns the ID_CHIAVE.
 	 * 
-	 * @return: the ID_LINGUA_LIVELLO.
+	 * @return: the ID_CHIAVE.
 	 */
-	Integer getLinguaLivelloId();
+	String getChiaveId();
 
 	/**
-	 * Returns the DESCRIZIONE of the ID_LINGUA_LIVELLO.
+	 * Returns the TESTO of the ID_CHIAVE.
 	 * 
-	 * @return: the DESCRIZIONE of the ID_LINGUA_LIVELLO.
+	 * @return: the TESTO of the ID_CHIAVE.
 	 */
-	String getDesc();
+	String getTesto();
 }

@@ -6,39 +6,17 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 @JsonDeserialize(as = SondaggioImpl.class)
 public interface Sondaggio extends Serializable {
-	// METHODS-------------------------------------------
 	/**
-	 * Returns the ID_SONDAGGIO.
+	 * Returns the ID_CHIAVE.
 	 * 
-	 * @return: the ID_SONDAGGIO.
+	 * @return: the ID_CHIAVE.
 	 */
-	Integer getSondaggioId();
+	String getChiaveId();
 
 	/**
-	 * Returns the ID_SOCIETA of ID_SONDAGGIO.
+	 * Returns the TESTO of the ID_CHIAVE.
 	 * 
-	 * @return: the ID_SOCIETA of ID_SONDAGGIO.
+	 * @return: the TESTO of the ID_CHIAVE.
 	 */
-	Integer getSocietaId();
-
-	/**
-	 * Returns the DESCRIZIONE of ID_SONDAGGIO.
-	 * 
-	 * @return: the DESCRIZIONE of ID_SONDAGGIO.
-	 */
-	String getDesc();
-
-	/**
-	 * Returns the ATTIVO of the ID_SONDAGGIO.
-	 * 
-	 * @return: the ATTIVO of the ID_SONDAGGIO.
-	 */
-	String getAttivo();
-
-	/**
-	 * Returns the CODICE of the ID_SONDAGGIO.
-	 * 
-	 * @return: the CODICE of the ID_SONDAGGIO.
-	 */
-	String getCodice();
+	String getTesto();
 }
