@@ -12,7 +12,7 @@ import java.util.Objects;
 public class BenefitImpl implements Benefit {
 
 	/**
-	 * UID: technical internal identification number.
+	 * UID: technical internal identification number (serialization).
 	 */
 	private static final long serialVersionUID = 565083839508288574L;
 
@@ -23,7 +23,7 @@ public class BenefitImpl implements Benefit {
 	private String iconaCodice;
 
 	/**
-	 * Default empty constructor (necessary for Jackson serialization).
+	 * Default empty constructor.
 	 */
 	public BenefitImpl() {
 		super();
@@ -110,7 +110,8 @@ public class BenefitImpl implements Benefit {
 	}
 
 	/**
-	 * 
+	 * Returns a hash code value for the object. This method is supported for the
+	 * benefit of hash tables such as those provided by HashMap.
 	 */
 	@Override
 	public int hashCode() {
@@ -122,7 +123,7 @@ public class BenefitImpl implements Benefit {
 	}
 
 	/**
-	 * 
+	 * Compares the IDs to see if the values are exactly the same Object.
 	 */
 	@Override
 	public boolean equals(Object obj) {

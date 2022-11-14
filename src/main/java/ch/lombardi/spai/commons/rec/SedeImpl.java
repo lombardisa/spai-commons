@@ -12,7 +12,7 @@ import java.util.Objects;
 public class SedeImpl implements Sede {
 
 	/**
-	 * UID: technical internal identification number.
+	 * UID: technical internal identification number (serialization).
 	 */
 	private static final long serialVersionUID = 4286757739061690872L;
 
@@ -34,7 +34,7 @@ public class SedeImpl implements Sede {
 	private String nazione;
 
 	/**
-	 * Default empty constructor (necessary for Jackson serialization).
+	 * Default empty constructor.
 	 */
 	public SedeImpl() {
 		super();
@@ -321,7 +321,8 @@ public class SedeImpl implements Sede {
 	}
 
 	/**
-	 * 
+	 * Returns a hash code value for the object. This method is supported for the
+	 * benefit of hash tables such as those provided by HashMap.
 	 */
 	@Override
 	public int hashCode() {
@@ -330,7 +331,7 @@ public class SedeImpl implements Sede {
 	}
 
 	/**
-	 * 
+	 * Compares the IDs to see if the values are exactly the same Object.
 	 */
 	@Override
 	public boolean equals(Object obj) {

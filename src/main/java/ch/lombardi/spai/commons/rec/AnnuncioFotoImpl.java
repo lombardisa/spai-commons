@@ -12,7 +12,7 @@ import java.util.Objects;
 public class AnnuncioFotoImpl implements AnnuncioFoto {
 
 	/**
-	 * UID: technical internal identification number.
+	 * UID: technical internal identification number (serialization).
 	 */
 	private static final long serialVersionUID = 8297759014733666276L;
 
@@ -26,7 +26,7 @@ public class AnnuncioFotoImpl implements AnnuncioFoto {
 	private String desc;
 
 	/**
-	 * Default empty constructor (necessary for Jackson serialization).
+	 * Default empty constructor.
 	 */
 	public AnnuncioFotoImpl() {
 		super();
@@ -168,7 +168,8 @@ public class AnnuncioFotoImpl implements AnnuncioFoto {
 	}
 
 	/**
-	 * 
+	 * Returns a hash code value for the object. This method is supported for the
+	 * benefit of hash tables such as those provided by HashMap.
 	 */
 	@Override
 	public int hashCode() {
@@ -180,7 +181,7 @@ public class AnnuncioFotoImpl implements AnnuncioFoto {
 	}
 
 	/**
-	 * 
+	 * Compares the IDs to see if the values are exactly the same Object.
 	 */
 	@Override
 	public boolean equals(Object obj) {

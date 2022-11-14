@@ -11,7 +11,7 @@ import java.util.Objects;
 public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 
 	/**
-	 * UID: technical internal identification number.
+	 * UID: technical internal identification number (serialization).
 	 */
 	private static final long serialVersionUID = 2676876379619731666L;
 
@@ -21,7 +21,7 @@ public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 	private String desc;
 
 	/**
-	 * Default empty constructor (necessary for Jackson serialization).
+	 * Default empty constructor.
 	 */
 	public AnnuncioEsperienzaImpl() {
 		super();
@@ -91,7 +91,8 @@ public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 	}
 
 	/**
-	 * 
+	 * Returns a hash code value for the object. This method is supported for the
+	 * benefit of hash tables such as those provided by HashMap.
 	 */
 	@Override
 	public int hashCode() {
@@ -99,7 +100,7 @@ public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 	}
 
 	/**
-	 * 
+	 * Compares the IDs to see if the values are exactly the same Object.
 	 */
 	@Override
 	public boolean equals(Object obj) {

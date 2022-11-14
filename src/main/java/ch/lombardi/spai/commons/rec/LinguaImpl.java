@@ -11,7 +11,7 @@ import java.util.Objects;
 public class LinguaImpl implements Lingua {
 
 	/**
-	 * UID: technical internal identification number.
+	 * UID: technical internal identification number (serialization).
 	 */
 	private static final long serialVersionUID = -5639711708140896060L;
 
@@ -20,7 +20,7 @@ public class LinguaImpl implements Lingua {
 	private String desc;
 
 	/**
-	 * Default empty constructor (necessary for Jackson serialization).
+	 * Default empty constructor.
 	 */
 	public LinguaImpl() {
 		super();
@@ -71,7 +71,8 @@ public class LinguaImpl implements Lingua {
 	}
 
 	/**
-	 * 
+	 * Returns a hash code value for the object. This method is supported for the
+	 * benefit of hash tables such as those provided by HashMap.
 	 */
 	@Override
 	public int hashCode() {
@@ -79,7 +80,7 @@ public class LinguaImpl implements Lingua {
 	}
 
 	/**
-	 * 
+	 * Compares the IDs to see if the values are exactly the same Object.
 	 */
 	@Override
 	public boolean equals(Object obj) {

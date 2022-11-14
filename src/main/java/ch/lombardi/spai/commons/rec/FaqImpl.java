@@ -11,7 +11,7 @@ import java.util.Objects;
 public class FaqImpl implements Faq {
 
 	/**
-	 * UID: technical internal identification number.
+	 * UID: technical internal identification number (serialization).
 	 */
 	private static final long serialVersionUID = -2664975307331891009L;
 
@@ -21,7 +21,7 @@ public class FaqImpl implements Faq {
 	private String risposta;
 
 	/**
-	 * Default empty constructor (necessary for Jackson serialization).
+	 * Default empty constructor.
 	 */
 	public FaqImpl() {
 		super();
@@ -90,7 +90,8 @@ public class FaqImpl implements Faq {
 	}
 
 	/**
-	 * 
+	 * Returns a hash code value for the object. This method is supported for the
+	 * benefit of hash tables such as those provided by HashMap.
 	 */
 	@Override
 	public int hashCode() {
@@ -98,7 +99,7 @@ public class FaqImpl implements Faq {
 	}
 
 	/**
-	 * 
+	 * Compares the IDs to see if the values are exactly the same Object.
 	 */
 	@Override
 	public boolean equals(Object obj) {

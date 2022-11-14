@@ -11,7 +11,7 @@ import java.util.Objects;
 public class AreaImpl implements Area {
 
 	/**
-	 * UID: technical internal identification number.
+	 * UID: technical internal identification number (serialization).
 	 */
 	private static final long serialVersionUID = -504620104046972018L;
 
@@ -20,7 +20,7 @@ public class AreaImpl implements Area {
 	private String testo;
 
 	/**
-	 * Default empty constructor (necessary for Jackson serialization).
+	 * Default empty constructor.
 	 */
 	public AreaImpl() {
 		super();
@@ -71,7 +71,8 @@ public class AreaImpl implements Area {
 	}
 
 	/**
-	 * 
+	 * Returns a hash code value for the object. This method is supported for the
+	 * benefit of hash tables such as those provided by HashMap.
 	 */
 	@Override
 	public int hashCode() {
@@ -79,7 +80,7 @@ public class AreaImpl implements Area {
 	}
 
 	/**
-	 * 
+	 * Compares the IDs to see if the values are exactly the same Object.
 	 */
 	@Override
 	public boolean equals(Object obj) {

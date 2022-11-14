@@ -11,7 +11,7 @@ import java.util.Objects;
 public class SituazioneLavorativaImpl implements SituazioneLavorativa {
 
 	/**
-	 * UID: technical internal identification number.
+	 * UID: technical internal identification number (serialization).
 	 */
 	private static final long serialVersionUID = 4345981187877890717L;
 
@@ -20,7 +20,7 @@ public class SituazioneLavorativaImpl implements SituazioneLavorativa {
 	private String testo;
 
 	/**
-	 * Default empty constructor (necessary for Jackson serialization).
+	 * Default empty constructor.
 	 */
 	public SituazioneLavorativaImpl() {
 		super();
@@ -71,7 +71,8 @@ public class SituazioneLavorativaImpl implements SituazioneLavorativa {
 	}
 
 	/**
-	 * 
+	 * Returns a hash code value for the object. This method is supported for the
+	 * benefit of hash tables such as those provided by HashMap.
 	 */
 	@Override
 	public int hashCode() {
@@ -79,7 +80,7 @@ public class SituazioneLavorativaImpl implements SituazioneLavorativa {
 	}
 
 	/**
-	 * 
+	 * Compares the IDs to see if the values are exactly the same Object.
 	 */
 	@Override
 	public boolean equals(Object obj) {

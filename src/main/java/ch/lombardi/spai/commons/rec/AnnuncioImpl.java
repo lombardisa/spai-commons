@@ -14,7 +14,7 @@ import java.util.Objects;
 public class AnnuncioImpl implements Annuncio {
 
 	/**
-	 * UID: technical internal identification number.
+	 * UID: technical internal identification number (serialization).
 	 */
 	private static final long serialVersionUID = 7564964076463242656L;
 
@@ -60,7 +60,7 @@ public class AnnuncioImpl implements Annuncio {
 	private byte[] foto;
 
 	/**
-	 * Default empty constructor (necessary for Jackson serialization).
+	 * Default empty constructor.
 	 */
 	public AnnuncioImpl() {
 		super();
@@ -784,7 +784,8 @@ public class AnnuncioImpl implements Annuncio {
 	}
 
 	/**
-	 * 
+	 * Returns a hash code value for the object. This method is supported for the
+	 * benefit of hash tables such as those provided by HashMap.
 	 */
 	@Override
 	public int hashCode() {
@@ -802,7 +803,7 @@ public class AnnuncioImpl implements Annuncio {
 	}
 
 	/**
-	 * 
+	 * Compares the IDs to see if the values are exactly the same Object.
 	 */
 	@Override
 	public boolean equals(Object obj) {

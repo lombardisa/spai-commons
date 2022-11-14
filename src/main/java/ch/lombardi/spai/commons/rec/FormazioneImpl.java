@@ -11,7 +11,7 @@ import java.util.Objects;
 public class FormazioneImpl implements Formazione {
 
 	/**
-	 * UID: technical internal identification number.
+	 * UID: technical internal identification number (serialization).
 	 */
 	private static final long serialVersionUID = -1238637146357934548L;
 
@@ -20,7 +20,7 @@ public class FormazioneImpl implements Formazione {
 	private String testo;
 
 	/**
-	 * Default empty constructor (necessary for Jackson serialization).
+	 * Default empty constructor.
 	 */
 	public FormazioneImpl() {
 		super();
@@ -29,8 +29,8 @@ public class FormazioneImpl implements Formazione {
 	/**
 	 * Costructor of the formazione requested to the candidates.
 	 * 
-	 * @param chiaveId
-	 * @param testo
+	 * @param chiaveId: the ID_CHIAVE.
+	 * @param testo: the TESTO.
 	 */
 	public FormazioneImpl(String chiaveId, String testo) {
 		super();
@@ -71,7 +71,9 @@ public class FormazioneImpl implements Formazione {
 	}
 
 	/**
-	 * 
+	 * Returns a hash code value for the object. This method is supported for the
+	 * benefit of hash tables such as those provided by HashMap.
+
 	 */
 	@Override
 	public int hashCode() {
@@ -79,7 +81,7 @@ public class FormazioneImpl implements Formazione {
 	}
 
 	/**
-	 * 
+	 * Compares the IDs to see if the values are exactly the same Object.
 	 */
 	@Override
 	public boolean equals(Object obj) {
