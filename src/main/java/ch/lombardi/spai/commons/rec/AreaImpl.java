@@ -2,48 +2,85 @@ package ch.lombardi.spai.commons.rec;
 
 import java.util.Objects;
 
+/**
+ * Java Class: AreaImpl.java
+ * 
+ * @author Matteo Maddes
+ * @version 28.11.2022
+ */
 public class AreaImpl implements Area {
 
+	/**
+	 * UID: technical internal identification number.
+	 */
 	private static final long serialVersionUID = -504620104046972018L;
 
-	// VARIABILI
+	// VARIABLES
 	private String chiaveId;
 	private String testo;
 
 	/**
-	 * Default empty constructor (necessary for Jackson serialization)
+	 * Default empty constructor (necessary for Jackson serialization).
 	 */
 	public AreaImpl() {
 		super();
 	}
 
+	/**
+	 * Costructor of the area of an annuncio.
+	 * 
+	 * @param chiaveId: the ID_CHIAVE.
+	 * @param testo:    the TESTO.
+	 */
 	public AreaImpl(String chiaveId, String testo) {
 		super();
 		this.chiaveId = chiaveId;
 		this.testo = testo;
 	}
 
+	/**
+	 * Gets the ID_CHIAVE.
+	 */
 	public String getChiaveId() {
 		return chiaveId;
 	}
 
+	/**
+	 * Gets the TESTO.
+	 */
 	public String getTesto() {
 		return testo;
 	}
 
+	/**
+	 * Sets the ID_CHIAVE.
+	 * 
+	 * @param chiaveId: Sets the ID_CHIAVE.
+	 */
 	public void setChiaveId(String chiaveId) {
 		this.chiaveId = chiaveId;
 	}
 
+	/**
+	 * Sets the TESTO.
+	 * 
+	 * @param testo: the TESTO.
+	 */
 	public void setTesto(String testo) {
 		this.testo = testo;
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public int hashCode() {
 		return Objects.hash(chiaveId, testo);
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

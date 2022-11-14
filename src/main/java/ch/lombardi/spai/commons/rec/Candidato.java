@@ -5,248 +5,250 @@ import java.time.LocalDate;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+/**
+ * Java Interface: Candidato.java
+ * 
+ * @author Matteo Maddes
+ * @version 28.11.2022
+ */
 @JsonDeserialize(as = CandidatoImpl.class)
 public interface Candidato extends Serializable {
 
-	// METHODS-------------------------------------------
 	/**
-	 * Metodo per ricevere l'ID del candidato.
+	 * Returns the ID_CANDIDATO.
 	 * 
-	 * @return l'ID del candidato.
+	 * @return the ID_CANDIDATO.
 	 */
 	Integer getCandidatoId();
 
 	/**
-	 * Metodo per ricevere l'ID del sesso del candidato.
+	 * Returns the ID_SESSO.
 	 * 
-	 * @return l'ID del sesso del candidato.
+	 * @return the ID_SESSO.
 	 */
 	Integer getSessoId();
 
 	/**
-	 * Metodo per ricevere l'ID del sondaggio del candidato.
+	 * Returns the ID_SONDAGGIO.
 	 * 
-	 * @return l'ID del sondaggio del candidato.
+	 * @return the ID_SONDAGGIO.
 	 */
 	Integer getSondaggioId();
 
 	/**
-	 * Metodo per ricevere l'ID del link.
+	 * Returns the ID_LINK.
 	 * 
-	 * @return l'ID del link.
+	 * @return the ID_LINK.
 	 */
 	Integer getLinkId();
 
 	/**
-	 * Metodo per ricevere il link.
+	 * Returns the LINK.
 	 * 
-	 * @return il link.
+	 * @return the LINK.
 	 */
 	String[] getLink();
-	
+
 	/**
-	 * Metodo per ricevere l'ID della lingua.
+	 * Returns the ID_CANDIDATO_LINGUA.
 	 * 
-	 * @return l'ID della lingua.
+	 * @return the ID_CANDIDATO_LINGUA.
 	 */
 	Integer getCandidatoLinguaId();
 
 	/**
-	 * Metodo per ricevere l'ID della lingua.
+	 * Returns the ID_LINGUA.
 	 * 
-	 * @return l'ID della lingua.
+	 * @return the ID_LINGUA.
 	 */
 	String[] getLinguaId();
 
 	/**
-	 * Metodo per ricevere l'ID della lingua livello.
+	 * Returns the ID_LINGUA_LIVELLO.
 	 * 
-	 * @return l'ID della lingua livello.
+	 * @return the ID_LINGUA_LIVELLO.
 	 */
 	String[] getLinguaLivelloId();
 
 	/**
-	 * Metodo per ricevere la situazione lavorativa del candidato.
+	 * Returns the ID_SITUAZIONE_LAVORATIVA.
 	 * 
-	 * @return la situazione lavorativa del candidato.
+	 * @return the ID_SITUAZIONE_LAVORATIVA.
 	 */
 	Integer getSituazioneLavorativaId();
 
 	/**
-	 * Metodo per ricevere l'ID della formazione del candidato.
+	 * Returns the ID_FORMAZIONE.
 	 * 
-	 * @return l'ID della formazione del candidato.
+	 * @return the ID_FORMAZIONE.
 	 */
 	Integer getFormazioneId();
 
 	/**
-	 * Metodo per ricevere l'ID dello stato del candidato.
+	 * Returns the ID_STATO.
 	 * 
-	 * @return l'ID dello stato del candidato.
+	 * @return the ID_STATO.
 	 */
 	Integer getStatoId();
 
 	/**
-	 * Metodo per ricevere l'ID dell'annuncio del candidato.
+	 * Returns the ID_ANNUNCIO.
 	 * 
-	 * @return l'ID dell'annuncio del candidato.
+	 * @return the ID_ANNUNCIO.
 	 */
 	Integer getAnnuncioId();
 
 	/**
-	 * Metodo per ricevere l'ID della motivazione scarto del candidato.
+	 * Returns the ID_MOTIVAZIONE_SCARTO.
 	 * 
-	 * @return l'ID della motivazione scarto del candidato.
+	 * @return the ID_MOTIVAZIONE_SCARTO.
 	 */
 	Integer getMotivazioneScartoId();
 
 	/**
-	 * Metodo per ricevere la data di formazione del candidato.
+	 * Returns the DATA_FORMAZIONE.
 	 * 
-	 * @return la data di formazione del candidato.
+	 * @return the DATA_FORMAZIONE.
 	 */
 	LocalDate getDataFormazione();
 
 	/**
-	 * Metodo per ricevere il nome del candidato.
+	 * Returns the NOME.
 	 * 
-	 * @return il nome del candidato.
+	 * @return the NOME.
 	 */
 	String getNome();
 
 	/**
-	 * Metodo per ricevere il cognome del candidato.
+	 * Returns the COGNOME.
 	 * 
-	 * @return il cognome del candidato.
+	 * @return the COGNOME.
 	 */
 	String getCognome();
 
 	/**
-	 * Metodo per ricevere la data di nascita del candidato.
+	 * Returns the NASCITA.
 	 * 
-	 * @return la data di nascita del candidato.
+	 * @return the NASCITA.
 	 */
 	LocalDate getNascita();
 
 	/**
-	 * Metodo per ricevere l'indirizzo email del candidato.
+	 * Returns the E_MAIL.
 	 * 
-	 * @return l'indirizzo email del candidato.
+	 * @return the E_MAIL.
 	 */
 	String getEmail();
 
 	/**
-	 * Metodo per ricevere il CV del candidato.
+	 * Returns the CV.
 	 * 
-	 * @return il CV del candidato.
+	 * @return the CV.
 	 */
 	byte[] getCv();
 
 	/**
-	 * Metodo per ricevere la conferma (S/N) di accettazione termini da parte del
-	 * candidato.
+	 * Returns the CHECK_TERMINI (S/N).
 	 * 
-	 * @return la conferma (S/N) di accettazione termini da parte del candidato.
+	 * @return the CHECK_TERMINI (S/N).
 	 */
 	String getCheckTermini();
 
 	/**
-	 * Metodo per ricevere la conferma (S/N) di accettazione autorizzazione da parte
-	 * del candidato.
+	 * Returns the CHECK_AUTORIIZZAZIONE (S/N).
 	 * 
-	 * @return la conferma (S/N) di accettazione autorizzazione da parte del
-	 *         candidato.
+	 * @return the CHECK_AUTORIIZZAZIONE (S/N).
 	 */
 	String getCheckAutorizzazione();
 
 	/**
-	 * Metodo per ricevere il numero di telefono del candidato.
+	 * Returns the TELEFONO.
 	 * 
-	 * @return il numero di telefono del candidato.
+	 * @return the TELEFONO.
 	 */
 	String getTelefono();
 
 	/**
-	 * Metodo per ricevere il messaggio del candidato.
+	 * Returns the MESSAGGIO.
 	 * 
-	 * @return il messaggio del candidato.
+	 * @return the MESSAGGIO.
 	 */
 	String getMessaggio();
 
 	/**
-	 * Metodo per ricevere il messaggio vocale del candidato.
+	 * Returns the VOCALE.
 	 * 
-	 * @return il messaggio vocale del candidato.
+	 * @return the VOCALE.
 	 */
 	byte[] getVocale();
 
 	/**
-	 * Metodo per ricevere l'estenzione del CV del candidato.
+	 * Returns the CV_ESTENSIONE.
 	 * 
-	 * @return l'estenzione del CV del candidato.
+	 * @return the CV_ESTENSIONE.
 	 */
 	String getCvEstensione();
 
 	/**
-	 * Metodo per ricevere l'estenzione del messaggio vocale del candidato.
+	 * Returns the VOCALE_ESTENSIONE.
 	 * 
-	 * @return l'estenzione del messaggio vocale del candidato.
+	 * @return the VOCALE_ESTENSIONE.
 	 */
 	String getVocaleEstensione();
 
 	/**
-	 * Metodo per ricevere la prima valutazione del candidato.
+	 * Returns the VALUTAZIONE_PRIMA.
 	 * 
-	 * @return la prima valutazione del candidato.
+	 * @return the VALUTAZIONE_PRIMA.
 	 */
 	String getValutazionePrima();
 
 	/**
-	 * Metodo per ricevere la seconda valutazione del candidato.
+	 * Returns the VALUTAZIONE_SECONDA.
 	 * 
-	 * @return la seconda valutazione del candidato.
+	 * @return the VALUTAZIONE_SECONDA.
 	 */
 	String getValutazioneSeconda();
 
 	/**
-	 * Metodo per ricevere la seconda valutazione del candidato.
+	 * Returns the FEEDBACK_INTERNO.
 	 * 
-	 * @return la seconda valutazione del candidato.
+	 * @return the FEEDBACK_INTERNO.
 	 */
 	String getFeedbackInterno();
 
 	/**
-	 * Metodo per ricevere la seconda valutazione del candidato.
+	 * Returns the INFORMATO (S/N).
 	 * 
-	 * @return la seconda valutazione del candidato.
+	 * @return the INFORMATO (S/N).
 	 */
 	String getInformato();
 
 	/**
-	 * Metodo per ricevere l'ID del candidato.
+	 * Returns the ID_DOCUMENTO.
 	 * 
-	 * @return l'ID del candidato.
+	 * @return the ID_DOCUMENTO.
 	 */
 	Integer getDocumentoId();
 
 	/**
-	 * Metodo per ricevere l'ID del sesso del candidato.
+	 * Returns the DOCUMENTO.
 	 * 
-	 * @return l'ID del sesso del candidato.
+	 * @return the DOCUMENTO.
 	 */
 	byte[] getDocumento();
 
 	/**
-	 * Metodo per ricevere l'ID del sesso del candidato.
+	 * Returns the DOCUMENTO_ESTENSIONE.
 	 * 
-	 * @return l'ID del sesso del candidato.
+	 * @return DOCUMENTO_ESTENSIONE.
 	 */
 	String getDocumentoEstensione();
 
 	/**
-	 * Metodo per ricevere l'ID del sesso del candidato.
+	 * Returns the DESCRIZIONE of the DOCUMENTO.
 	 * 
-	 * @return l'ID del sesso del candidato.
+	 * @return the DESCRIZIONE of the DOCUMENTO.
 	 */
 	String getDescrizioneDocumento();
 }

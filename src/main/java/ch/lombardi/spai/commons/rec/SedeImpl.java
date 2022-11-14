@@ -3,11 +3,20 @@ package ch.lombardi.spai.commons.rec;
 import java.time.LocalDate;
 import java.util.Objects;
 
+/**
+ * Java Class: SedeImpl.java
+ * 
+ * @author Matteo Maddes
+ * @version 28.11.2022
+ */
 public class SedeImpl implements Sede {
 
+	/**
+	 * UID: technical internal identification number.
+	 */
 	private static final long serialVersionUID = 4286757739061690872L;
 
-	// VARIABILI
+	// VARIABLES
 	private Integer sedeId;
 	private Integer societaId;
 	private String descSede;
@@ -25,29 +34,30 @@ public class SedeImpl implements Sede {
 	private String nazione;
 
 	/**
-	 * Default empty constructor (necessary for Jackson serialization)
+	 * Default empty constructor (necessary for Jackson serialization).
 	 */
 	public SedeImpl() {
 		super();
 	}
 
 	/**
+	 * Costructor of the sede of the annuncio.
 	 * 
-	 * @param sedeId
-	 * @param societaId
-	 * @param descSede
-	 * @param nomeIndirizzo
-	 * @param indirizzo
-	 * @param localita
-	 * @param dataChiusura
-	 * @param nap
-	 * @param noTelefono
-	 * @param eMail
-	 * @param timeZone
-	 * @param descEstesa
-	 * @param eMailHr
-	 * @param nazioneId
-	 * @param nazione
+	 * @param sedeId:        the ID_SEDE.
+	 * @param societaId:     the ID_SOCIETA.
+	 * @param descSede:      the DESCRIZIONE.
+	 * @param nomeIndirizzo: the NOME_INDIRIZZO.
+	 * @param indirizzo:     the INDIRIZZO.
+	 * @param localita:      the LOCALITA.
+	 * @param dataChiusura:  the DATA_CHIUSURA.
+	 * @param nap:           the NAP.
+	 * @param noTelefono:    the NO_TELEFONO.
+	 * @param eMail:         the E_MAIL.
+	 * @param timeZone:      the TIME_ZONE.
+	 * @param descEstesa:    the DESCRIZIONE_ESTESA.
+	 * @param eMailHr:       the E_MAIL_HR.
+	 * @param nazioneId:     the ID_NAZIONE.
+	 * @param nazione:       the NAZIONE.
 	 */
 	public SedeImpl(Integer sedeId, Integer societaId, String descSede, String nomeIndirizzo, String indirizzo,
 			String localita, LocalDate dataChiusura, String nap, String noTelefono, String eMail, String timeZone,
@@ -70,132 +80,258 @@ public class SedeImpl implements Sede {
 		this.nazione = nazione;
 	}
 
+	/**
+	 * Gets the ID_SEDE.
+	 */
 	public Integer getSedeId() {
 		return sedeId;
 	}
 
+	/**
+	 * Gets the ID_SOCIETA.
+	 */
 	public Integer getSocietaId() {
 		return societaId;
 	}
 
+	/**
+	 * Gets the DESCRIZIONE.
+	 */
 	public String getDescSede() {
 		return descSede;
 	}
 
+	/**
+	 * Gets the NOME_INDIRIZZO.
+	 */
 	public String getNomeIndirizzo() {
 		return nomeIndirizzo;
 	}
 
+	/**
+	 * Gets the INDIRIZZO.
+	 */
 	public String getIndirizzo() {
 		return indirizzo;
 	}
 
+	/**
+	 * Gets the LOCALITA.
+	 */
 	public String getLocalita() {
 		return localita;
 	}
 
+	/**
+	 * Gets the DATA_CHIUSURA.
+	 */
 	public LocalDate getDataChiusura() {
 		return dataChiusura;
 	}
 
+	/**
+	 * Gets the NAP.
+	 */
 	public String getNap() {
 		return nap;
 	}
 
+	/**
+	 * Gets the NO_TELEFONO.
+	 */
 	public String getNoTelefono() {
 		return noTelefono;
 	}
 
+	/**
+	 * Gets the E_MAIL.
+	 */
 	public String geteMail() {
 		return eMail;
 	}
 
+	/**
+	 * Gets the TIME_ZONE.
+	 */
 	public String getTimeZone() {
 		return timeZone;
 	}
 
+	/**
+	 * Gets the DESCRIZIONE_ESTESA.
+	 */
 	public String getDescEstesa() {
 		return descEstesa;
 	}
 
+	/**
+	 * Gets the E_MAIL_HR.
+	 */
 	public String geteMailHr() {
 		return eMailHr;
 	}
 
+	/**
+	 * Gets the ID_NAZIONE.
+	 */
 	public Integer getNazioneId() {
 		return nazioneId;
 	}
 
+	/**
+	 * Gets the NAZIONE.
+	 */
 	public String getNazione() {
 		return nazione;
 	}
 
+	/**
+	 * Sets the ID_SEDE.
+	 * 
+	 * @param sedeId: the ID_SEDE.
+	 */
 	public void setSedeId(Integer sedeId) {
 		this.sedeId = sedeId;
 	}
 
+	/**
+	 * Sets the ID_SOCIETA.
+	 * 
+	 * @param societaId: the ID_SOCIETA.
+	 */
 	public void setSocietaId(Integer societaId) {
 		this.societaId = societaId;
 	}
 
+	/**
+	 * Sets the DESCRIZIONE.
+	 * 
+	 * @param descSede: the DESCRIZIONE.
+	 */
 	public void setDescSede(String descSede) {
 		this.descSede = descSede;
 	}
 
+	/**
+	 * Sets the NOME_INDIRIZZO.
+	 * 
+	 * @param nomeIndirizzo: the NOME_INDIRIZZO.
+	 */
 	public void setNomeIndirizzo(String nomeIndirizzo) {
 		this.nomeIndirizzo = nomeIndirizzo;
 	}
 
+	/**
+	 * Sets the INDIRIZZO.
+	 * 
+	 * @param indirizzo: the INDIRIZZO.
+	 */
 	public void setIndirizzo(String indirizzo) {
 		this.indirizzo = indirizzo;
 	}
 
+	/**
+	 * Sets the LOCALITA.
+	 * 
+	 * @param localita: the LOCALITA.
+	 */
 	public void setLocalita(String localita) {
 		this.localita = localita;
 	}
 
+	/**
+	 * Sets the DATA_CHIUSURA.
+	 * 
+	 * @param dataChiusura: the DATA_CHIUSURA.
+	 */
 	public void setDataChiusura(LocalDate dataChiusura) {
 		this.dataChiusura = dataChiusura;
 	}
 
+	/**
+	 * Sets the NAP.
+	 * 
+	 * @param nap: the NAP.
+	 */
 	public void setNap(String nap) {
 		this.nap = nap;
 	}
 
+	/**
+	 * Sets the NO_TELEFONO.
+	 * 
+	 * @param noTelefono: the NO_TELEFONO.
+	 */
 	public void setNoTelefono(String noTelefono) {
 		this.noTelefono = noTelefono;
 	}
 
+	/**
+	 * Sets the E_MAIL.
+	 * 
+	 * @param eMail: the E_MAIL.
+	 */
 	public void seteMail(String eMail) {
 		this.eMail = eMail;
 	}
 
+	/**
+	 * Sets the TIME_ZONE.
+	 * 
+	 * @param timeZone: the TIME_ZONE.
+	 */
 	public void setTimeZone(String timeZone) {
 		this.timeZone = timeZone;
 	}
 
+	/**
+	 * Sets the DESCRIZIONE_ESTESA.
+	 * 
+	 * @param descEstesa: the DESCRIZIONE_ESTESA.
+	 */
 	public void setDescEstesa(String descEstesa) {
 		this.descEstesa = descEstesa;
 	}
 
+	/**
+	 * Sets the E_MAIL_HR.
+	 * 
+	 * @param eMailHr: the E_MAIL_HR.
+	 */
 	public void seteMailHr(String eMailHr) {
 		this.eMailHr = eMailHr;
 	}
 
+	/**
+	 * Sets the ID_NAZIONE.
+	 * 
+	 * @param nazioneId: the ID_NAZIONE.
+	 */
 	public void setNazioneId(Integer nazioneId) {
 		this.nazioneId = nazioneId;
 	}
 
+	/**
+	 * Sets the NAZIONE.
+	 * 
+	 * @param nazione: the NAZIONE.
+	 */
 	public void setNazione(String nazione) {
 		this.nazione = nazione;
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public int hashCode() {
 		return Objects.hash(dataChiusura, descEstesa, descSede, eMail, eMailHr, indirizzo, localita, nap, nazione,
 				nazioneId, noTelefono, nomeIndirizzo, sedeId, societaId, timeZone);
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

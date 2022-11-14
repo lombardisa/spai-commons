@@ -4,10 +4,20 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Objects;
 
+/**
+ * Java Class: CandidatoImpl.java
+ * 
+ * @author Matteo Maddes
+ * @version 28.11.2022
+ */
 public class CandidatoImpl implements Candidato {
 
+	/**
+	 * UID: technical internal identification number.
+	 */
 	private static final long serialVersionUID = -2903163788258047228L;
 
+	// VARIABLES
 	private Integer candidatoId;
 	private Integer sessoId;
 	private Integer sondaggioId;
@@ -43,7 +53,9 @@ public class CandidatoImpl implements Candidato {
 	private String[] linguaId;
 	private String[] linguaLivelloId;
 
-	// Questo override non contiene gli array: link, lingua.
+	/**
+	 * String with all information apart from: lingua (array), link (array).
+	 */
 	@Override
 	public String toString() {
 		return getCandidatoId() + ", " + getSessoId() + ", " + getSondaggioId() + ", " + getSituazioneLavorativaId()
@@ -57,12 +69,50 @@ public class CandidatoImpl implements Candidato {
 	}
 
 	/**
-	 * Default empty constructor (necessary for Jackson serialization)
+	 * Default empty constructor (necessary for Jackson serialization).
 	 */
 	public CandidatoImpl() {
 		super();
 	}
 
+	/**
+	 * Constructor of the candidato itself.
+	 * 
+	 * @param candidatoId:            the ID_CANDIDATO.
+	 * @param sessoId:                the ID_SESSO.
+	 * @param sondaggioId:            the ID_SONDAGGIO.
+	 * @param situazioneLavorativaId: the ID_SITUAZIONE_LAVORATIVA.
+	 * @param formazioneId:           the ID_FORMAZIONE.
+	 * @param statoId:                the ID_STATO.
+	 * @param annuncioId:             the ID_ANNUNCIO.
+	 * @param dataFormazione:         the DATA_FORMAZIONE.
+	 * @param nome:                   the NOME.
+	 * @param cognome:                the COGNOME.
+	 * @param nascita:                the NASCITA.
+	 * @param email:                  the E_MAIL.
+	 * @param cv:                     the CV.
+	 * @param checkTermini:           the CHECK_TERMINI.
+	 * @param checkAutorizzazione:    the CHECK_AUTORIZZAZIONE.
+	 * @param telefono:               the TELEFONO.
+	 * @param messaggio:              the MESSAGGIO.
+	 * @param vocale:                 the VOCALE.
+	 * @param cvEstensione:           the CV_ESTENSIONE.
+	 * @param vocaleEstensione:       the VOCALE_ESTENSIONE.
+	 * @param valutazionePrima:       the VALUTAZIONE_PRIMA.
+	 * @param valutazioneSeconda:     the VALUTAZIONE_SECONDA.
+	 * @param motivazioneScartoId:    the ID_MOTIVAZIONE_SCARTO.
+	 * @param feedbackInterno:        the FEEDBACK_INTERNO.
+	 * @param informato:              the INFORMATO.
+	 * @param documentoId:            the ID_DOCUMENTO.
+	 * @param documento:              the DOCUMENTO.
+	 * @param documentoEstensione:    the DOCUMENTO_ESTENSIONE.
+	 * @param descrizioneDocumento:   the DESCRIZIONE of the DOCUMENTO.
+	 * @param linkId:                 the ID_LINK.
+	 * @param link:                   the LINK.
+	 * @param candidatoLinguaId:      the ID_CANDIDATO_LINGUA.
+	 * @param linguaId:               the ID_LINGUA.
+	 * @param linguaLivelloId:        the ID_LINGUA_LIVELLO.
+	 */
 	public CandidatoImpl(Integer candidatoId, Integer sessoId, Integer sondaggioId, Integer situazioneLavorativaId,
 			Integer formazioneId, Integer statoId, Integer annuncioId, LocalDate dataFormazione, String nome,
 			String cognome, LocalDate nascita, String email, byte[] cv, String checkTermini, String checkAutorizzazione,
@@ -108,278 +158,553 @@ public class CandidatoImpl implements Candidato {
 		this.linguaLivelloId = linguaLivelloId;
 	}
 
+	/**
+	 * Gets the ID_CANDIDATO.
+	 */
 	public Integer getCandidatoId() {
 		return candidatoId;
 	}
 
+	/**
+	 * Gets the ID_SESSO.
+	 */
 	public Integer getSessoId() {
 		return sessoId;
 	}
 
+	/**
+	 * Gets the ID_SONDAGGIO.
+	 */
 	public Integer getSondaggioId() {
 		return sondaggioId;
 	}
 
+	/**
+	 * Gets the ID_SITUAZIONE_LAVORATIVA.
+	 */
 	public Integer getSituazioneLavorativaId() {
 		return situazioneLavorativaId;
 	}
 
+	/**
+	 * Gets the ID_FORMAZIONE.
+	 */
 	public Integer getFormazioneId() {
 		return formazioneId;
 	}
 
+	/**
+	 * Gets the ID_STATO.
+	 */
 	public Integer getStatoId() {
 		return statoId;
 	}
 
+	/**
+	 * Gets the ID_ANNUNCIO.
+	 */
 	public Integer getAnnuncioId() {
 		return annuncioId;
 	}
 
+	/**
+	 * Gets the DATA_FORMAZIONE.
+	 */
 	public LocalDate getDataFormazione() {
 		return dataFormazione;
 	}
 
+	/**
+	 * Gets the NOME.
+	 */
 	public String getNome() {
 		return nome;
 	}
 
+	/**
+	 * Gets the COGNOME.
+	 */
 	public String getCognome() {
 		return cognome;
 	}
 
+	/**
+	 * Gets the NASCITA.
+	 */
 	public LocalDate getNascita() {
 		return nascita;
 	}
 
+	/**
+	 * Gets the E_MAIL.
+	 */
 	public String getEmail() {
 		return email;
 	}
 
+	/**
+	 * Gets the CV.
+	 */
 	public byte[] getCv() {
 		return cv;
 	}
 
+	/**
+	 * Gets the CHECK_TERMINI.
+	 */
 	public String getCheckTermini() {
 		return checkTermini;
 	}
 
+	/**
+	 * Gets the CHECK_AUTORIZZAZIONE.
+	 */
 	public String getCheckAutorizzazione() {
 		return checkAutorizzazione;
 	}
 
+	/**
+	 * Gets the TELEFONO.
+	 */
 	public String getTelefono() {
 		return telefono;
 	}
 
+	/**
+	 * Gets the MESSAGGIO.
+	 */
 	public String getMessaggio() {
 		return messaggio;
 	}
 
+	/**
+	 * Gets the VOCALE.
+	 */
 	public byte[] getVocale() {
 		return vocale;
 	}
 
+	/**
+	 * Gets the CV_ESTENSIONE.
+	 */
 	public String getCvEstensione() {
 		return cvEstensione;
 	}
 
+	/**
+	 * Gets the VOCALE_ESTENSIONE.
+	 */
 	public String getVocaleEstensione() {
 		return vocaleEstensione;
 	}
 
+	/**
+	 * Gets the VALUTAZIONE_PRIMA.
+	 */
 	public String getValutazionePrima() {
 		return valutazionePrima;
 	}
 
+	/**
+	 * Gets the VALUTAZIONE_SECONDA.
+	 */
 	public String getValutazioneSeconda() {
 		return valutazioneSeconda;
 	}
 
+	/**
+	 * Gets the ID_MOTIVAZIONE_SCARTO.
+	 */
 	public Integer getMotivazioneScartoId() {
 		return motivazioneScartoId;
 	}
 
+	/**
+	 * Gets the FEEDBACK_INTERNO.
+	 */
 	public String getFeedbackInterno() {
 		return feedbackInterno;
 	}
 
+	/**
+	 * Gets the INFORMATO.
+	 */
 	public String getInformato() {
 		return informato;
 	}
 
+	/**
+	 * Gets the ID_DOCUMENTO.
+	 */
 	public Integer getDocumentoId() {
 		return documentoId;
 	}
 
+	/**
+	 * Gets the DOCUMENTO.
+	 */
 	public byte[] getDocumento() {
 		return documento;
 	}
 
+	/**
+	 * Gets the DOCUMENTO_ESTENSIONE.
+	 */
 	public String getDocumentoEstensione() {
 		return documentoEstensione;
 	}
 
+	/**
+	 * Gets the DESCRIZIONE of the DOCUMENTO.
+	 */
 	public String getDescrizioneDocumento() {
 		return descrizioneDocumento;
 	}
 
+	/**
+	 * Gets the ID_LINK.
+	 */
 	public Integer getLinkId() {
 		return linkId;
 	}
 
+	/**
+	 * Gets the LINK.
+	 */
 	public String[] getLink() {
 		return link;
 	}
 
+	/**
+	 * Gets the ID_CANDIDATO_LINGUA.
+	 */
 	public Integer getCandidatoLinguaId() {
 		return candidatoLinguaId;
 	}
 
+	/**
+	 * Gets the ID_LINGUA.
+	 */
 	public String[] getLinguaId() {
 		return linguaId;
 	}
 
+	/**
+	 * Gets the ID_LINGUA_LIVELLO.
+	 */
 	public String[] getLinguaLivelloId() {
 		return linguaLivelloId;
 	}
 
+	/**
+	 * Sets the ID_CANDIDATO.
+	 * 
+	 * @param candidatoId: the ID_CANDIDATO.
+	 */
 	public void setCandidatoId(Integer candidatoId) {
 		this.candidatoId = candidatoId;
 	}
 
+	/**
+	 * Sets the ID_SESSO.
+	 * 
+	 * @param sessoId: the ID_SESSO.
+	 */
 	public void setSessoId(Integer sessoId) {
 		this.sessoId = sessoId;
 	}
 
+	/**
+	 * Sets the ID_SONDAGGIO.
+	 * 
+	 * @param sondaggioId: the ID_SONDAGGIO.
+	 */
 	public void setSondaggioId(Integer sondaggioId) {
 		this.sondaggioId = sondaggioId;
 	}
 
+	/**
+	 * Sets the ID_SITUAZIONE_LAVORATIVA.
+	 * 
+	 * @param situazioneLavorativaId: the ID_SITUAZIONE_LAVORATIVA.
+	 */
 	public void setSituazioneLavorativaId(Integer situazioneLavorativaId) {
 		this.situazioneLavorativaId = situazioneLavorativaId;
 	}
 
+	/**
+	 * Sets the ID_FORMAZIONE.
+	 * 
+	 * @param formazioneId: the ID_FORMAZIONE.
+	 */
 	public void setFormazioneId(Integer formazioneId) {
 		this.formazioneId = formazioneId;
 	}
 
+	/**
+	 * Sets the ID_STATO.
+	 * 
+	 * @param statoId: the ID_STATO.
+	 */
 	public void setStatoId(Integer statoId) {
 		this.statoId = statoId;
 	}
 
+	/**
+	 * Sets the ID_ANNUNCIO.
+	 * 
+	 * @param annuncioId: the ID_ANNUNCIO.
+	 */
 	public void setAnnuncioId(Integer annuncioId) {
 		this.annuncioId = annuncioId;
 	}
 
+	/**
+	 * Sets the DATA_FORMAZIONE.
+	 * 
+	 * @param dataFormazione: the DATA_FORMAZIONE.
+	 */
 	public void setDataFormazione(LocalDate dataFormazione) {
 		this.dataFormazione = dataFormazione;
 	}
 
+	/**
+	 * Sets the NOME.
+	 * 
+	 * @param nome: the NOME.
+	 */
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
+	/**
+	 * Sets the COGNOME.
+	 * 
+	 * @param cognome: the COGNOME.
+	 */
 	public void setCognome(String cognome) {
 		this.cognome = cognome;
 	}
 
+	/**
+	 * Sets the NASCITA.
+	 * 
+	 * @param nascita: the NASCITA.
+	 */
 	public void setNascita(LocalDate nascita) {
 		this.nascita = nascita;
 	}
 
+	/**
+	 * Sets the E_MAIL.
+	 * 
+	 * @param email: the E_MAIL.
+	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
+	/**
+	 * Sets the CV.
+	 * 
+	 * @param cv: the CV.
+	 */
 	public void setCv(byte[] cv) {
 		this.cv = cv;
 	}
 
+	/**
+	 * Sets the CHECK_TERMINI.
+	 * 
+	 * @param checkTermini: the CHECK_TERMINI.
+	 */
 	public void setCheckTermini(String checkTermini) {
 		this.checkTermini = checkTermini;
 	}
 
+	/**
+	 * Sets the CHECK_AUTORIZZAZIONE.
+	 * 
+	 * @param checkAutorizzazione: the CHECK_AUTORIZZAZIONE.
+	 */
 	public void setCheckAutorizzazione(String checkAutorizzazione) {
 		this.checkAutorizzazione = checkAutorizzazione;
 	}
 
+	/**
+	 * Sets the TELEFONO.
+	 * 
+	 * @param telefono: the TELEFONO.
+	 */
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 
+	/**
+	 * Sets the MESSAGGIO.
+	 * 
+	 * @param messaggio: the MESSAGGIO.
+	 */
 	public void setMessaggio(String messaggio) {
 		this.messaggio = messaggio;
 	}
 
+	/**
+	 * Sets the VOCALE.
+	 * 
+	 * @param vocale: the VOCALE.
+	 */
 	public void setVocale(byte[] vocale) {
 		this.vocale = vocale;
 	}
 
+	/**
+	 * Sets the CV_ESTENSIONE.
+	 * 
+	 * @param cvEstensione: the CV_ESTENSIONE.
+	 */
 	public void setCvEstensione(String cvEstensione) {
 		this.cvEstensione = cvEstensione;
 	}
 
+	/**
+	 * Sets the VOCALE_ESTENSIONE.
+	 * 
+	 * @param vocaleEstensione: the VOCALE_ESTENSIONE.
+	 */
 	public void setVocaleEstensione(String vocaleEstensione) {
 		this.vocaleEstensione = vocaleEstensione;
 	}
 
+	/**
+	 * Sets the VALUTAZIONE_PRIMA.
+	 * 
+	 * @param valutazionePrima: the VALUTAZIONE_PRIMA.
+	 */
 	public void setValutazionePrima(String valutazionePrima) {
 		this.valutazionePrima = valutazionePrima;
 	}
 
+	/**
+	 * Sets the VALUTAZIONE_SECONDA.
+	 * 
+	 * @param valutazioneSeconda: the VALUTAZIONE_SECONDA.
+	 */
 	public void setValutazioneSeconda(String valutazioneSeconda) {
 		this.valutazioneSeconda = valutazioneSeconda;
 	}
 
+	/**
+	 * Sets the ID_MOTIVAZIONE_SCARTO.
+	 * 
+	 * @param motivazioneScartoId: the ID_MOTIVAZIONE_SCARTO.
+	 */
 	public void setMotivazioneScartoId(Integer motivazioneScartoId) {
 		this.motivazioneScartoId = motivazioneScartoId;
 	}
 
+	/**
+	 * Sets the FEEDBACK_INTERNO.
+	 * 
+	 * @param feedbackInterno: the FEEDBACK_INTERNO.
+	 */
 	public void setFeedbackInterno(String feedbackInterno) {
 		this.feedbackInterno = feedbackInterno;
 	}
 
+	/**
+	 * Sets the INFORMATO.
+	 * 
+	 * @param informato: the INFORMATO.
+	 */
 	public void setInformato(String informato) {
 		this.informato = informato;
 	}
 
+	/**
+	 * Sets the ID_DOCUMENTO.
+	 * 
+	 * @param documentoId: the ID_DOCUMENTO.
+	 */
 	public void setDocumentoId(Integer documentoId) {
 		this.documentoId = documentoId;
 	}
 
+	/**
+	 * Sets the DOCUMENTO.
+	 * 
+	 * @param documento: the DOCUMENTO.
+	 */
 	public void setDocumento(byte[] documento) {
 		this.documento = documento;
 	}
 
+	/**
+	 * Sets the DOCUMENTO_ESTENSIONE.
+	 * 
+	 * @param documentoEstensione: the DOCUMENTO_ESTENSIONE.
+	 */
 	public void setDocumentoEstensione(String documentoEstensione) {
 		this.documentoEstensione = documentoEstensione;
 	}
 
+	/**
+	 * Sets the DESCRIZIONE of the DOCUMENTO.
+	 * 
+	 * @param descrizioneDocumento: the DESCRIZIONE of the DOCUMENTO.
+	 */
 	public void setDescrizioneDocumento(String descrizioneDocumento) {
 		this.descrizioneDocumento = descrizioneDocumento;
 	}
 
+	/**
+	 * Sets the ID_LINK.
+	 * 
+	 * @param linkId: the ID_LINK.
+	 */
 	public void setLinkId(Integer linkId) {
 		this.linkId = linkId;
 	}
 
+	/**
+	 * Sets the LINK.
+	 * 
+	 * @param link: the LINK.
+	 */
 	public void setLink(String[] link) {
 		this.link = link;
 	}
 
+	/**
+	 * Sets the ID_CANDIDATO_LINGUA.
+	 * 
+	 * @param candidatoLinguaId: the ID_CANDIDATO_LINGUA.
+	 */
 	public void setCandidatoLinguaId(Integer candidatoLinguaId) {
 		this.candidatoLinguaId = candidatoLinguaId;
 	}
 
+	/**
+	 * Sets the ID_LINGUA.
+	 * 
+	 * @param linguaId: the ID_LINGUA.
+	 */
 	public void setLinguaId(String[] linguaId) {
 		this.linguaId = linguaId;
 	}
 
+	/**
+	 * Sets the ID_LINGUA_LIVELLO.
+	 * 
+	 * @param linguaLivelloId: the ID_LINGUA_LIVELLO.
+	 */
 	public void setLinguaLivelloId(String[] linguaLivelloId) {
 		this.linguaLivelloId = linguaLivelloId;
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -398,6 +723,9 @@ public class CandidatoImpl implements Candidato {
 		return result;
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

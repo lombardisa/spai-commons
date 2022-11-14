@@ -4,8 +4,15 @@ import java.io.Serializable;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+/**
+ * Java Interface: LinguaLivello.java
+ * 
+ * @author Matteo Maddes
+ * @version 28.11.2022
+ */
 @JsonDeserialize(as = LinguaLivelloImpl.class)
 public interface LinguaLivello extends Serializable {
+
 	/**
 	 * Returns the ID_CHIAVE.
 	 * 

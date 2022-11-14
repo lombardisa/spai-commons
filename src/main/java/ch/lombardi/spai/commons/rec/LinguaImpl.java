@@ -2,25 +2,35 @@ package ch.lombardi.spai.commons.rec;
 
 import java.util.Objects;
 
+/**
+ * Java Class: LinguaImpl.java
+ * 
+ * @author Matteo Maddes
+ * @version 28.11.2022
+ */
 public class LinguaImpl implements Lingua {
 
+	/**
+	 * UID: technical internal identification number.
+	 */
 	private static final long serialVersionUID = -5639711708140896060L;
 
-	// VARIABILI
+	// VARIABLES
 	private Integer linguaId;
 	private String desc;
 
 	/**
-	 * 
+	 * Default empty constructor (necessary for Jackson serialization).
 	 */
 	public LinguaImpl() {
 		super();
 	}
 
 	/**
+	 * Costructor of the lingue asked to the candidates.
 	 * 
-	 * @param linguaId
-	 * @param desc
+	 * @param linguaId: the ID_LINGUA.
+	 * @param desc:     the DESCRIZIONE of the ID_LINGUA.
 	 */
 	public LinguaImpl(Integer linguaId, String desc) {
 		super();
@@ -28,27 +38,49 @@ public class LinguaImpl implements Lingua {
 		this.desc = desc;
 	}
 
+	/**
+	 * Gets the ID_LINGUA.
+	 */
 	public Integer getLinguaId() {
 		return linguaId;
 	}
 
+	/**
+	 * Gets the DESCRIZIONE.
+	 */
 	public String getDesc() {
 		return desc;
 	}
 
+	/**
+	 * Sets the ID_LINGUA.
+	 * 
+	 * @param linguaId: the ID_LINGUA.
+	 */
 	public void setLinguaId(Integer linguaId) {
 		this.linguaId = linguaId;
 	}
 
+	/**
+	 * Sets the DESCRIZIONE.
+	 * 
+	 * @param desc: the DESCRIZIONE.
+	 */
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public int hashCode() {
 		return Objects.hash(desc, linguaId);
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

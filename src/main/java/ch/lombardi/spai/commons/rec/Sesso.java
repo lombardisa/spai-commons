@@ -4,20 +4,26 @@ import java.io.Serializable;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+/**
+ * Java Interface: Sesso.java
+ * 
+ * @author Matteo Maddes
+ * @version 28.11.2022
+ */
 @JsonDeserialize(as = SessoImpl.class)
 public interface Sesso extends Serializable {
-	// METHODS-------------------------------------------
+
 	/**
 	 * Returns the ID_CHIAVE.
 	 * 
 	 * @return: the ID_CHIAVE.
 	 */
 	String getChiaveId();
-	
+
 	/**
-	 * Returns the TESTO of the ID_CHIAVE.
+	 * Returns the TESTO.
 	 * 
-	 * @return: the TESTO of the ID_CHIAVE.
+	 * @return: the TESTO.
 	 */
 	String getTesto();
 }

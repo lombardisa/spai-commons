@@ -3,29 +3,39 @@ package ch.lombardi.spai.commons.rec;
 import java.util.Arrays;
 import java.util.Objects;
 
+/**
+ * Java Class: BenefitImpl.java
+ * 
+ * @author Matteo Maddes
+ * @version 28.11.2022
+ */
 public class BenefitImpl implements Benefit {
 
+	/**
+	 * UID: technical internal identification number.
+	 */
 	private static final long serialVersionUID = 565083839508288574L;
 
-	// VARIABILI
+	// VARIABLES
 	private Integer annuncioId;
 	private String desc;
 	private byte[] icona;
 	private String iconaCodice;
 
 	/**
-	 * 
+	 * Default empty constructor (necessary for Jackson serialization).
 	 */
 	public BenefitImpl() {
 		super();
 	}
 
 	/**
+	 * Costructor of the benefits of an annuncio.
 	 * 
-	 * @param annuncioId
-	 * @param desc
-	 * @param icona
-	 * @param iconaCodice
+	 * @param annuncioId:  the ID_ANNUNCIO.
+	 * @param desc:        the DESCRIZIONE.
+	 * @param icona:       the ICONA.
+	 * @param iconaCodice: the ICONA_CODICE.
 	 */
 	public BenefitImpl(Integer annuncioId, String desc, byte[] icona, String iconaCodice) {
 		super();
@@ -35,38 +45,73 @@ public class BenefitImpl implements Benefit {
 		this.iconaCodice = iconaCodice;
 	}
 
+	/**
+	 * Gets the ID_ANNUNCIO.
+	 */
 	public Integer getAnnuncioId() {
 		return annuncioId;
 	}
 
+	/**
+	 * Gets the DESCRIZIONE.
+	 */
 	public String getDesc() {
 		return desc;
 	}
 
+	/**
+	 * Gets the ICONA.
+	 */
 	public byte[] getIcona() {
 		return icona;
 	}
 
+	/**
+	 * Gets the ICONA_CODICE.
+	 */
 	public String getIconaCodice() {
 		return iconaCodice;
 	}
 
+	/**
+	 * Sets the ID_ANNUNCIO.
+	 * 
+	 * @param annuncioId: the ID_ANNUNCIO.
+	 */
 	public void setAnnuncioId(Integer annuncioId) {
 		this.annuncioId = annuncioId;
 	}
 
+	/**
+	 * Sets the DESCRIZIONE.
+	 * 
+	 * @param desc: the DESCRIZIONE.
+	 */
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
 
+	/**
+	 * Sets the ICONA.
+	 * 
+	 * @param icona: the ICONA.
+	 */
 	public void setIcona(byte[] icona) {
 		this.icona = icona;
 	}
 
+	/**
+	 * Sets the ICONA_CODICE.
+	 * 
+	 * @param iconaCodice: the ICONA_CODICE.
+	 */
 	public void setIconaCodice(String iconaCodice) {
 		this.iconaCodice = iconaCodice;
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -76,6 +121,9 @@ public class BenefitImpl implements Benefit {
 		return result;
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

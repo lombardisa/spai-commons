@@ -4,8 +4,15 @@ import java.io.Serializable;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+/**
+ * Java Interface: Sondaggio.java
+ * 
+ * @author Matteo Maddes
+ * @version 28.11.2022
+ */
 @JsonDeserialize(as = SondaggioImpl.class)
 public interface Sondaggio extends Serializable {
+
 	/**
 	 * Returns the ID_CHIAVE.
 	 * 
@@ -14,9 +21,9 @@ public interface Sondaggio extends Serializable {
 	String getChiaveId();
 
 	/**
-	 * Returns the TESTO of the ID_CHIAVE.
+	 * Returns the TESTO.
 	 * 
-	 * @return: the TESTO of the ID_CHIAVE.
+	 * @return: the TESTO.
 	 */
 	String getTesto();
 }

@@ -4,14 +4,19 @@ import java.io.Serializable;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+/**
+ * Java Interface: AnnuncioEsperienza.java
+ * 
+ * @author Matteo Maddes
+ * @version 28.11.2022
+ */
 @JsonDeserialize(as = AnnuncioEsperienzaImpl.class)
 public interface AnnuncioEsperienza extends Serializable {
 
-	// METHODS-------------------------------------------
 	/**
 	 * Returns the ID_ANNUNCIO.
 	 * 
-	 * @return: the ID_ANNUNCIO..
+	 * @return: the ID_ANNUNCIO.
 	 */
 	Integer getAnnuncioId();
 

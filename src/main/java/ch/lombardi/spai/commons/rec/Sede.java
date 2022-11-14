@@ -5,97 +5,117 @@ import java.time.LocalDate;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+/**
+ * Java Interface: Sede.java
+ * 
+ * @author Matteo Maddes
+ * @version 28.11.2022
+ */
 @JsonDeserialize(as = SedeImpl.class)
 public interface Sede extends Serializable {
 
-	// METHODS-------------------------------------------
 	/**
+	 * Returns the ID_SEDE.
 	 * 
-	 * @return
+	 * @return the ID_SEDE.
 	 */
 	Integer getSedeId();
 
 	/**
+	 * Returns the ID_SOCIETA.
 	 * 
-	 * @return
+	 * @return the ID_SOCIETA.
 	 */
 	Integer getSocietaId();
 
 	/**
+	 * Returns the DESCRIZIONE.
 	 * 
-	 * @return
+	 * @return the DESCRIZIONE.
 	 */
 	String getDescSede();
 
 	/**
+	 * Returns the NOME_INDIRIZZO.
 	 * 
-	 * @return
+	 * @return the NOME_INDIRIZZO.
 	 */
 	String getNomeIndirizzo();
 
 	/**
+	 * Returns the INDIRIZZO.
 	 * 
-	 * @return
+	 * @return the INDIRIZZO.
 	 */
 	String getIndirizzo();
 
 	/**
+	 * Returns the LOCALITA.
 	 * 
-	 * @return
+	 * @return the LOCALITA.
 	 */
 	String getLocalita();
 
 	/**
+	 * Returns the DATA_CHIUSURA.
 	 * 
-	 * @return
+	 * @return the DATA_CHIUSURA.
 	 */
 	LocalDate getDataChiusura();
 
 	/**
+	 * Returns the NAP.
 	 * 
-	 * @return
+	 * @return the NAP.
 	 */
 	String getNap();
 
 	/**
+	 * Returns the TELEFONO.
 	 * 
-	 * @return
+	 * @return the TELEFONO.
 	 */
 	String getNoTelefono();
 
 	/**
+	 * Returns the E_MAIL.
 	 * 
-	 * @return
+	 * @return the E_MAIL.
 	 */
 	String geteMail();
 
 	/**
+	 * Returns the TIME_ZONE.
 	 * 
-	 * @return
+	 * @return the TIME_ZONE.
 	 */
 	String getTimeZone();
 
 	/**
+	 * Returns the DESCRIZIONE_ESTESA.
 	 * 
-	 * @return
+	 * @return the DESCRIZIONE_ESTESA.
 	 */
 	String getDescEstesa();
 
 	/**
+	 * Returns the E_MAIL_HR.
 	 * 
-	 * @return
+	 * @return the E_MAIL_HR.
 	 */
 	String geteMailHr();
 
 	/**
+	 * Returns the ID_NAZIONE.
 	 * 
-	 * @return
+	 * @return the ID_NAZIONE.
 	 */
 	Integer getNazioneId();
 
 	/**
+	 * Returns the NAZIONE.
 	 * 
-	 * @return
+	 * @return the NAZIONE.
 	 */
 	String getNazione();
 }

@@ -2,27 +2,38 @@ package ch.lombardi.spai.commons.rec;
 
 import java.util.Objects;
 
+/**
+ * Java Class: AnnuncioEsperienzaImpl.java
+ * 
+ * @author Matteo Maddes
+ * @version 28.11.2022
+ */
 public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 
+	/**
+	 * UID: technical internal identification number.
+	 */
 	private static final long serialVersionUID = 2676876379619731666L;
 
-	// VARIABILI
+	// VARIABLES
 	private Integer annuncioId;
 	private Integer esperienzaId;
 	private String desc;
 
 	/**
-	 * 
+	 * Default empty constructor (necessary for Jackson serialization).
 	 */
 	public AnnuncioEsperienzaImpl() {
 		super();
 	}
 
 	/**
+	 * Costructor of the experience needed for an annuncio.
 	 * 
-	 * @param annuncioId
-	 * @param esperienzaId
-	 * @param desc
+	 * @param annuncioId:   the ID of the annuncio.
+	 * @param esperienzaId: the ID of the esperienza.
+	 * @param desc:         the DESCRIZIONE of the esperienza needed for this
+	 *                      annuncio.
 	 */
 	public AnnuncioEsperienzaImpl(Integer annuncioId, Integer esperienzaId, String desc) {
 		super();
@@ -31,35 +42,65 @@ public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 		this.desc = desc;
 	}
 
+	/**
+	 * Gets the ID_ANNUNCIO.
+	 */
 	public Integer getAnnuncioId() {
 		return annuncioId;
 	}
 
+	/**
+	 * Gets the ID_ESPERIENZA.
+	 */
 	public Integer getEsperienzaId() {
 		return esperienzaId;
 	}
 
+	/**
+	 * Gets the DESCRIZIONE.
+	 */
 	public String getDesc() {
 		return desc;
 	}
 
+	/**
+	 * Sets the ID_ANNUNCIO.
+	 * 
+	 * @param annuncioId: the ID of the annuncio.
+	 */
 	public void setAnnuncioId(Integer annuncioId) {
 		this.annuncioId = annuncioId;
 	}
 
+	/**
+	 * Sets the ID_ESPERIENZA.
+	 * 
+	 * @param esperienzaId: the ID of the esperienza.
+	 */
 	public void setEsperienzaId(Integer esperienzaId) {
 		this.esperienzaId = esperienzaId;
 	}
 
+	/**
+	 * Sets the DESCRIZIONE.
+	 * 
+	 * @param desc: the DESCRIZIONE of the esperienza needed for this annuncio.
+	 */
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public int hashCode() {
 		return Objects.hash(annuncioId, desc, esperienzaId);
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
