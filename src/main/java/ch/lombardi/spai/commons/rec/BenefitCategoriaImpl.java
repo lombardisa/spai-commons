@@ -16,9 +16,8 @@ public class BenefitCategoriaImpl implements BenefitCategoria {
 	private static final long serialVersionUID = 5341574465827396540L;
 
 	// VARIABLES
-	private Integer benefitCategoriaId;
-	private String titolo;
-	private String desc;
+	private String chiaveId;
+	private String testo;
 
 	/**
 	 * Default empty constructor.
@@ -30,63 +29,45 @@ public class BenefitCategoriaImpl implements BenefitCategoria {
 	/**
 	 * Costructor of the benefits showed on the website.
 	 * 
-	 * @param benefitCategoriaId: the ID_BENEFIT_CATEGORIA.
-	 * @param titolo:             the TITOLO.
-	 * @param desc:               the DESCRIZIONE.
+	 * @param chiaveId: the ID_CHIAVE.
+	 * @param testo:    the TESTO.
 	 */
-	public BenefitCategoriaImpl(Integer benefitCategoriaId, String titolo, String desc) {
+	public BenefitCategoriaImpl(String chiaveId, String testo) {
 		super();
-		this.benefitCategoriaId = benefitCategoriaId;
-		this.titolo = titolo;
-		this.desc = desc;
+		this.chiaveId = chiaveId;
+		this.testo = testo;
 	}
 
 	/**
-	 * Gets the ID_BENEFIT_CATEGORIA.
+	 * Gets the ID_CHIAVE.
 	 */
-	public Integer getBenefitCategoriaId() {
-		return benefitCategoriaId;
+	public String getChiaveId() {
+		return chiaveId;
 	}
 
 	/**
-	 * Gets the TITOLO.
+	 * Gets the TESTO.
 	 */
-	public String getTitolo() {
-		return titolo;
+	public String getTesto() {
+		return testo;
 	}
 
 	/**
-	 * Gets the DESCRIZIONE.
-	 */
-	public String getDesc() {
-		return desc;
-	}
-
-	/**
-	 * Sets the ID_BENEFIT_CATEGORIA.
+	 * Sets the ID_CHIAVE.
 	 * 
-	 * @param benefitCategoriaId: the ID_BENEFIT_CATEGORIA.
+	 * @param chiaveId: Sets the ID_CHIAVE.
 	 */
-	public void setBenefitCategoriaId(Integer benefitCategoriaId) {
-		this.benefitCategoriaId = benefitCategoriaId;
+	public void setChiaveId(String chiaveId) {
+		this.chiaveId = chiaveId;
 	}
 
 	/**
-	 * Sets the TITOLO.
+	 * Sets the TESTO.
 	 * 
-	 * @param titolo: the TITOLO.
+	 * @param testo: the TESTO.
 	 */
-	public void setTitolo(String titolo) {
-		this.titolo = titolo;
-	}
-
-	/**
-	 * Sets the DESCRIZIONE.
-	 * 
-	 * @param desc: the DESCRIZIONE.
-	 */
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setTesto(String testo) {
+		this.testo = testo;
 	}
 
 	/**
@@ -95,7 +76,7 @@ public class BenefitCategoriaImpl implements BenefitCategoria {
 	 */
 	@Override
 	public int hashCode() {
-		return Objects.hash(benefitCategoriaId, desc, titolo);
+		return Objects.hash(chiaveId, testo);
 	}
 
 	/**
@@ -110,7 +91,6 @@ public class BenefitCategoriaImpl implements BenefitCategoria {
 		if (getClass() != obj.getClass())
 			return false;
 		BenefitCategoriaImpl other = (BenefitCategoriaImpl) obj;
-		return Objects.equals(benefitCategoriaId, other.benefitCategoriaId) && Objects.equals(desc, other.desc)
-				&& Objects.equals(titolo, other.titolo);
+		return Objects.equals(chiaveId, other.chiaveId) && Objects.equals(testo, other.testo);
 	}
 }

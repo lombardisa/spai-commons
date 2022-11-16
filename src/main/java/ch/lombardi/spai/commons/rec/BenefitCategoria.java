@@ -14,23 +14,16 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 public interface BenefitCategoria extends Serializable {
 
 	/**
-	 * Returns the ID_BENEFIT_CATEGORIA.
+	 * Returns the ID_CHIAVE.
 	 * 
-	 * @return: the ID_BENEFIT_CATEGORIA.
+	 * @return: the ID_CHIAVE.
 	 */
-	Integer getBenefitCategoriaId();
+	String getChiaveId();
 
 	/**
-	 * Returns the TITOLO of ID_BENEFIT_CATEGORIA.
+	 * Returns the TESTO of the ID_CHIAVE.
 	 * 
-	 * @return: the TITOLO of ID_BENEFIT_CATEGORIA.
+	 * @return: the TESTO of the ID_CHIAVE.
 	 */
-	String getTitolo();
-
-	/**
-	 * Returns the DESCRIZIONE of the ID_BENEFIT_CATEGORIA.
-	 * 
-	 * @return: the DESCRIZIONE of the ID_BENEFIT_CATEGORIA.
-	 */
-	String getDesc();
+	String getTesto();
 }
