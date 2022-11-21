@@ -35,13 +35,13 @@ public class AnnuncioFotoImpl implements AnnuncioFoto {
 	/**
 	 * Costructor of the foto needed for an annuncio.
 	 * 
-	 * @param fotoId
-	 * @param societaId
-	 * @param annuncioId
-	 * @param attivo
-	 * @param foto
-	 * @param codice
-	 * @param desc
+	 * @param fotoId:     the ID_FOTO
+	 * @param societaId:  the ID_SOCIETA
+	 * @param annuncioId: the ID_ANNUNCIO
+	 * @param attivo:     the ATTIVO
+	 * @param foto:       the FOTO
+	 * @param codice:     the CODICE
+	 * @param desc:       the DESCRIZIONE
 	 */
 	public AnnuncioFotoImpl(Integer fotoId, Integer societaId, Integer annuncioId, String attivo, byte[] foto,
 			String codice, String desc) {
