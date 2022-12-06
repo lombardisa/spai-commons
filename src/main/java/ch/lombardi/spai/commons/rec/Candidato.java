@@ -251,4 +251,11 @@ public interface Candidato extends Serializable {
 	 * @return the DESCRIZIONE of the DOCUMENTO.
 	 */
 	String getDescrizioneDocumento();
+
+	/**
+	 * Returns the DATA_CANDIDATURA.
+	 * 
+	 * @return the DATA_CANDIDATURA.
+	 */
+	LocalDate getDataCandidatura();
 }

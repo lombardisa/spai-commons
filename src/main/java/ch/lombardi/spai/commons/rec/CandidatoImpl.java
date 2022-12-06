@@ -52,6 +52,7 @@ public class CandidatoImpl implements Candidato {
 	private Integer candidatoLinguaId;
 	private String[] linguaId;
 	private String[] linguaLivelloId;
+	private LocalDate dataCandidatura;
 
 	/**
 	 * String with all information apart from: lingua (array), link (array).
@@ -112,6 +113,7 @@ public class CandidatoImpl implements Candidato {
 	 * @param candidatoLinguaId:      the ID_CANDIDATO_LINGUA.
 	 * @param linguaId:               the ID_LINGUA.
 	 * @param linguaLivelloId:        the ID_LINGUA_LIVELLO.
+	 * @param dataCandidatura:        the DATA_CANDIDATURA.
 	 */
 	public CandidatoImpl(Integer candidatoId, Integer sessoId, Integer sondaggioId, Integer situazioneLavorativaId,
 			Integer formazioneId, Integer statoId, Integer annuncioId, LocalDate dataFormazione, String nome,
@@ -120,7 +122,7 @@ public class CandidatoImpl implements Candidato {
 			String valutazionePrima, String valutazioneSeconda, Integer motivazioneScartoId, String feedbackInterno,
 			String informato, Integer documentoId, byte[] documento, String documentoEstensione,
 			String descrizioneDocumento, Integer linkId, String[] link, Integer candidatoLinguaId, String[] linguaId,
-			String[] linguaLivelloId) {
+			String[] linguaLivelloId, LocalDate dataCandidatura) {
 		super();
 		this.candidatoId = candidatoId;
 		this.sessoId = sessoId;
@@ -156,6 +158,7 @@ public class CandidatoImpl implements Candidato {
 		this.candidatoLinguaId = candidatoLinguaId;
 		this.linguaId = linguaId;
 		this.linguaLivelloId = linguaLivelloId;
+		this.dataCandidatura = dataCandidatura;
 	}
 
 	/**
@@ -394,6 +397,13 @@ public class CandidatoImpl implements Candidato {
 	 */
 	public String[] getLinguaLivelloId() {
 		return linguaLivelloId;
+	}
+
+	/**
+	 * Gets the DATA_CANDIDATURA.
+	 */
+	public LocalDate getDataCandidatura() {
+		return dataCandidatura;
 	}
 
 	/**
@@ -703,6 +713,15 @@ public class CandidatoImpl implements Candidato {
 	}
 
 	/**
+	 * Sets the DATA_CANDIDATURA.
+	 * 
+	 * @param dataFormazione: the DATA_CANDIDATURA.
+	 */
+	public void setDataCandidatura(LocalDate dataCandidatura) {
+		this.dataCandidatura = dataCandidatura;
+	}
+
+	/**
 	 * Returns a hash code value for the object. This method is supported for the
 	 * benefit of hash tables such as those provided by HashMap.
 	 */
@@ -720,7 +739,7 @@ public class CandidatoImpl implements Candidato {
 				checkTermini, cognome, cvEstensione, dataFormazione, descrizioneDocumento, documentoEstensione,
 				documentoId, email, feedbackInterno, formazioneId, informato, linkId, messaggio, motivazioneScartoId,
 				nascita, nome, sessoId, situazioneLavorativaId, sondaggioId, statoId, telefono, valutazionePrima,
-				valutazioneSeconda, vocaleEstensione);
+				valutazioneSeconda, vocaleEstensione, dataCandidatura);
 		return result;
 	}
 
@@ -758,6 +777,7 @@ public class CandidatoImpl implements Candidato {
 				&& Objects.equals(sondaggioId, other.sondaggioId) && Objects.equals(statoId, other.statoId)
 				&& Objects.equals(telefono, other.telefono) && Objects.equals(valutazionePrima, other.valutazionePrima)
 				&& Objects.equals(valutazioneSeconda, other.valutazioneSeconda) && Arrays.equals(vocale, other.vocale)
-				&& Objects.equals(vocaleEstensione, other.vocaleEstensione);
+				&& Objects.equals(vocaleEstensione, other.vocaleEstensione)
+				&& Objects.equals(dataCandidatura, other.dataCandidatura);
 	}
 }
