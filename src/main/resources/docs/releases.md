@@ -27,7 +27,8 @@ Ognuno inserirà le proprie credenziali GitHub.
 A questo punto la release può essere effettuata con i comandi Maven di default, ovvero:
 
 ```
-mvn release:prepare release:perform
+mvn release:clean release:prepare 
+mvn release:perform
 ```
 
 ## Utilizzo degli artefatti
