@@ -1,6 +1,7 @@
 package ch.lombardi.spai.commons.rec;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -52,7 +53,7 @@ public class CandidatoImpl implements Candidato {
 	private Integer candidatoLinguaId;
 	private String[] linguaId;
 	private String[] linguaLivelloId;
-	private LocalDate dataCandidatura;
+	private LocalDateTime dataCandidatura;
 
 	/**
 	 * String with all information apart from: lingua (array), link (array).
@@ -122,7 +123,7 @@ public class CandidatoImpl implements Candidato {
 			String valutazionePrima, String valutazioneSeconda, Integer motivazioneScartoId, String feedbackInterno,
 			String informato, Integer documentoId, byte[] documento, String documentoEstensione,
 			String descrizioneDocumento, Integer linkId, String[] link, Integer candidatoLinguaId, String[] linguaId,
-			String[] linguaLivelloId, LocalDate dataCandidatura) {
+			String[] linguaLivelloId, LocalDateTime dataCandidatura) {
 		super();
 		this.candidatoId = candidatoId;
 		this.sessoId = sessoId;
@@ -402,7 +403,7 @@ public class CandidatoImpl implements Candidato {
 	/**
 	 * Gets the DATA_CANDIDATURA.
 	 */
-	public LocalDate getDataCandidatura() {
+	public LocalDateTime getDataCandidatura() {
 		return dataCandidatura;
 	}
 
@@ -717,7 +718,7 @@ public class CandidatoImpl implements Candidato {
 	 * 
 	 * @param dataFormazione: the DATA_CANDIDATURA.
 	 */
-	public void setDataCandidatura(LocalDate dataCandidatura) {
+	public void setDataCandidatura(LocalDateTime dataCandidatura) {
 		this.dataCandidatura = dataCandidatura;
 	}
 

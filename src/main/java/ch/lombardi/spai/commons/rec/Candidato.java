@@ -2,6 +2,7 @@ package ch.lombardi.spai.commons.rec;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
@@ -257,5 +258,5 @@ public interface Candidato extends Serializable {
 	 * 
 	 * @return the DATA_CANDIDATURA.
 	 */
-	LocalDate getDataCandidatura();
+	LocalDateTime getDataCandidatura();
 }
