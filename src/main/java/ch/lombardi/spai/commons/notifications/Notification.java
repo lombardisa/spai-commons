@@ -82,4 +82,28 @@ public interface Notification extends Serializable {
 	 */
 	List<NotificationAddressee> getAddressees();
 
+	/**
+	 * Get the notification entity name.
+	 * @return Notification entity name
+	 */
+	Optional<String> getEntityName();
+
+	/**
+	 * Get the notification entity id.
+	 * @return The notification entity id
+	 */
+	Optional<Integer> getEntityId();
+
+	/**
+	 * Get the notification action.
+	 * @return Notification action
+	 */
+	Optional<Action> getAction();
+
+	/**
+	 * Get the corresponding module.
+	 * @return Notification module
+	 */
+	Optional<String> getModule();
+
 }

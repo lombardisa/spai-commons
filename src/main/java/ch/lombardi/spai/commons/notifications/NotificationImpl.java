@@ -24,6 +24,10 @@ public class NotificationImpl implements Notification {
 	private String textMessageCode;
 	private String link;
 	private List<NotificationAddressee> addressees;
+	private String entityName;
+	private Integer entityId;
+	private Action action;
+	private String module;
 
 	@Override
 	public Integer getId() {
@@ -83,6 +87,26 @@ public class NotificationImpl implements Notification {
 		return Collections.emptyList();
 	}
 
+	@Override
+	public Optional<String> getEntityName() {
+		return Optional.ofNullable(entityName);
+	}
+
+	@Override
+	public Optional<Integer> getEntityId() {
+		return Optional.ofNullable(entityId);
+	}
+
+	@Override
+	public Optional<Action> getAction() {
+		return Optional.ofNullable(action);
+	}
+
+	@Override
+	public Optional<String> getModule() {
+		return Optional.ofNullable(module);
+	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -134,6 +158,22 @@ public class NotificationImpl implements Notification {
 			}
 			addressees.add(addressee);
 		}
+	}
+
+	public void setEntityName(String entityName) {
+		this.entityName = entityName;
+	}
+
+	public void setEntityId(Integer entityId) {
+		this.entityId = entityId;
+	}
+
+	public void setAction(Action action) {
+		this.action = action;
+	}
+
+	public void setModule(String module) {
+		this.module = module;
 	}
 
 	@Override
