@@ -6,6 +6,8 @@ public enum Category {
 	
 	WARNING,
 	
-	ERROR
+	ERROR,
+	
+	APPROVAL
 	
 }
