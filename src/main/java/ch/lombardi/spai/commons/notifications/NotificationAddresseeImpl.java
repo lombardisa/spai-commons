@@ -20,6 +20,7 @@ public class NotificationAddresseeImpl implements NotificationAddressee {
 	private LocalDateTime sentDateTime;
 	private String error;
 	private String errorMessageCode;
+	private String evasa;
 
 	@Override
 	public Integer getSequence() {
@@ -61,6 +62,11 @@ public class NotificationAddresseeImpl implements NotificationAddressee {
 		return Optional.ofNullable(errorMessageCode);
 	}
 
+	@Override
+	public Optional<String> getEvasa() {
+		return Optional.ofNullable(evasa);
+	}
+
 	@JsonProperty("sequence")
 	public void setSequence(Integer sequence) {
 		this.sequence = sequence;
@@ -94,4 +100,7 @@ public class NotificationAddresseeImpl implements NotificationAddressee {
 		this.errorMessageCode = errorMessageCode;
 	}
 
+	public void setEvasa(String evasa) {
+		this.evasa = evasa;
+	}
 }
