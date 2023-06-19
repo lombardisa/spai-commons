@@ -738,9 +738,9 @@ public class CandidatoImpl implements Candidato {
 		result = prime * result + Arrays.hashCode(vocale);
 		result = prime * result + Objects.hash(annuncioId, candidatoId, candidatoLinguaId, checkAutorizzazione,
 				checkTermini, cognome, cvEstensione, dataFormazione, descrizioneDocumento, documentoEstensione,
-				documentoId, email, feedbackInterno, formazioneId, informato, linkId, messaggio, motivazioneScartoId,
-				nascita, nome, sessoId, situazioneLavorativaId, sondaggioId, statoId, telefono, valutazionePrima,
-				valutazioneSeconda, vocaleEstensione, dataCandidatura);
+				documentoId, email, feedbackInterno, formazioneId, informato, linkId, linguaId, linguaLivelloId,
+				messaggio, motivazioneScartoId, nascita, nome, sessoId, situazioneLavorativaId, sondaggioId, statoId,
+				telefono, valutazionePrima, valutazioneSeconda, vocaleEstensione, dataCandidatura);
 		return result;
 	}
 
