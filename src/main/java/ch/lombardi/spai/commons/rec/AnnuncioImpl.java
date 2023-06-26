@@ -9,7 +9,7 @@ import java.util.Objects;
  * Java Class: AnnuncioImpl.java
  * 
  * @author Matteo Maddes
- * @version 28.11.2022
+ * @version 26.06.2023
  */
 public class AnnuncioImpl implements Annuncio {
 
@@ -106,7 +106,6 @@ public class AnnuncioImpl implements Annuncio {
 	 * @param dataInizioContratto:  the DATA_INIZIO_CONTRATTO of the annuncio.
 	 * @param durataContratto:      the DURATA_CONTRATTO of the annuncio.
 	 * @param unitaDurataContratto: the UNITA_DURATA_CONTRATTO of the annuncio.
-	 * @param foto:                 the FOTO of the annuncio.
 	 */
 	public AnnuncioImpl(Integer annuncioId, Integer refPrincId, String nomeRefPrinc, String cognomeRefPrinc,
 			byte[] fotoRefPrinc, Integer sedeId, String descSede, String nomeIndirizzo, String descIndirizzo,
