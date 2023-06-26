@@ -281,10 +281,4 @@ public interface Annuncio extends Serializable {
 	 */
 	Integer getUnitaDurataContratto();
 
-	/**
-	 * Returns the picture of the FOTO of the annuncio.
-	 * 
-	 * @return the picture of the FOTO of the annuncio.
-	 */
-	byte[] getFoto();
 }

@@ -57,7 +57,6 @@ public class AnnuncioImpl implements Annuncio {
 	private LocalDate dataInizioContratto;
 	private Integer durataContratto;
 	private Integer unitaDurataContratto;
-	private byte[] foto;
 
 	/**
 	 * Default empty constructor.
@@ -116,7 +115,7 @@ public class AnnuncioImpl implements Annuncio {
 			Integer areaId, String descArea, String descAreaBreve, Integer refSecondId, String nomeRefSecond,
 			String cognomeRefSecond, byte[] fotoRefSecond, String titolo, String descrizione, String homeOffice,
 			String datiCompleti, BigDecimal occupMin, BigDecimal occupMax, LocalDate inizio, LocalDate fine,
-			LocalDate dataInizioContratto, Integer durataContratto, Integer unitaDurataContratto, byte[] foto) {
+			LocalDate dataInizioContratto, Integer durataContratto, Integer unitaDurataContratto) {
 		super();
 		this.annuncioId = annuncioId;
 		this.refPrincId = refPrincId;
@@ -156,7 +155,6 @@ public class AnnuncioImpl implements Annuncio {
 		this.dataInizioContratto = dataInizioContratto;
 		this.durataContratto = durataContratto;
 		this.unitaDurataContratto = unitaDurataContratto;
-		this.foto = foto;
 	}
 
 	/**
@@ -423,13 +421,6 @@ public class AnnuncioImpl implements Annuncio {
 	 */
 	public Integer getUnitaDurataContratto() {
 		return unitaDurataContratto;
-	}
-
-	/**
-	 * Gets the FOTO.
-	 */
-	public byte[] getFoto() {
-		return foto;
 	}
 
 	/**
@@ -775,15 +766,6 @@ public class AnnuncioImpl implements Annuncio {
 	}
 
 	/**
-	 * Sets the FOTO.
-	 * 
-	 * @param foto: the FOTO.
-	 */
-	public void setFoto(byte[] foto) {
-		this.foto = foto;
-	}
-
-	/**
 	 * Returns a hash code value for the object. This method is supported for the
 	 * benefit of hash tables such as those provided by HashMap.
 	 */
@@ -791,7 +773,6 @@ public class AnnuncioImpl implements Annuncio {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + Arrays.hashCode(foto);
 		result = prime * result + Arrays.hashCode(fotoRefPrinc);
 		result = prime * result + Arrays.hashCode(fotoRefSecond);
 		result = prime * result + Objects.hash(annuncioId, areaId, casellaPostale, cognomeRefPrinc, cognomeRefSecond,
@@ -824,12 +805,12 @@ public class AnnuncioImpl implements Annuncio {
 				&& Objects.equals(descIndirizzo, other.descIndirizzo) && Objects.equals(descNazione, other.descNazione)
 				&& Objects.equals(descSede, other.descSede) && Objects.equals(descrizione, other.descrizione)
 				&& Objects.equals(durataContratto, other.durataContratto) && Objects.equals(emailHr, other.emailHr)
-				&& Objects.equals(fine, other.fine) && Arrays.equals(foto, other.foto)
-				&& Arrays.equals(fotoRefPrinc, other.fotoRefPrinc) && Arrays.equals(fotoRefSecond, other.fotoRefSecond)
-				&& Objects.equals(homeOffice, other.homeOffice) && Objects.equals(indirizzo, other.indirizzo)
-				&& Objects.equals(inizio, other.inizio) && Objects.equals(localita, other.localita)
-				&& Objects.equals(nap, other.nap) && Objects.equals(nazioneId, other.nazioneId)
-				&& Objects.equals(noTelefono, other.noTelefono) && Objects.equals(nomeIndirizzo, other.nomeIndirizzo)
+				&& Objects.equals(fine, other.fine) && Arrays.equals(fotoRefPrinc, other.fotoRefPrinc)
+				&& Arrays.equals(fotoRefSecond, other.fotoRefSecond) && Objects.equals(homeOffice, other.homeOffice)
+				&& Objects.equals(indirizzo, other.indirizzo) && Objects.equals(inizio, other.inizio)
+				&& Objects.equals(localita, other.localita) && Objects.equals(nap, other.nap)
+				&& Objects.equals(nazioneId, other.nazioneId) && Objects.equals(noTelefono, other.noTelefono)
+				&& Objects.equals(nomeIndirizzo, other.nomeIndirizzo)
 				&& Objects.equals(nomeRefPrinc, other.nomeRefPrinc)
 				&& Objects.equals(nomeRefSecond, other.nomeRefSecond) && Objects.equals(occupMax, other.occupMax)
 				&& Objects.equals(occupMin, other.occupMin) && Objects.equals(paginaInternet, other.paginaInternet)
