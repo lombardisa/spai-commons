@@ -34,10 +34,4 @@ public interface AnnuncioOfferta extends Serializable {
 	 */
 	String getDesc();
 
-	/**
-	 * Returns the TITOLO of the ID_OFFERTA.
-	 * 
-	 * @return: the TITOLO of the ID_OFFERTA.
-	 */
-	String getTitolo();
 }

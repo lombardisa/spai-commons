@@ -19,7 +19,6 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 	private Integer annuncioId;
 	private Integer offertaId;
 	private String desc;
-	private String titolo;
 
 	/**
 	 * Default empty constructor.
@@ -34,14 +33,12 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 	 * @param annuncioId: the ID_ANNUNCIO.
 	 * @param offertaId:  the ID_OFFERTA.
 	 * @param desc:       the DESCRIZIONE.
-	 * @param titolo:     the TITOLO.
 	 */
-	public AnnuncioOffertaImpl(Integer annuncioId, Integer offertaId, String desc, String titolo) {
+	public AnnuncioOffertaImpl(Integer annuncioId, Integer offertaId, String desc) {
 		super();
 		this.annuncioId = annuncioId;
 		this.offertaId = offertaId;
 		this.desc = desc;
-		this.titolo = titolo;
 	}
 
 	/**
@@ -63,13 +60,6 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 	 */
 	public String getDesc() {
 		return desc;
-	}
-
-	/**
-	 * Gets the TITOLO.
-	 */
-	public String getTitolo() {
-		return titolo;
 	}
 
 	/**
@@ -100,21 +90,12 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 	}
 
 	/**
-	 * Sets the TITOLO.
-	 * 
-	 * @param titolo: the TITOLO.
-	 */
-	public void setTitolo(String titolo) {
-		this.titolo = titolo;
-	}
-
-	/**
 	 * Returns a hash code value for the object. This method is supported for the
 	 * benefit of hash tables such as those provided by HashMap.
 	 */
 	@Override
 	public int hashCode() {
-		return Objects.hash(annuncioId, desc, offertaId, titolo);
+		return Objects.hash(annuncioId, desc, offertaId);
 	}
 
 	/**
@@ -130,6 +111,7 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 			return false;
 		AnnuncioOffertaImpl other = (AnnuncioOffertaImpl) obj;
 		return Objects.equals(annuncioId, other.annuncioId) && Objects.equals(desc, other.desc)
-				&& Objects.equals(offertaId, other.offertaId) && Objects.equals(titolo, other.titolo);
+				&& Objects.equals(offertaId, other.offertaId);
 	}
+
 }
