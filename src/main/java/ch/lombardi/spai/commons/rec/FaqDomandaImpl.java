@@ -3,12 +3,12 @@ package ch.lombardi.spai.commons.rec;
 import java.util.Objects;
 
 /**
- * Java Class: FaqImpl.java
+ * Java Class: FaqDomandaImpl.java
  * 
  * @author Matteo Maddes
- * @version 28.11.2022
+ * @version 03.07.2023
  */
-public class FaqImpl implements Faq {
+public class FaqDomandaImpl implements FaqDomanda {
 
 	/**
 	 * UID: technical internal identification number (serialization).
@@ -16,36 +16,33 @@ public class FaqImpl implements Faq {
 	private static final long serialVersionUID = -2664975307331891009L;
 
 	// VARIABLES
-	private Integer faqId;
+	private String faqDomandaId;
 	private String domanda;
-	private String risposta;
 
 	/**
 	 * Default empty constructor.
 	 */
-	public FaqImpl() {
+	public FaqDomandaImpl() {
 		super();
 	}
 
 	/**
 	 * Costructor of the faq showed on the website.
 	 * 
-	 * @param faqId:    the ID_FAQ.
-	 * @param domanda:  the DOMANDA.
-	 * @param risposta: the RISPOSTA.
+	 * @param faqId:   the ID_FAQ.
+	 * @param domanda: the DOMANDA.
 	 */
-	public FaqImpl(Integer faqId, String domanda, String risposta) {
+	public FaqDomandaImpl(String faqDomandaId, String domanda) {
 		super();
-		this.faqId = faqId;
+		this.faqDomandaId = faqDomandaId;
 		this.domanda = domanda;
-		this.risposta = risposta;
 	}
 
 	/**
 	 * Gets the ID_FAQ.
 	 */
-	public Integer getFaqId() {
-		return faqId;
+	public String getFaqId() {
+		return faqDomandaId;
 	}
 
 	/**
@@ -56,19 +53,12 @@ public class FaqImpl implements Faq {
 	}
 
 	/**
-	 * Gets the RISPOSTA.
-	 */
-	public String getRisposta() {
-		return risposta;
-	}
-
-	/**
 	 * Sets the ID_FAQ.
 	 * 
 	 * @param faqId: the ID_FAQ.
 	 */
-	public void setFaqId(Integer faqId) {
-		this.faqId = faqId;
+	public void setFaqId(String faqDomandaId) {
+		this.faqDomandaId = faqDomandaId;
 	}
 
 	/**
@@ -81,21 +71,12 @@ public class FaqImpl implements Faq {
 	}
 
 	/**
-	 * Sets the RISPOSTA.
-	 * 
-	 * @param risposta: the RISPOSTA.
-	 */
-	public void setRisposta(String risposta) {
-		this.risposta = risposta;
-	}
-
-	/**
 	 * Returns a hash code value for the object. This method is supported for the
 	 * benefit of hash tables such as those provided by HashMap.
 	 */
 	@Override
 	public int hashCode() {
-		return Objects.hash(domanda, faqId, risposta);
+		return Objects.hash(domanda, faqDomandaId);
 	}
 
 	/**
@@ -109,8 +90,8 @@ public class FaqImpl implements Faq {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		FaqImpl other = (FaqImpl) obj;
-		return Objects.equals(domanda, other.domanda) && Objects.equals(faqId, other.faqId)
-				&& Objects.equals(risposta, other.risposta);
+		FaqDomandaImpl other = (FaqDomandaImpl) obj;
+		return Objects.equals(domanda, other.domanda) && Objects.equals(faqDomandaId, other.faqDomandaId);
 	}
+
 }

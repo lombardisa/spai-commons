@@ -5,27 +5,20 @@ import java.io.Serializable;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 /**
- * Java Interface: Faq.java
+ * Java Interface: FaqRisposta.java
  * 
  * @author Matteo Maddes
- * @version 28.11.2022
+ * @version 03.07.2023
  */
-@JsonDeserialize(as = FaqImpl.class)
-public interface Faq extends Serializable {
+@JsonDeserialize(as = FaqRisposta.class)
+public interface FaqRisposta extends Serializable {
 
 	/**
 	 * Returns the ID_FAQ.
 	 * 
 	 * @return the ID_FAQ.
 	 */
-	Integer getFaqId();
-
-	/**
-	 * Returns the DOMANDA of the FAQ.
-	 * 
-	 * @return the DOMANDA.
-	 */
-	String getDomanda();
+	String getFaqId();
 
 	/**
 	 * Returns the RISPOSTA of the FAQ.

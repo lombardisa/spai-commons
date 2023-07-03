@@ -16,8 +16,8 @@ public class LinguaImpl implements Lingua {
 	private static final long serialVersionUID = -5639711708140896060L;
 
 	// VARIABLES
-	private Integer linguaId;
-	private String desc;
+	private String chiaveId;
+	private String testo;
 
 	/**
 	 * Default empty constructor.
@@ -32,42 +32,42 @@ public class LinguaImpl implements Lingua {
 	 * @param linguaId: the ID_LINGUA.
 	 * @param desc:     the DESCRIZIONE of the ID_LINGUA.
 	 */
-	public LinguaImpl(Integer linguaId, String desc) {
+	public LinguaImpl(String chiaveId, String testo) {
 		super();
-		this.linguaId = linguaId;
-		this.desc = desc;
+		this.chiaveId = chiaveId;
+		this.testo = testo;
 	}
 
 	/**
-	 * Gets the ID_LINGUA.
+	 * Gets the ID_CHIAVE.
 	 */
-	public Integer getLinguaId() {
-		return linguaId;
+	public String getChiaveId() {
+		return chiaveId;
 	}
 
 	/**
-	 * Gets the DESCRIZIONE.
+	 * Gets the TESTO.
 	 */
-	public String getDesc() {
-		return desc;
+	public String getTesto() {
+		return testo;
 	}
 
 	/**
-	 * Sets the ID_LINGUA.
+	 * Sets the ID_CHIAVE.
 	 * 
-	 * @param linguaId: the ID_LINGUA.
+	 * @param chiaveId: the ID_CHIAVE.
 	 */
-	public void setLinguaId(Integer linguaId) {
-		this.linguaId = linguaId;
+	public void setChiaveId(String chiaveId) {
+		this.chiaveId = chiaveId;
 	}
 
 	/**
-	 * Sets the DESCRIZIONE.
+	 * Sets the TESTO.
 	 * 
-	 * @param desc: the DESCRIZIONE.
+	 * @param testo: the TESTO.
 	 */
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setTesto(String testo) {
+		this.testo = testo;
 	}
 
 	/**
@@ -76,7 +76,7 @@ public class LinguaImpl implements Lingua {
 	 */
 	@Override
 	public int hashCode() {
-		return Objects.hash(desc, linguaId);
+		return Objects.hash(chiaveId, testo);
 	}
 
 	/**
@@ -91,6 +91,6 @@ public class LinguaImpl implements Lingua {
 		if (getClass() != obj.getClass())
 			return false;
 		LinguaImpl other = (LinguaImpl) obj;
-		return Objects.equals(desc, other.desc) && Objects.equals(linguaId, other.linguaId);
+		return Objects.equals(testo, other.testo) && Objects.equals(chiaveId, other.chiaveId);
 	}
 }

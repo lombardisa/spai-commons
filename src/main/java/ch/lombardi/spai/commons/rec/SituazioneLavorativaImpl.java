@@ -93,5 +93,4 @@ public class SituazioneLavorativaImpl implements SituazioneLavorativa {
 		SituazioneLavorativaImpl other = (SituazioneLavorativaImpl) obj;
 		return Objects.equals(chiaveId, other.chiaveId) && Objects.equals(testo, other.testo);
 	}
-
 }

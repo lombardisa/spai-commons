@@ -14,16 +14,16 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 public interface Lingua extends Serializable {
 
 	/**
-	 * Returns the ID_LINGUA.
+	 * Returns the ID_CHIAVE.
 	 * 
-	 * @return: the ID_LINGUA.
+	 * @return: the ID_CHIAVE.
 	 */
-	Integer getLinguaId();
+	String getChiaveId();
 
 	/**
-	 * Returns the DESCRIZIONE of the ID_LINGUA.
+	 * Returns the TESTO of the ID_CHIAVE.
 	 * 
-	 * @return: the DESCRIZIONE of the ID_LINGUA.
+	 * @return: the TESTO of the ID_CHIAVE.
 	 */
-	String getDesc();
+	String getTesto();
 }
