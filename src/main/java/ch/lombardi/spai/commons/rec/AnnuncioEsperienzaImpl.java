@@ -6,7 +6,7 @@ import java.util.Objects;
  * Java Class: AnnuncioEsperienzaImpl.java
  * 
  * @author Matteo Maddes
- * @version 28.11.2022
+ * @version 04.07.2023
  */
 public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 
@@ -14,11 +14,10 @@ public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 	 * UID: technical internal identification number (serialization).
 	 */
 	private static final long serialVersionUID = 2676876379619731666L;
-	
-	private final Integer STATUS_OK = 200;
-	private final Integer STATUS_ERROR = 404;
 
 	// VARIABLES
+	private final Integer STATUS_OK = 200;
+	private final Integer STATUS_ERROR = 404;
 	private Integer status;
 	private Integer annuncioId;
 	private Integer esperienzaId;
@@ -31,7 +30,7 @@ public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 	public AnnuncioEsperienzaImpl() {
 		super();
 	}
-	
+
 	/**
 	 * Costructor of the experience needed for an annuncio.
 	 * 

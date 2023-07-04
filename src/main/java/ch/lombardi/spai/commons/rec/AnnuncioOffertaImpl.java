@@ -6,7 +6,7 @@ import java.util.Objects;
  * Java Class: AnnuncioOffertaImpl.java
  * 
  * @author Matteo Maddes
- * @version 28.11.2022
+ * @version 04.07.2023
  */
 public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 
@@ -16,9 +16,13 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 	private static final long serialVersionUID = -1633804424445767997L;
 
 	// VARIABLES
+	private final Integer STATUS_OK = 200;
+	private final Integer STATUS_ERROR = 404;
+	private Integer status;
 	private Integer annuncioId;
 	private Integer offertaId;
 	private String desc;
+	private String errorDesc;
 
 	/**
 	 * Default empty constructor.
@@ -36,9 +40,53 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 	 */
 	public AnnuncioOffertaImpl(Integer annuncioId, Integer offertaId, String desc) {
 		super();
+		this.status = STATUS_OK;
 		this.annuncioId = annuncioId;
 		this.offertaId = offertaId;
 		this.desc = desc;
+	}
+
+	/**
+	 * Method for the error. It uses two Strings.
+	 * 
+	 * @param errorCode: code of the error.
+	 * @param errorDesc: description of the error.
+	 */
+	public AnnuncioOffertaImpl(String errorDesc) {
+		this.status = STATUS_ERROR;
+		this.errorDesc = errorDesc;
+	}
+
+	/**
+	 * String for the Error Code
+	 */
+	public Integer getStatus() {
+		return status;
+	}
+
+	/**
+	 * Sets the Error Code.
+	 * 
+	 * @param Error Code.
+	 */
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+
+	/**
+	 * String for the Error Desc
+	 */
+	public String getErrorDesc() {
+		return errorDesc;
+	}
+
+	/**
+	 * Sets the Error Desc.
+	 * 
+	 * @param Error Desc.
+	 */
+	public void setErrorDesc(String errorDesc) {
+		this.errorDesc = errorDesc;
 	}
 
 	/**
@@ -113,5 +161,4 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 		return Objects.equals(annuncioId, other.annuncioId) && Objects.equals(desc, other.desc)
 				&& Objects.equals(offertaId, other.offertaId);
 	}
-
 }

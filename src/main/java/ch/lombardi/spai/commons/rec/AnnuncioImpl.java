@@ -20,34 +20,32 @@ public class AnnuncioImpl implements Annuncio {
 
 	// VARIABLES
 	private Integer annuncioId;
-	private Integer refPrincId;
-	private String nomeRefPrinc;
-	private String cognomeRefPrinc;
-	private byte[] fotoRefPrinc;
 	private Integer sedeId;
-	private String descSede;
+	private Integer sezioneId;
+	private Integer areaId;
+	private Integer nazioneId;
+	private Integer refPrincId;
+	private Integer refSecondId;
+	private String titolo;
+	private String descrizione;
+	private String descArea;
+	private String descAreaBreve;
 	private String nomeIndirizzo;
 	private String descIndirizzo;
+	private String descSede;
 	private String indirizzo;
 	private String casellaPostale;
 	private String nap;
 	private String localita;
-	private Integer nazioneId;
 	private String descNazione;
 	private String noTelefono;
 	private String emailHr;
 	private String paginaInternet;
 	private String paginaLinkedin;
-	private Integer sezioneId;
-	private Integer areaId;
-	private String descArea;
-	private String descAreaBreve;
-	private Integer refSecondId;
+	private String nomeRefPrinc;
+	private String cognomeRefPrinc;
 	private String nomeRefSecond;
 	private String cognomeRefSecond;
-	private byte[] fotoRefSecond;
-	private String titolo;
-	private String descrizione;
 	private String homeOffice;
 	private String datiCompleti;
 	private BigDecimal occupMin;
@@ -57,6 +55,8 @@ public class AnnuncioImpl implements Annuncio {
 	private LocalDate dataInizioContratto;
 	private Integer durataContratto;
 	private Integer unitaDurataContratto;
+	private byte[] fotoRefPrinc;
+	private byte[] fotoRefSecond;
 
 	/**
 	 * Default empty constructor.
