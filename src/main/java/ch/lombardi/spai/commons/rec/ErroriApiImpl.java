@@ -16,8 +16,16 @@ public class ErroriApiImpl implements ErroriApi {
 	private static final long serialVersionUID = 1383570345104264282L;
 
 	// VARIABLES
-	private Integer errorCode;
+	private Integer status;
 	private String errorMessage;
+	public static final int STATUS_204 = 204;
+	public static final int STATUS_400 = 400;
+	public static final int STATUS_404 = 404;
+	public static final int STATUS_503 = 503;
+	private final String MESS_204 = "Empty response.";
+	private final String MESS_400 = "Bad input parameter. The request cannot be fulfilled due to bad syntax.";
+	private final String MESS_404 = "Data not found.";
+	private final String MESS_503 = "Service unavailable.";
 
 	/**
 	 * Default empty constructor.
@@ -29,29 +37,40 @@ public class ErroriApiImpl implements ErroriApi {
 	/**
 	 * Constructor of the API's error code & message.
 	 * 
-	 * @param errorCode:    the API's error code (number).
-	 * @param errorMessage: the API's error message.
+	 * @param status: the API's error code (status).
 	 */
-	public ErroriApiImpl(Integer errorCode, String errorMessage) {
+	public ErroriApiImpl(Integer status) {
 		super();
-		this.errorCode = errorCode;
-		this.errorMessage = errorMessage;
+		this.status = status;
+		// this.errorMessage = errorMessage;
+		// SWITCH CASE: STATUS & ERROR MESSAGE
+		switch (status) {
+		case STATUS_204:
+			this.errorMessage = MESS_204;
+			break;
+		case STATUS_400:
+			this.errorMessage = MESS_400;
+			break;
+		case STATUS_404:
+			this.errorMessage = MESS_404;
+			break;
+		}
 	}
 
 	/**
-	 * Gets the error code (number).
+	 * Gets the error code (status).
 	 */
-	public Integer getErrorCode() {
-		return errorCode;
+	public Integer getStatus() {
+		return status;
 	}
 
 	/**
-	 * Sets the error code (number).
+	 * Sets the error code (status).
 	 * 
-	 * @param errorCode: the error code (number).
+	 * @param errorCode: the error code (status).
 	 */
-	public void setErrorCode(Integer errorCode) {
-		this.errorCode = errorCode;
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 
 	/**
@@ -76,7 +95,7 @@ public class ErroriApiImpl implements ErroriApi {
 	 */
 	@Override
 	public int hashCode() {
-		return Objects.hash(errorCode, errorMessage);
+		return Objects.hash(status, errorMessage);
 	}
 
 	/**
@@ -91,6 +110,6 @@ public class ErroriApiImpl implements ErroriApi {
 		if (getClass() != obj.getClass())
 			return false;
 		ErroriApiImpl other = (ErroriApiImpl) obj;
-		return Objects.equals(errorCode, other.errorCode) && Objects.equals(errorMessage, other.errorMessage);
+		return Objects.equals(status, other.status) && Objects.equals(errorMessage, other.errorMessage);
 	}
 }

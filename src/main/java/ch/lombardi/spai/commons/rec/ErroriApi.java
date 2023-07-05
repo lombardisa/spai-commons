@@ -10,15 +10,15 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
  * @author Matteo Maddes
  * @version 05.07.2023
  */
-@JsonDeserialize(as = ErroriApi.class)
+@JsonDeserialize(as = ErroriApiImpl.class)
 public interface ErroriApi extends Serializable {
 
 	/**
-	 * Returns the error's code (number).
+	 * Returns the error's code (status).
 	 * 
-	 * @return the error's code (number).
+	 * @return the error's code (status).
 	 */
-	Integer getErrorCode();
+	Integer getStatus();
 
 	/**
 	 * Returns the error's message.
