@@ -19,19 +19,19 @@ public class SedeImpl implements Sede {
 	// VARIABLES
 	private Integer sedeId;
 	private Integer societaId;
-	private String descSede;
+	private Integer nazioneId;
+	private String descEstesa;
 	private String nomeIndirizzo;
 	private String indirizzo;
+	private String descSede;
 	private String localita;
-	private LocalDate dataChiusura;
 	private String nap;
+	private String nazione;
+	private String timeZone;
 	private String noTelefono;
 	private String eMail;
-	private String timeZone;
-	private String descEstesa;
 	private String eMailHr;
-	private Integer nazioneId;
-	private String nazione;
+	private LocalDate dataChiusura;
 
 	/**
 	 * Default empty constructor.

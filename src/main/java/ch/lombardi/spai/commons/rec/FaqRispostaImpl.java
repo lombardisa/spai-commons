@@ -16,7 +16,7 @@ public class FaqRispostaImpl implements FaqRisposta {
 	private static final long serialVersionUID = -2664975307331891009L;
 
 	// VARIABLES
-	private String faqDomandaId;
+	private String faqRispostaId;
 	private String risposta;
 
 	/**
@@ -33,9 +33,9 @@ public class FaqRispostaImpl implements FaqRisposta {
 	 * @param domanda:  the DOMANDA.
 	 * @param risposta: the RISPOSTA.
 	 */
-	public FaqRispostaImpl(String faqDomandaId, String risposta) {
+	public FaqRispostaImpl(String faqRispostaId, String risposta) {
 		super();
-		this.faqDomandaId = faqDomandaId;
+		this.faqRispostaId = faqRispostaId;
 		this.risposta = risposta;
 	}
 
@@ -43,7 +43,7 @@ public class FaqRispostaImpl implements FaqRisposta {
 	 * Gets the ID_FAQ.
 	 */
 	public String getFaqId() {
-		return faqDomandaId;
+		return faqRispostaId;
 	}
 
 	/**
@@ -58,8 +58,8 @@ public class FaqRispostaImpl implements FaqRisposta {
 	 * 
 	 * @param faqId: the ID_FAQ.
 	 */
-	public void setFaqId(String faqDomandaId) {
-		this.faqDomandaId = faqDomandaId;
+	public void setFaqId(String faqRispostaId) {
+		this.faqRispostaId = faqRispostaId;
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class FaqRispostaImpl implements FaqRisposta {
 	 */
 	@Override
 	public int hashCode() {
-		return Objects.hash(faqDomandaId, risposta);
+		return Objects.hash(faqRispostaId, risposta);
 	}
 
 	/**
@@ -92,6 +92,6 @@ public class FaqRispostaImpl implements FaqRisposta {
 		if (getClass() != obj.getClass())
 			return false;
 		FaqRispostaImpl other = (FaqRispostaImpl) obj;
-		return Objects.equals(faqDomandaId, other.faqDomandaId) && Objects.equals(risposta, other.risposta);
+		return Objects.equals(faqRispostaId, other.faqRispostaId) && Objects.equals(risposta, other.risposta);
 	}
 }
