@@ -23,7 +23,7 @@ public class ErroriApiImpl implements ErroriApi {
 	public static final int STATUS_404 = 404;
 	public static final int STATUS_503 = 503;
 	private final String MESS_204 = "Empty response.";
-	private final String MESS_400 = "Bad input parameter. The request cannot be fulfilled due to bad syntax.";
+	private final String MESS_400 = "Bad input parameter. The entered language does not respect the correct syntax.";
 	private final String MESS_404 = "Data not found.";
 	private final String MESS_503 = "Service unavailable.";
 
