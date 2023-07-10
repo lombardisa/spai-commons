@@ -54,6 +54,9 @@ public class ErroriApiImpl implements ErroriApi {
 		case STATUS_404:
 			this.errorMessage = MESS_404;
 			break;
+		case STATUS_503:
+			this.errorMessage = MESS_503;
+			break;
 		}
 	}
 
