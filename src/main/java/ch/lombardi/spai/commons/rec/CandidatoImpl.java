@@ -683,11 +683,7 @@ public class CandidatoImpl implements Candidato {
 	 * @param link: the LINK.
 	 */
 	public void setLink(String[] link) {
-		if (link != null) {
-			this.link = link;
-		} else {
-			this.link = new String[0];
-		}
+		this.link = link;
 	}
 
 	/**
