@@ -6,7 +6,7 @@ import java.util.Objects;
  * Java Class: AnnuncioOffertaImpl.java
  * 
  * @author Matteo Maddes
- * @version 04.07.2023
+ * @version 22.11.2023
  */
 public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 
