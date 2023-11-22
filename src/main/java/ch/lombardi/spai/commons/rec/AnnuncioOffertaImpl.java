@@ -21,6 +21,7 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 	private Integer status;
 	private Integer annuncioId;
 	private Integer offertaId;
+	private Integer ordinamento;
 	private String desc;
 	private String errorDesc;
 
@@ -34,15 +35,17 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 	/**
 	 * Costructor of the offerta included in an annuncio.
 	 * 
-	 * @param annuncioId: the ID_ANNUNCIO.
-	 * @param offertaId:  the ID_OFFERTA.
-	 * @param desc:       the DESCRIZIONE.
+	 * @param annuncioId:    the ID_ANNUNCIO.
+	 * @param offertaId:     the ID_OFFERTA.
+	 * @param ordinamentoId: the ordinamento of the DESCRIZIONE.
+	 * @param desc:          the DESCRIZIONE.
 	 */
-	public AnnuncioOffertaImpl(Integer annuncioId, Integer offertaId, String desc) {
+	public AnnuncioOffertaImpl(Integer annuncioId, Integer offertaId, Integer ordinamento, String desc) {
 		super();
 		this.status = STATUS_OK;
 		this.annuncioId = annuncioId;
 		this.offertaId = offertaId;
+		this.ordinamento = ordinamento;
 		this.desc = desc;
 	}
 
@@ -104,6 +107,13 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 	}
 
 	/**
+	 * Gets the ORDINAMENTO.
+	 */
+	public Integer getOrdinamento() {
+		return ordinamento;
+	}
+
+	/**
 	 * Gets the DESCRIZIONE.
 	 */
 	public String getDesc() {
@@ -129,6 +139,15 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 	}
 
 	/**
+	 * Sets the ORDINAMENTO.
+	 * 
+	 * @param ordinamento: the ORDINAMENTO.
+	 */
+	public void setOrdinamento(Integer ordinamento) {
+		this.ordinamento = ordinamento;
+	}
+
+	/**
 	 * Sets the DESCRIZIONE.
 	 * 
 	 * @param desc: the DESCRIZIONE.
@@ -137,18 +156,11 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 		this.desc = desc;
 	}
 
-	/**
-	 * Returns a hash code value for the object. This method is supported for the
-	 * benefit of hash tables such as those provided by HashMap.
-	 */
 	@Override
 	public int hashCode() {
-		return Objects.hash(annuncioId, desc, offertaId);
+		return Objects.hash(STATUS_ERROR, STATUS_OK, annuncioId, desc, errorDesc, offertaId, ordinamento, status);
 	}
 
-	/**
-	 * Compares the IDs to see if the values are exactly the same Object.
-	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -158,7 +170,10 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 		if (getClass() != obj.getClass())
 			return false;
 		AnnuncioOffertaImpl other = (AnnuncioOffertaImpl) obj;
-		return Objects.equals(annuncioId, other.annuncioId) && Objects.equals(desc, other.desc)
-				&& Objects.equals(offertaId, other.offertaId);
+		return Objects.equals(STATUS_ERROR, other.STATUS_ERROR) && Objects.equals(STATUS_OK, other.STATUS_OK)
+				&& Objects.equals(annuncioId, other.annuncioId) && Objects.equals(desc, other.desc)
+				&& Objects.equals(errorDesc, other.errorDesc) && Objects.equals(offertaId, other.offertaId)
+				&& Objects.equals(ordinamento, other.ordinamento) && Objects.equals(status, other.status);
 	}
+
 }

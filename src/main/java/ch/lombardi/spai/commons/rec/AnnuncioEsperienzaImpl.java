@@ -21,6 +21,7 @@ public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 	private Integer status;
 	private Integer annuncioId;
 	private Integer esperienzaId;
+	private Integer ordinamento;
 	private String desc;
 	private String errorDesc;
 
@@ -39,11 +40,12 @@ public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 	 * @param desc:         the DESCRIZIONE of the esperienza needed for this
 	 *                      annuncio.
 	 */
-	public AnnuncioEsperienzaImpl(Integer annuncioId, Integer esperienzaId, String desc) {
+	public AnnuncioEsperienzaImpl(Integer annuncioId, Integer esperienzaId, Integer ordinamento, String desc) {
 		super();
 		this.status = STATUS_OK;
 		this.annuncioId = annuncioId;
 		this.esperienzaId = esperienzaId;
+		this.ordinamento = ordinamento;
 		this.desc = desc;
 	}
 
@@ -105,6 +107,13 @@ public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 	}
 
 	/**
+	 * Gets the ORDINAMENTO.
+	 */
+	public Integer getOrdinamento() {
+		return ordinamento;
+	}
+
+	/**
 	 * Gets the DESCRIZIONE.
 	 */
 	public String getDesc() {
@@ -130,6 +139,15 @@ public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 	}
 
 	/**
+	 * Sets the ORDINAMENTO.
+	 * 
+	 * @param ordinamento: the ORDINAMENTO.
+	 */
+	public void setOrdinamento(Integer ordinamento) {
+		this.ordinamento = ordinamento;
+	}
+
+	/**
 	 * Sets the DESCRIZIONE.
 	 * 
 	 * @param desc: the DESCRIZIONE of the esperienza needed for this annuncio.
@@ -138,18 +156,11 @@ public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 		this.desc = desc;
 	}
 
-	/**
-	 * Returns a hash code value for the object. This method is supported for the
-	 * benefit of hash tables such as those provided by HashMap.
-	 */
 	@Override
 	public int hashCode() {
-		return Objects.hash(annuncioId, desc, esperienzaId);
+		return Objects.hash(STATUS_ERROR, STATUS_OK, annuncioId, desc, errorDesc, esperienzaId, ordinamento, status);
 	}
 
-	/**
-	 * Compares the IDs to see if the values are exactly the same Object.
-	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -159,7 +170,10 @@ public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 		if (getClass() != obj.getClass())
 			return false;
 		AnnuncioEsperienzaImpl other = (AnnuncioEsperienzaImpl) obj;
-		return Objects.equals(annuncioId, other.annuncioId) && Objects.equals(desc, other.desc)
-				&& Objects.equals(esperienzaId, other.esperienzaId);
+		return Objects.equals(STATUS_ERROR, other.STATUS_ERROR) && Objects.equals(STATUS_OK, other.STATUS_OK)
+				&& Objects.equals(annuncioId, other.annuncioId) && Objects.equals(desc, other.desc)
+				&& Objects.equals(errorDesc, other.errorDesc) && Objects.equals(esperienzaId, other.esperienzaId)
+				&& Objects.equals(ordinamento, other.ordinamento) && Objects.equals(status, other.status);
 	}
+
 }
