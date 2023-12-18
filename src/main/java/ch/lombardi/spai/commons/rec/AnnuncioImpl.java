@@ -57,6 +57,7 @@ public class AnnuncioImpl implements Annuncio {
 	private Integer unitaDurataContratto;
 	private byte[] fotoRefPrinc;
 	private byte[] fotoRefSecond;
+	private String spontaneous;
 
 	/**
 	 * Default empty constructor.
@@ -114,7 +115,7 @@ public class AnnuncioImpl implements Annuncio {
 			Integer areaId, String descArea, String descAreaBreve, Integer refSecondId, String nomeRefSecond,
 			String cognomeRefSecond, byte[] fotoRefSecond, String titolo, String descrizione, String homeOffice,
 			String datiCompleti, BigDecimal occupMin, BigDecimal occupMax, LocalDate inizio, LocalDate fine,
-			LocalDate dataInizioContratto, Integer durataContratto, Integer unitaDurataContratto) {
+			LocalDate dataInizioContratto, Integer durataContratto, Integer unitaDurataContratto, String spontaneous) {
 		super();
 		this.annuncioId = annuncioId;
 		this.refPrincId = refPrincId;
@@ -154,6 +155,7 @@ public class AnnuncioImpl implements Annuncio {
 		this.dataInizioContratto = dataInizioContratto;
 		this.durataContratto = durataContratto;
 		this.unitaDurataContratto = unitaDurataContratto;
+		this.spontaneous = spontaneous;
 	}
 
 	/**
@@ -388,6 +390,13 @@ public class AnnuncioImpl implements Annuncio {
 	}
 
 	/**
+	 * Gets the SPONTANEOUS.
+	 */
+	public String getSpontaneous() {
+		return spontaneous;
+	}
+
+	/**
 	 * Gets the INIZIO.
 	 */
 	public LocalDate getInizio() {
@@ -474,6 +483,15 @@ public class AnnuncioImpl implements Annuncio {
 	 */
 	public void setSedeId(Integer sedeId) {
 		this.sedeId = sedeId;
+	}
+
+	/**
+	 * Sets the SPONTANEOUS.
+	 * 
+	 * @param spontaneous: the SPONTANEOUS.
+	 */
+	public void setSpontaneous(String spontaneous) {
+		this.spontaneous = spontaneous;
 	}
 
 	/**
@@ -778,7 +796,7 @@ public class AnnuncioImpl implements Annuncio {
 				dataInizioContratto, datiCompleti, descArea, descAreaBreve, descIndirizzo, descNazione, descSede,
 				descrizione, durataContratto, emailHr, fine, homeOffice, indirizzo, inizio, localita, nap, nazioneId,
 				noTelefono, nomeIndirizzo, nomeRefPrinc, nomeRefSecond, occupMax, occupMin, paginaInternet,
-				paginaLinkedin, refPrincId, refSecondId, sedeId, sezioneId, titolo, unitaDurataContratto);
+				paginaLinkedin, refPrincId, refSecondId, sedeId, sezioneId, spontaneous, titolo, unitaDurataContratto);
 		return result;
 	}
 
@@ -815,7 +833,8 @@ public class AnnuncioImpl implements Annuncio {
 				&& Objects.equals(occupMin, other.occupMin) && Objects.equals(paginaInternet, other.paginaInternet)
 				&& Objects.equals(paginaLinkedin, other.paginaLinkedin) && Objects.equals(refPrincId, other.refPrincId)
 				&& Objects.equals(refSecondId, other.refSecondId) && Objects.equals(sedeId, other.sedeId)
-				&& Objects.equals(sezioneId, other.sezioneId) && Objects.equals(titolo, other.titolo)
+				&& Objects.equals(sezioneId, other.sezioneId) && Objects.equals(spontaneous, other.spontaneous)
+				&& Objects.equals(titolo, other.titolo)
 				&& Objects.equals(unitaDurataContratto, other.unitaDurataContratto);
 	}
 }
