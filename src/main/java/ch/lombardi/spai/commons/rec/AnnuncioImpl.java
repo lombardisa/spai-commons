@@ -114,7 +114,7 @@ public class AnnuncioImpl implements Annuncio {
 			Integer areaId, String descArea, String descAreaBreve, Integer refSecondId, String nomeRefSecond,
 			String cognomeRefSecond, byte[] fotoRefSecond, String titolo, String descrizione, String homeOffice,
 			String datiCompleti, BigDecimal occupMin, BigDecimal occupMax, LocalDate inizio, LocalDate fine,
-			LocalDate dataInizioContratto, Integer durataContratto, Integer unitaDurataContratto, String spontaneous) {
+			LocalDate dataInizioContratto, Integer durataContratto, Integer unitaDurataContratto) {
 		super();
 		this.annuncioId = annuncioId;
 		this.refPrincId = refPrincId;
