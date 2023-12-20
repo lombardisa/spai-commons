@@ -3,7 +3,7 @@
 
 	<groupId>ch.lombardi.spai</groupId>
 	<artifactId>spai-commons</artifactId>
-	<version>0.0.29-SNAPSHOT</version>
+	<version>0.0.29</version>
 
 	<packaging>jar</packaging>
 
@@ -12,7 +12,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/lombardisa/spai-commons.git</connection>
 		<url>https://github.com/lombardisa/spai-commons</url>
-		<tag>HEAD</tag>
+		<tag>0.0.29</tag>
 	</scm>
 
 	<properties>
