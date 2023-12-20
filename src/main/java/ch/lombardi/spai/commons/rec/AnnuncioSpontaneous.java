@@ -280,11 +280,4 @@ public interface AnnuncioSpontaneous extends Serializable {
 	 */
 	Integer getUnitaDurataContratto();
 
-	/**
-	 * Returns the possibility of spontaneous.
-	 * 
-	 * @return: the possibility of spontaneous.
-	 */
-	String getSpontaneous();
-
 }
