@@ -54,6 +54,7 @@ public class CandidatoImpl implements Candidato {
 	private String[] linguaId;
 	private String[] linguaLivelloId;
 	private LocalDateTime dataCandidatura;
+	private Integer linguaContatto;
 
 	/**
 	 * String with all information apart from: lingua (array), link (array).
@@ -67,7 +68,7 @@ public class CandidatoImpl implements Candidato {
 				+ getMessaggio() + ", " + getVocale() + ", " + getCvEstensione() + ", " + getVocaleEstensione() + ", "
 				+ getValutazionePrima() + ", " + getValutazioneSeconda() + ", " + getMotivazioneScartoId() + ", "
 				+ getFeedbackInterno() + ", " + getInformato() + ", " + getDocumentoId() + ", " + getDocumento() + ", "
-				+ getDocumentoEstensione() + ", " + getDescrizioneDocumento();
+				+ getDocumentoEstensione() + ", " + getDescrizioneDocumento() + ", " + getLinguaContatto();
 	}
 
 	/**
@@ -115,6 +116,7 @@ public class CandidatoImpl implements Candidato {
 	 * @param linguaId:               the ID_LINGUA.
 	 * @param linguaLivelloId:        the ID_LINGUA_LIVELLO.
 	 * @param dataCandidatura:        the DATA_CANDIDATURA.
+	 * @param linguaContatto:         the LINGUA_CONTATTO.
 	 */
 	public CandidatoImpl(Integer candidatoId, Integer sessoId, Integer sondaggioId, Integer situazioneLavorativaId,
 			Integer formazioneId, Integer statoId, Integer annuncioId, LocalDate dataFormazione, String nome,
@@ -123,7 +125,7 @@ public class CandidatoImpl implements Candidato {
 			String valutazionePrima, String valutazioneSeconda, Integer motivazioneScartoId, String feedbackInterno,
 			String informato, Integer documentoId, byte[] documento, String documentoEstensione,
 			String descrizioneDocumento, Integer linkId, String[] link, Integer candidatoLinguaId, String[] linguaId,
-			String[] linguaLivelloId, LocalDateTime dataCandidatura) {
+			String[] linguaLivelloId, LocalDateTime dataCandidatura, Integer linguaContatto) {
 		super();
 		this.candidatoId = candidatoId;
 		this.sessoId = sessoId;
@@ -160,6 +162,7 @@ public class CandidatoImpl implements Candidato {
 		this.linguaId = linguaId;
 		this.linguaLivelloId = linguaLivelloId;
 		this.dataCandidatura = dataCandidatura;
+		this.linguaContatto = linguaContatto;
 	}
 
 	/**
@@ -405,6 +408,13 @@ public class CandidatoImpl implements Candidato {
 	 */
 	public LocalDateTime getDataCandidatura() {
 		return dataCandidatura;
+	}
+
+	/**
+	 * Gets the LINGUA_CONTATTO.
+	 */
+	public Integer getLinguaContatto() {
+		return linguaContatto;
 	}
 
 	/**
@@ -723,9 +733,14 @@ public class CandidatoImpl implements Candidato {
 	}
 
 	/**
-	 * Returns a hash code value for the object. This method is supported for the
-	 * benefit of hash tables such as those provided by HashMap.
+	 * Sets the LINGUA_CONTATTO.
+	 * 
+	 * @param liguaContatto: the LINGUA_CONTATTO.
 	 */
+	public void setLinguaContatto(Integer liguaContatto) {
+		this.linguaContatto = liguaContatto;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -737,16 +752,13 @@ public class CandidatoImpl implements Candidato {
 		result = prime * result + Arrays.hashCode(link);
 		result = prime * result + Arrays.hashCode(vocale);
 		result = prime * result + Objects.hash(annuncioId, candidatoId, candidatoLinguaId, checkAutorizzazione,
-				checkTermini, cognome, cvEstensione, dataFormazione, descrizioneDocumento, documentoEstensione,
-				documentoId, email, feedbackInterno, formazioneId, informato, linkId, linguaId, linguaLivelloId,
-				messaggio, motivazioneScartoId, nascita, nome, sessoId, situazioneLavorativaId, sondaggioId, statoId,
-				telefono, valutazionePrima, valutazioneSeconda, vocaleEstensione, dataCandidatura);
+				checkTermini, cognome, cvEstensione, dataCandidatura, dataFormazione, descrizioneDocumento,
+				documentoEstensione, documentoId, email, feedbackInterno, formazioneId, informato, linguaContatto,
+				linkId, messaggio, motivazioneScartoId, nascita, nome, sessoId, situazioneLavorativaId, sondaggioId,
+				statoId, telefono, valutazionePrima, valutazioneSeconda, vocaleEstensione);
 		return result;
 	}
 
-	/**
-	 * Compares the IDs to see if the values are exactly the same Object.
-	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -761,6 +773,7 @@ public class CandidatoImpl implements Candidato {
 				&& Objects.equals(checkAutorizzazione, other.checkAutorizzazione)
 				&& Objects.equals(checkTermini, other.checkTermini) && Objects.equals(cognome, other.cognome)
 				&& Arrays.equals(cv, other.cv) && Objects.equals(cvEstensione, other.cvEstensione)
+				&& Objects.equals(dataCandidatura, other.dataCandidatura)
 				&& Objects.equals(dataFormazione, other.dataFormazione)
 				&& Objects.equals(descrizioneDocumento, other.descrizioneDocumento)
 				&& Arrays.equals(documento, other.documento)
@@ -768,9 +781,9 @@ public class CandidatoImpl implements Candidato {
 				&& Objects.equals(documentoId, other.documentoId) && Objects.equals(email, other.email)
 				&& Objects.equals(feedbackInterno, other.feedbackInterno)
 				&& Objects.equals(formazioneId, other.formazioneId) && Objects.equals(informato, other.informato)
-				&& Arrays.equals(linguaId, other.linguaId) && Arrays.equals(linguaLivelloId, other.linguaLivelloId)
-				&& Arrays.equals(link, other.link) && Objects.equals(linkId, other.linkId)
-				&& Objects.equals(messaggio, other.messaggio)
+				&& Objects.equals(linguaContatto, other.linguaContatto) && Arrays.equals(linguaId, other.linguaId)
+				&& Arrays.equals(linguaLivelloId, other.linguaLivelloId) && Arrays.equals(link, other.link)
+				&& Objects.equals(linkId, other.linkId) && Objects.equals(messaggio, other.messaggio)
 				&& Objects.equals(motivazioneScartoId, other.motivazioneScartoId)
 				&& Objects.equals(nascita, other.nascita) && Objects.equals(nome, other.nome)
 				&& Objects.equals(sessoId, other.sessoId)
@@ -778,7 +791,7 @@ public class CandidatoImpl implements Candidato {
 				&& Objects.equals(sondaggioId, other.sondaggioId) && Objects.equals(statoId, other.statoId)
 				&& Objects.equals(telefono, other.telefono) && Objects.equals(valutazionePrima, other.valutazionePrima)
 				&& Objects.equals(valutazioneSeconda, other.valutazioneSeconda) && Arrays.equals(vocale, other.vocale)
-				&& Objects.equals(vocaleEstensione, other.vocaleEstensione)
-				&& Objects.equals(dataCandidatura, other.dataCandidatura);
+				&& Objects.equals(vocaleEstensione, other.vocaleEstensione);
 	}
+
 }

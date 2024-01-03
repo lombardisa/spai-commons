@@ -259,4 +259,11 @@ public interface Candidato extends Serializable {
 	 * @return the DATA_CANDIDATURA.
 	 */
 	LocalDateTime getDataCandidatura();
+
+	/**
+	 * Returns the LINGUA_CONTATTO.
+	 * 
+	 * @return the LINGUA_CONTATTO.
+	 */
+	Integer getLinguaContatto();
 }
