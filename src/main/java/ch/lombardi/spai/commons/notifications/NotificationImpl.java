@@ -24,6 +24,7 @@ public class NotificationImpl implements Notification {
 	private String textMessageCode;
 	private String link;
 	private List<NotificationAddressee> addressees;
+	private List<NotificationAddresseeGruppi> addresseesGruppi;
 	private String entityName;
 	private Integer entityId;
 	private Action action;
@@ -88,6 +89,14 @@ public class NotificationImpl implements Notification {
 	}
 
 	@Override
+	public List<NotificationAddresseeGruppi> getAddresseesGruppi() {
+		if (addresseesGruppi != null) {
+			return addresseesGruppi;
+		}
+		return Collections.emptyList();
+	}
+
+	@Override
 	public Optional<String> getEntityName() {
 		return Optional.ofNullable(entityName);
 	}
@@ -147,6 +156,10 @@ public class NotificationImpl implements Notification {
 		this.link = link;
 	}
 
+	public void setAddresseesGruppi(List<NotificationAddresseeGruppi> addresseesGruppi) {
+		this.addresseesGruppi = addresseesGruppi;
+	}
+
 	public void setAddressees(List<NotificationAddressee> addressees) {
 		this.addressees = addressees;
 	}
@@ -157,6 +170,15 @@ public class NotificationImpl implements Notification {
 				addressees = new LinkedList<>();
 			}
 			addressees.add(addressee);
+		}
+	}
+
+	public void addAddresseeGruppi(NotificationAddresseeGruppi addresseeGruppi) {
+		if (addresseeGruppi != null) {
+			if (addresseesGruppi == null) {
+				addresseesGruppi = new LinkedList<>();
+			}
+			addresseesGruppi.add(addresseeGruppi);
 		}
 	}
 
