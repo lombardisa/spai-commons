@@ -6,16 +6,20 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Default {@link NotificationAddressee} implementation.
+ * Default {@link NotificationAddresseeGruppi} implementation.
  */
-public class NotificationAddresseeImpl implements NotificationAddressee {
+public class NotificationAddresseeGruppiImpl implements NotificationAddresseeGruppi {
 
-	private static final long serialVersionUID = -3115079312528103902L;
+	/**
+	 * UID
+	 */
+	private static final long serialVersionUID = -3496036238676939077L;
 
+	// VARIABLES
 	private Integer sequence;
 	private Type type;
 	private Integer company;
-	private String username;
+	private String mail;
 	private Status status;
 	private LocalDateTime sentDateTime;
 	private String error;
@@ -38,8 +42,8 @@ public class NotificationAddresseeImpl implements NotificationAddressee {
 	}
 
 	@Override
-	public Optional<String> getUsername() {
-		return Optional.ofNullable(username);
+	public Optional<String> getMail() {
+		return Optional.ofNullable(mail);
 	}
 
 	@Override
@@ -80,8 +84,8 @@ public class NotificationAddresseeImpl implements NotificationAddressee {
 		this.company = company;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 	public void setStatus(Status status) {
@@ -103,4 +107,5 @@ public class NotificationAddresseeImpl implements NotificationAddressee {
 	public void setEvasa(String evasa) {
 		this.evasa = evasa;
 	}
+
 }
