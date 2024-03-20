@@ -6,6 +6,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
+import ch.lombardi.spai.commons.notifications_group.NotificationAddresseeGruppi;
+
 /**
  * Default {@link Notification} implementation.
  */

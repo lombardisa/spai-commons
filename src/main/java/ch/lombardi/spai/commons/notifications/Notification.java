@@ -7,6 +7,8 @@ import java.util.Optional;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+import ch.lombardi.spai.commons.notifications_group.NotificationAddresseeGruppi;
+
 /**
  * Notification.
  */

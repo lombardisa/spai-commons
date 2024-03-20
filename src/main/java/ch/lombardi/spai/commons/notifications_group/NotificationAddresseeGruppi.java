@@ -1,10 +1,13 @@
-package ch.lombardi.spai.commons.notifications;
+package ch.lombardi.spai.commons.notifications_group;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import ch.lombardi.spai.commons.notifications.Status;
+import ch.lombardi.spai.commons.notifications.Type;
 
 /**
  * Notification addressee gruppi.
