@@ -1,6 +1,7 @@
 package ch.lombardi.spai.commons.notifications_group;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -111,4 +112,24 @@ public class NotificationAddresseeGruppiImpl implements NotificationAddresseeGru
 		this.evasa = evasa;
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(company, error, errorMessageCode, evasa, mail, sentDateTime, sequence, status, type);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		NotificationAddresseeGruppiImpl other = (NotificationAddresseeGruppiImpl) obj;
+		return Objects.equals(company, other.company) && Objects.equals(error, other.error)
+				&& Objects.equals(errorMessageCode, other.errorMessageCode) && Objects.equals(evasa, other.evasa)
+				&& Objects.equals(mail, other.mail) && Objects.equals(sentDateTime, other.sentDateTime)
+				&& Objects.equals(sequence, other.sequence) && status == other.status && type == other.type;
+	}
+	
 }
