@@ -13,6 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.PROPERTY)
 public class AFCCurrencyRate {
 	
+	
 	@XmlAttribute(name = "code")
 	private String code;
 	@XmlElement(name = "land_de")
