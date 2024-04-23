@@ -5,17 +5,10 @@
 	<!-- DETAILS -->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ch.lombardi.spai</groupId>
-<<<<<<< HEAD
-	<artifactId>spai-locks</artifactId>
-	<version>0.0.5-SNAPSHOT</version>
-	<packaging>war</packaging>
-	<name>SPAI Locks</name>
-=======
 	<artifactId>spai-commons</artifactId>
 	<version>0.0.39-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>SPAI Commons</name>
->>>>>>> branch 'master' of https://github.com/lombardisa/spai-commons.git
 
 	<!-- SCM -->
 	<scm>
