@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<!-- DETAILS -->
 	<modelVersion>4.0.0</modelVersion>
@@ -17,24 +19,21 @@
 
 	<!-- PROPERTIES -->
 	<properties>
-		<!-- Fail on missing XML -->
-		<failOnMissingWebXml>false</failOnMissingWebXml>
-		<!-- Encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
 		<!-- Maven plugins -->
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-		<!-- Spring Boot -->
-		<spring.boot.version>2.2.2.RELEASE</spring.boot.version>
-		<!-- SPAI Commons -->
-		<spai.commons.version>0.0.38</spai.commons.version>
-		<!-- Holon -->
-		<holon.platform.version>5.5.3</holon.platform.version>
-		<!-- Oracle driver -->
-		<oracle.driver.version>12.2.0.1</oracle.driver.version>
-		<!-- Git -->
-		<project.scm.id>git-scm-server</project.scm.id>
-		<!-- Maven WAR> -->
-		<maven-war-plugin.version>3.3.2</maven-war-plugin.version>
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+		<maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+		<maven-javadoc-plugin.version>3.1.0</maven-javadoc-plugin.version>
+		<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+		<maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+
+		<!-- Jackson -->
+		<jackson.version>2.11.1</jackson.version>
+
+		<github.global.server>git-scm-server</github.global.server>
 	</properties>
 
 	<!-- REPOSITORIES -->
@@ -58,92 +57,38 @@
 					<release>11</release>
 				</configuration>
 			</plugin>
-			<!-- Spring Boot plugin (to use spring-boot:run and other goals)-->
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>${spring.boot.version}</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<!-- Maven WAR -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>${maven-war-plugin.version}</version>
-			</plugin>
 		</plugins>
 	</build>
 
 	<!-- DEPENDENCIES -->
-	<dependencyManagement>
-		<dependencies>
-			<!-- Holon Platform -->
-			<dependency>
-				<groupId>com.holon-platform</groupId>
-				<artifactId>bom</artifactId>
-				<version>${holon.platform.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 	<dependencies>
-		<!-- Holon JAX-RS server -->
+		<!-- Jackson -->
 		<dependency>
-			<groupId>com.holon-platform.jaxrs</groupId>
-			<artifactId>holon-starter-jersey</artifactId>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson.version}</version>
 		</dependency>
-		<!-- Holon Datastore JDBC -->
 		<dependency>
-			<groupId>com.holon-platform.jdbc</groupId>
-			<artifactId>holon-starter-jdbc-datastore-hikaricp</artifactId>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
 		</dependency>
-		<!-- Holon JAXRS -->
 		<dependency>
-			<groupId>com.holon-platform.jaxrs</groupId>
-			<artifactId>holon-jaxrs-client</artifactId>
-			<scope>test</scope>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+			<version>${jackson.version}</version>
 		</dependency>
-		<!-- Holon Starter Test -->
 		<dependency>
-			<groupId>com.holon-platform.core</groupId>
-			<artifactId>holon-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- SPAI Commons -->
-		<dependency>
-			<groupId>ch.lombardi.spai</groupId>
-			<artifactId>spai-commons</artifactId>
-			<version>${spai.commons.version}</version>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.28</version>
+			<scope>provided</scope>
 		</dependency>
 		<!-- Oracle Drivers -->
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
 			<artifactId>ojdbc11</artifactId>
 			<version>21.8.0.0</version>
-		</dependency>
-		<!-- Logback -->
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-		</dependency>
-		<!-- J Unit API -->
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- J Unit Jupiter -->
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
