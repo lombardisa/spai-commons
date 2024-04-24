@@ -12,8 +12,8 @@
 
 	<!-- SCM -->
 	<scm>
-		<connection>scm:git:https://github.com/lombardisa/spai-locks.git</connection>
-		<url>https://github.com/lombardisa/spai-locks</url>
+		<connection>scm:git:https://github.com/lombardisa/spai-commons.git</connection>
+		<url>https://github.com/lombardisa/spai-commons</url>
 		<tag>HEAD</tag>
 	</scm>
 
