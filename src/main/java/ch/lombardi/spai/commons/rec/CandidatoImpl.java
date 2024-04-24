@@ -9,7 +9,7 @@ import java.util.Objects;
  * Java Class: CandidatoImpl.java
  * 
  * @author Matteo Maddes
- * @version 28.11.2022
+ * @version 24.04.2024
  */
 public class CandidatoImpl implements Candidato {
 
@@ -55,6 +55,7 @@ public class CandidatoImpl implements Candidato {
 	private String[] linguaLivelloId;
 	private LocalDateTime dataCandidatura;
 	private Integer linguaContatto;
+	private String notificaScartoInviata;
 
 	/**
 	 * String with all information apart from: lingua (array), link (array).
@@ -68,7 +69,8 @@ public class CandidatoImpl implements Candidato {
 				+ getMessaggio() + ", " + getVocale() + ", " + getCvEstensione() + ", " + getVocaleEstensione() + ", "
 				+ getValutazionePrima() + ", " + getValutazioneSeconda() + ", " + getMotivazioneScartoId() + ", "
 				+ getFeedbackInterno() + ", " + getInformato() + ", " + getDocumentoId() + ", " + getDocumento() + ", "
-				+ getDocumentoEstensione() + ", " + getDescrizioneDocumento() + ", " + getLinguaContatto();
+				+ getDocumentoEstensione() + ", " + getDescrizioneDocumento() + ", " + getLinguaContatto() + ", "
+				+ getNotificaScartoInviata();
 	}
 
 	/**
@@ -117,6 +119,7 @@ public class CandidatoImpl implements Candidato {
 	 * @param linguaLivelloId:        the ID_LINGUA_LIVELLO.
 	 * @param dataCandidatura:        the DATA_CANDIDATURA.
 	 * @param linguaContatto:         the LINGUA_CONTATTO.
+	 * @param notificaScartoInviata:  the NOTIFICA_SCARTO_INVIATA.
 	 */
 	public CandidatoImpl(Integer candidatoId, Integer sessoId, Integer sondaggioId, Integer situazioneLavorativaId,
 			Integer formazioneId, Integer statoId, Integer annuncioId, LocalDate dataFormazione, String nome,
@@ -125,7 +128,8 @@ public class CandidatoImpl implements Candidato {
 			String valutazionePrima, String valutazioneSeconda, Integer motivazioneScartoId, String feedbackInterno,
 			String informato, Integer documentoId, byte[] documento, String documentoEstensione,
 			String descrizioneDocumento, Integer linkId, String[] link, Integer candidatoLinguaId, String[] linguaId,
-			String[] linguaLivelloId, LocalDateTime dataCandidatura, Integer linguaContatto) {
+			String[] linguaLivelloId, LocalDateTime dataCandidatura, Integer linguaContatto,
+			String notificaScartoInviata) {
 		super();
 		this.candidatoId = candidatoId;
 		this.sessoId = sessoId;
@@ -163,6 +167,7 @@ public class CandidatoImpl implements Candidato {
 		this.linguaLivelloId = linguaLivelloId;
 		this.dataCandidatura = dataCandidatura;
 		this.linguaContatto = linguaContatto;
+		this.notificaScartoInviata = notificaScartoInviata;
 	}
 
 	/**
@@ -415,6 +420,13 @@ public class CandidatoImpl implements Candidato {
 	 */
 	public Integer getLinguaContatto() {
 		return linguaContatto;
+	}
+
+	/**
+	 * Gets the NOTIFICA_SCARTO_INVIATA.
+	 */
+	public String getNotificaScartoInviata() {
+		return notificaScartoInviata;
 	}
 
 	/**
@@ -741,6 +753,15 @@ public class CandidatoImpl implements Candidato {
 		this.linguaContatto = liguaContatto;
 	}
 
+	/**
+	 * Sets the NOTIFICA_SCARTO_INVIATA.
+	 * 
+	 * @param notificaScartoInviata: the NOTIFICA_SCARTO_INVIATA.
+	 */
+	public void setNotificaScartoInviata(String notificaScartoInviata) {
+		this.notificaScartoInviata = notificaScartoInviata;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -751,11 +772,12 @@ public class CandidatoImpl implements Candidato {
 		result = prime * result + Arrays.hashCode(linguaLivelloId);
 		result = prime * result + Arrays.hashCode(link);
 		result = prime * result + Arrays.hashCode(vocale);
-		result = prime * result + Objects.hash(annuncioId, candidatoId, candidatoLinguaId, checkAutorizzazione,
-				checkTermini, cognome, cvEstensione, dataCandidatura, dataFormazione, descrizioneDocumento,
-				documentoEstensione, documentoId, email, feedbackInterno, formazioneId, informato, linguaContatto,
-				linkId, messaggio, motivazioneScartoId, nascita, nome, sessoId, situazioneLavorativaId, sondaggioId,
-				statoId, telefono, valutazionePrima, valutazioneSeconda, vocaleEstensione);
+		result = prime * result
+				+ Objects.hash(annuncioId, candidatoId, candidatoLinguaId, checkAutorizzazione, checkTermini, cognome,
+						cvEstensione, dataCandidatura, dataFormazione, descrizioneDocumento, documentoEstensione,
+						documentoId, email, feedbackInterno, formazioneId, informato, linguaContatto, linkId, messaggio,
+						motivazioneScartoId, nascita, nome, notificaScartoInviata, sessoId, situazioneLavorativaId,
+						sondaggioId, statoId, telefono, valutazionePrima, valutazioneSeconda, vocaleEstensione);
 		return result;
 	}
 
@@ -786,6 +808,7 @@ public class CandidatoImpl implements Candidato {
 				&& Objects.equals(linkId, other.linkId) && Objects.equals(messaggio, other.messaggio)
 				&& Objects.equals(motivazioneScartoId, other.motivazioneScartoId)
 				&& Objects.equals(nascita, other.nascita) && Objects.equals(nome, other.nome)
+				&& Objects.equals(notificaScartoInviata, other.notificaScartoInviata)
 				&& Objects.equals(sessoId, other.sessoId)
 				&& Objects.equals(situazioneLavorativaId, other.situazioneLavorativaId)
 				&& Objects.equals(sondaggioId, other.sondaggioId) && Objects.equals(statoId, other.statoId)
