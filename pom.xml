@@ -101,7 +101,7 @@
 		</plugins>
 	</build>
 
-	<!-- DEPENDENCIES -->
+		<!-- DEPENDENCIES -->
 	<dependencies>
 		<!-- Jackson -->
 		<dependency>
@@ -120,25 +120,11 @@
 			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
-<<<<<<< HEAD
-			<groupId>com.holon-platform.core</groupId>
-			<artifactId>holon-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- SPAI Commons -->
-		<!--
-		<dependency>
-			<groupId>ch.lombardi.spai</groupId>
-			<artifactId>spai-commons</artifactId>
-			<version>${spai.commons.version}</version>
-=======
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.28</version>
 			<scope>provided</scope>
->>>>>>> branch 'master' of https://github.com/lombardisa/spai-commons.git
 		</dependency>
-		-->
 		<!-- Oracle Drivers -->
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
