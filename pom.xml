@@ -117,11 +117,13 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- SPAI Commons -->
+		<!--
 		<dependency>
 			<groupId>ch.lombardi.spai</groupId>
 			<artifactId>spai-commons</artifactId>
 			<version>${spai.commons.version}</version>
 		</dependency>
+		-->
 		<!-- Oracle Drivers -->
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
