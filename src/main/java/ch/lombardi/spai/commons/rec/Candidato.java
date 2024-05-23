@@ -274,4 +274,11 @@ public interface Candidato extends Serializable {
 	 */
 	String getNotificaScartoInviata();
 	
+	/**
+	 * Returns the NOTIFICA_INTERNA_INVIATA (S/N).
+	 * 
+	 * @return the NOTIFICA_INTERNA_INVIATA (S/N).
+	 */
+	String getNotificaInternaInviata();
+	
 }
