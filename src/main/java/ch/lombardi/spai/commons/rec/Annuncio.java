@@ -10,7 +10,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
  * Java Interface: Annuncio.java
  * 
  * @author Matteo Maddes
- * @version 28.11.2022
+ * @version 31.07.2024
  */
 @JsonDeserialize(as = AnnuncioImpl.class)
 public interface Annuncio extends Serializable {
@@ -280,5 +280,4 @@ public interface Annuncio extends Serializable {
 	 * @return: the unit of measurement of the annuncio's contract duration.
 	 */
 	Integer getUnitaDurataContratto();
-
 }

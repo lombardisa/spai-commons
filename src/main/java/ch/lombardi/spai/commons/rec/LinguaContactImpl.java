@@ -6,7 +6,7 @@ import java.util.Objects;
  * Java Class: LinguaContactImpl.java
  * 
  * @author Matteo Maddes
- * @version 03.01.2024
+ * @version 31.07.2024
  */
 public class LinguaContactImpl implements LinguaContact {
 
@@ -86,5 +86,4 @@ public class LinguaContactImpl implements LinguaContact {
 		LinguaContactImpl other = (LinguaContactImpl) obj;
 		return Objects.equals(chiaveId, other.chiaveId) && Objects.equals(testo, other.testo);
 	}
-
 }

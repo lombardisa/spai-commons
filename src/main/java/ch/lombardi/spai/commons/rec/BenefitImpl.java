@@ -7,7 +7,7 @@ import java.util.Objects;
  * Java Class: BenefitImpl.java
  * 
  * @author Matteo Maddes
- * @version 28.11.2022
+ * @version 31.07.2024
  */
 public class BenefitImpl implements Benefit {
 

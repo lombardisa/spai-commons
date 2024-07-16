@@ -7,11 +7,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Default {@link NotificationAddressee} implementation.
+ * 
+ * Java Class: NotificationAddresseeImpl.java
+ * 
+ * @author Domenico Lalla
+ * @version 31.07.2024
  */
 public class NotificationAddresseeImpl implements NotificationAddressee {
 
+	/**
+	 * UID
+	 */
 	private static final long serialVersionUID = -3115079312528103902L;
 
+	// VARIABLES
 	private Integer sequence;
 	private Type type;
 	private Integer company;

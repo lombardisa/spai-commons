@@ -6,6 +6,12 @@ import java.time.LocalDate;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+/**
+ * Java Interface: AnnuncioNoPic.java
+ * 
+ * @author Matteo Maddes
+ * @version 31.07.2024
+ */
 @JsonDeserialize(as = AnnuncioNoPicImpl.class)
 public interface AnnuncioNoPic extends Serializable {
 
@@ -260,5 +266,4 @@ public interface AnnuncioNoPic extends Serializable {
 	 * @return: the unit of measurement of the annuncio's contract duration.
 	 */
 	Integer getUnitaDurataContratto();
-
 }

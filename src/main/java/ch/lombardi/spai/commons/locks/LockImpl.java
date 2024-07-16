@@ -7,8 +7,12 @@ import java.time.LocalDateTime;
  */
 public class LockImpl implements Lock {
 
+	/**
+	 * UID
+	 */
 	private static final long serialVersionUID = -9015960979692928667L;
 
+	// VARIABLES
 	private String owner;
 	private String entityName;
 	private Integer entityId;
@@ -17,7 +21,6 @@ public class LockImpl implements Lock {
 	/**
 	 * Default empty constructor (necessary for Jackson serialization)
 	 */
-
 	public LockImpl() {
 		super();
 	}
@@ -110,5 +113,4 @@ public class LockImpl implements Lock {
 			return false;
 		return true;
 	}
-
 }

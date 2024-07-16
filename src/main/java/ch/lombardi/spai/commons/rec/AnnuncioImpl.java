@@ -9,7 +9,7 @@ import java.util.Objects;
  * Java Class: AnnuncioImpl.java
  * 
  * @author Matteo Maddes
- * @version 26.06.2023
+ * @version 31.07.2024
  */
 public class AnnuncioImpl implements Annuncio {
 

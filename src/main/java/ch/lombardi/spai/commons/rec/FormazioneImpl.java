@@ -6,7 +6,7 @@ import java.util.Objects;
  * Java Class: FormazioneImpl.java
  * 
  * @author Matteo Maddes
- * @version 28.11.2022
+ * @version 31.07.2024
  */
 public class FormazioneImpl implements Formazione {
 
@@ -30,7 +30,7 @@ public class FormazioneImpl implements Formazione {
 	 * Costructor of the formazione requested to the candidates.
 	 * 
 	 * @param chiaveId: the ID_CHIAVE.
-	 * @param testo: the TESTO.
+	 * @param testo:    the TESTO.
 	 */
 	public FormazioneImpl(String chiaveId, String testo) {
 		super();
@@ -73,7 +73,7 @@ public class FormazioneImpl implements Formazione {
 	/**
 	 * Returns a hash code value for the object. This method is supported for the
 	 * benefit of hash tables such as those provided by HashMap.
-
+	 * 
 	 */
 	@Override
 	public int hashCode() {

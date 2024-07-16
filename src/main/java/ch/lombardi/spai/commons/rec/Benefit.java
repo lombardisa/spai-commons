@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
  * Java Interface: Benefit.java
  * 
  * @author Matteo Maddes
- * @version 28.11.2022
+ * @version 31.07.2024
  */
 @JsonDeserialize(as = BenefitImpl.class)
 public interface Benefit extends Serializable {

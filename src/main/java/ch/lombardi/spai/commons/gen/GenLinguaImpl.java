@@ -4,6 +4,12 @@ import java.util.Objects;
 
 import ch.lombardi.spai.commons.rec.Lingua;
 
+/**
+ * Java Class: GenLinguaImpl.java
+ * 
+ * @author Domenico Lalla
+ * @version 31.07.2024
+ */
 public class GenLinguaImpl implements Lingua {
 
 	/**

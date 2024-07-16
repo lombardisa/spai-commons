@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
  * Java Interface: AnnuncioOfferta.java
  * 
  * @author Matteo Maddes
- * @version 22.11.2023
+ * @version 31.07.2024
  */
 @JsonDeserialize(as = AnnuncioOffertaImpl.class)
 public interface AnnuncioOfferta extends Serializable {
@@ -40,5 +40,4 @@ public interface AnnuncioOfferta extends Serializable {
 	 * @return: the DESCRIZIONE of the ID_OFFERTA.
 	 */
 	String getDesc();
-
 }

@@ -10,7 +10,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
  * Java Interface: Candidato.java
  * 
  * @author Matteo Maddes
- * @version 24.04.2024
+ * @version 31.07.2024
  */
 @JsonDeserialize(as = CandidatoImpl.class)
 public interface Candidato extends Serializable {
@@ -266,19 +266,18 @@ public interface Candidato extends Serializable {
 	 * @return the LINGUA_CONTATTO.
 	 */
 	Integer getLinguaContatto();
-	
+
 	/**
 	 * Returns the NOTIFICA_SCARTO_INVIATA (S/N).
 	 * 
 	 * @return the NOTIFICA_SCARTO_INVIATA (S/N).
 	 */
 	String getNotificaScartoInviata();
-	
+
 	/**
 	 * Returns the NOTIFICA_INTERNA_INVIATA (S/N).
 	 * 
 	 * @return the NOTIFICA_INTERNA_INVIATA (S/N).
 	 */
 	String getNotificaInternaInviata();
-	
 }

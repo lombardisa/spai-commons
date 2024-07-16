@@ -11,6 +11,11 @@ import ch.lombardi.spai.commons.notifications.Type;
 
 /**
  * Notification addressee gruppi.
+ * 
+ * Java Interface: NotificationAddresseeGruppiImpl.java
+ * 
+ * @author Matteo Maddes
+ * @version 31.07.2024
  */
 @JsonDeserialize(as = NotificationAddresseeGruppiImpl.class)
 public interface NotificationAddresseeGruppi extends Serializable {
@@ -80,5 +85,4 @@ public interface NotificationAddresseeGruppi extends Serializable {
 	 * @return The status evasa
 	 */
 	Optional<String> getEvasa();
-
 }

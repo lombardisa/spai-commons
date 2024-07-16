@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
  * Java Interface: FaqDomanda.java
  * 
  * @author Matteo Maddes
- * @version 03.07.2023
+ * @version 31.07.2024
  */
 @JsonDeserialize(as = FaqDomanda.class)
 public interface FaqDomanda extends Serializable {
@@ -26,5 +26,4 @@ public interface FaqDomanda extends Serializable {
 	 * @return the DOMANDA.
 	 */
 	String getDomanda();
-
 }

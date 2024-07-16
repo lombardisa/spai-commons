@@ -8,7 +8,7 @@ import ch.lombardi.spai.commons.rec.LinguaImpl;
  * Java Interface: Lingua.java
  * 
  * @author Matteo Maddes
- * @version 22.04.2024
+ * @version 31.07.2024
  */
 @JsonDeserialize(as = LinguaImpl.class)
 public interface GenLingua {

@@ -129,5 +129,4 @@ public interface Notification extends Serializable {
 	 * @return Notification module
 	 */
 	Optional<String> getModule();
-
 }

@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
  * Java Interface: ErroriApi.java
  * 
  * @author Matteo Maddes
- * @version 05.07.2023
+ * @version 31.07.2024
  */
 @JsonDeserialize(as = ErroriApiImpl.class)
 public interface ErroriApi extends Serializable {

@@ -3,6 +3,12 @@ package ch.lombardi.spai.commons.rec;
 import java.math.BigDecimal;
 import java.util.Objects;
 
+/**
+ * Java Class: AnnuncioTitlesImpl.java
+ * 
+ * @author Matteo Maddes
+ * @version 31.07.2024
+ */
 public class AnnuncioTitlesImpl implements AnnuncioTitles {
 
 	/**
@@ -207,5 +213,4 @@ public class AnnuncioTitlesImpl implements AnnuncioTitles {
 				&& Objects.equals(sedeId, other.sedeId) && Objects.equals(sezioneId, other.sezioneId)
 				&& Objects.equals(titolo, other.titolo);
 	}
-
 }

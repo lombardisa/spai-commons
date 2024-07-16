@@ -8,11 +8,11 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
  * Java Interface: Formazione.java
  * 
  * @author Matteo Maddes
- * @version 28.11.2022
+ * @version 31.07.2024
  */
 @JsonDeserialize(as = FormazioneImpl.class)
 public interface Formazione extends Serializable {
-	
+
 	/**
 	 * Returns the ID_CHIAVE.
 	 * 
