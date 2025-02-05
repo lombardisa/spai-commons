@@ -10,10 +10,11 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
  * Java Interface: AnnuncioSpontaneous.java
  * 
  * @author Matteo Maddes
- * @version 19.12.2023
+ * @version 31.07.2024
  */
 @JsonDeserialize(as = AnnuncioSpontaneousImpl.class)
 public interface AnnuncioSpontaneous extends Serializable {
+
 	/**
 	 * Returns the ID_ANNUNCIO.
 	 * 
@@ -279,5 +280,4 @@ public interface AnnuncioSpontaneous extends Serializable {
 	 * @return: the unit of measurement of the annuncio's contract duration.
 	 */
 	Integer getUnitaDurataContratto();
-
 }

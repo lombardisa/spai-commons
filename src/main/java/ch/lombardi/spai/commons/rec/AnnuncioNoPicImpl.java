@@ -4,6 +4,12 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Objects;
 
+/**
+ * Java Class: AnnuncioNoPicImpl.java
+ * 
+ * @author Matteo Maddes
+ * @version 31.07.2024
+ */
 public class AnnuncioNoPicImpl implements AnnuncioNoPic {
 
 	/**
@@ -720,5 +726,4 @@ public class AnnuncioNoPicImpl implements AnnuncioNoPic {
 				&& Objects.equals(sezioneId, other.sezioneId) && Objects.equals(titolo, other.titolo)
 				&& Objects.equals(unitaDurataContratto, other.unitaDurataContratto);
 	}
-
 }

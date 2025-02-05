@@ -6,7 +6,7 @@ import java.util.Objects;
  * Java Class: AnnuncioOffertaImpl.java
  * 
  * @author Matteo Maddes
- * @version 22.11.2023
+ * @version 31.07.2024
  */
 public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 
@@ -175,5 +175,4 @@ public class AnnuncioOffertaImpl implements AnnuncioOfferta {
 				&& Objects.equals(errorDesc, other.errorDesc) && Objects.equals(offertaId, other.offertaId)
 				&& Objects.equals(ordinamento, other.ordinamento) && Objects.equals(status, other.status);
 	}
-
 }

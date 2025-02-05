@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
  * Java Interface: LinguaContact.java
  * 
  * @author Matteo Maddes
- * @version 03.01.2024
+ * @version 31.07.2024
  */
 @JsonDeserialize(as = LinguaContactImpl.class)
 public interface LinguaContact extends Serializable {

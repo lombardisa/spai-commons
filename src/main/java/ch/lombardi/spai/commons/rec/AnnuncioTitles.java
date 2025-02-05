@@ -4,6 +4,12 @@ import java.io.Serializable;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+/**
+ * Java Interface: AnnuncioTitles.java
+ * 
+ * @author Matteo Maddes
+ * @version 31.07.2024
+ */
 @JsonDeserialize(as = AnnuncioTitlesImpl.class)
 public interface AnnuncioTitles extends Serializable {
 

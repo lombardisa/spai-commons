@@ -129,9 +129,13 @@ public interface Notification extends Serializable {
 	 * @return Notification module
 	 */
 	Optional<String> getModule();
+<<<<<<< HEAD
 
 	Optional<Integer> getCompanyId();
 
 	Integer getDelayDays();
 
 }
+=======
+}
+>>>>>>> branch 'master' of https://github.com/lombardisa/spai-commons.git

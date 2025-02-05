@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
  * Java Interface: AnnuncioEsperienza.java
  * 
  * @author Matteo Maddes
- * @version 22.11.2023
+ * @version 31.07.2024
  */
 @JsonDeserialize(as = AnnuncioEsperienzaImpl.class)
 public interface AnnuncioEsperienza extends Serializable {

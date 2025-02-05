@@ -6,7 +6,7 @@ import java.util.Objects;
  * Java Class: FaqDomandaImpl.java
  * 
  * @author Matteo Maddes
- * @version 03.07.2023
+ * @version 31.07.2024
  */
 public class FaqDomandaImpl implements FaqDomanda {
 
@@ -93,5 +93,4 @@ public class FaqDomandaImpl implements FaqDomanda {
 		FaqDomandaImpl other = (FaqDomandaImpl) obj;
 		return Objects.equals(domanda, other.domanda) && Objects.equals(faqDomandaId, other.faqDomandaId);
 	}
-
 }

@@ -8,6 +8,11 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 /**
  * Notification addressee.
+ * 
+ * Java Interface: NotificationAddressee.java
+ * 
+ * @author Domenico Lalla
+ * @version 31.07.2024
  */
 @JsonDeserialize(as = NotificationAddresseeImpl.class)
 public interface NotificationAddressee extends Serializable {
@@ -77,5 +82,4 @@ public interface NotificationAddressee extends Serializable {
 	 * @return The status evasa
 	 */
 	Optional<String> getEvasa();
-
 }

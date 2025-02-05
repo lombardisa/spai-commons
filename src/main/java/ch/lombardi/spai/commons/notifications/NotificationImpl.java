@@ -13,8 +13,12 @@ import ch.lombardi.spai.commons.notifications_group.NotificationAddresseeGruppi;
  */
 public class NotificationImpl implements Notification {
 
+	/**
+	 * UID
+	 */
 	private static final long serialVersionUID = 5876897266373084585L;
 
+	// VARIABLES
 	private Integer id;
 	private Category category;
 	private LocalDateTime dateTime;
@@ -242,5 +246,4 @@ public class NotificationImpl implements Notification {
 			return false;
 		return true;
 	}
-
 }

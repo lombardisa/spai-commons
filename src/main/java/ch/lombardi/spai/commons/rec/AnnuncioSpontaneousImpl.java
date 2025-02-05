@@ -9,7 +9,7 @@ import java.util.Objects;
  * Java Class: AnnuncioSpontaneousImpl.java
  * 
  * @author Matteo Maddes
- * @version 19.12.2023
+ * @version 31.07.2024
  */
 public class AnnuncioSpontaneousImpl implements AnnuncioSpontaneous {
 

@@ -6,7 +6,7 @@ import java.util.Objects;
  * Java Class: AnnuncioEsperienzaImpl.java
  * 
  * @author Matteo Maddes
- * @version 22.11.2023
+ * @version 31.07.2024
  */
 public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 
@@ -175,5 +175,4 @@ public class AnnuncioEsperienzaImpl implements AnnuncioEsperienza {
 				&& Objects.equals(errorDesc, other.errorDesc) && Objects.equals(esperienzaId, other.esperienzaId)
 				&& Objects.equals(ordinamento, other.ordinamento) && Objects.equals(status, other.status);
 	}
-
 }

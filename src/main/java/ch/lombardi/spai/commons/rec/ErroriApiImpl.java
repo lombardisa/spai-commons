@@ -6,7 +6,7 @@ import java.util.Objects;
  * Java Class: ErroriApiImpl.java
  * 
  * @author Matteo Maddes
- * @version 05.07.2023
+ * @version 31.07.2024
  */
 public class ErroriApiImpl implements ErroriApi {
 

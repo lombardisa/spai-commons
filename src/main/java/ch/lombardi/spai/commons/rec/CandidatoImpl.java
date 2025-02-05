@@ -9,7 +9,7 @@ import java.util.Objects;
  * Java Class: CandidatoImpl.java
  * 
  * @author Matteo Maddes
- * @version 23.05.2024
+ * @version 31.07.2024
  */
 public class CandidatoImpl implements Candidato {
 
@@ -836,5 +836,4 @@ public class CandidatoImpl implements Candidato {
 				&& Objects.equals(valutazioneSeconda, other.valutazioneSeconda) && Arrays.equals(vocale, other.vocale)
 				&& Objects.equals(vocaleEstensione, other.vocaleEstensione);
 	}
-
 }
