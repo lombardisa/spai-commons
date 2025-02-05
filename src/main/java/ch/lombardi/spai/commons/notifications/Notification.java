@@ -130,4 +130,8 @@ public interface Notification extends Serializable {
 	 */
 	Optional<String> getModule();
 
+	Optional<Integer> getCompanyId();
+
+	Integer getDelayDays();
+
 }

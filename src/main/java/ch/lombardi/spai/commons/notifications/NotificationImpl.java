@@ -31,6 +31,8 @@ public class NotificationImpl implements Notification {
 	private Integer entityId;
 	private Action action;
 	private String module;
+	private Integer companyId;
+	private Integer delayDays;
 
 	@Override
 	public Integer getId() {
@@ -198,6 +200,22 @@ public class NotificationImpl implements Notification {
 
 	public void setModule(String module) {
 		this.module = module;
+	}
+
+	public Optional<Integer> getCompanyId() {
+		return Optional.ofNullable(companyId);
+	}
+
+	public void setCompanyId(Integer companyId) {
+		this.companyId = companyId;
+	}
+
+	public Integer getDelayDays() {
+		return delayDays;
+	}
+
+	public void setDelayDays(Integer delayDays) {
+		this.delayDays = delayDays;
 	}
 
 	@Override
